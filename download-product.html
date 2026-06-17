@@ -47,31 +47,100 @@
           Access Opensplice DDS product packages and controlled release files through
           the ZettaScale file service.
         </p>
-        <div class="hero-actions">
-          <a class="button primary" href="https://files.adlink-labs.tech/index.php/login" rel="noreferrer">
-            Download
-          </a>
-        </div>
       </section>
 
       <section class="section">
-        <div class="ordering-grid">
-          <article class="ordering-card">
-            <h2>Product packages</h2>
-            <p>Installers, SDK packages, and release materials are handled through the download portal.</p>
-          </article>
-          <article class="ordering-card">
-            <h2>Knowledge database</h2>
-            <p>Technical articles and product notes remain available from the knowledge base.</p>
-            <a class="button secondary" href="https://kbase.zettascale.tech/" rel="noreferrer">
-              Knowledge database
-            </a>
-          </article>
-          <article class="ordering-card">
-            <h2>Account access</h2>
-            <p>Download permissions can be managed through the customer account associated with the product.</p>
-          </article>
-        </div>
+        <form class="download-form" action="download-evaluation.html" method="get" data-evaluation-form>
+          <h2>Zetta OpenspliceDDS Evaluation Request</h2>
+
+          <div class="form-grid">
+            <label>
+              <span>First Name</span>
+              <input name="first_name" type="text" autocomplete="given-name" required>
+            </label>
+
+            <label>
+              <span>Last Name</span>
+              <input name="last_name" type="text" autocomplete="family-name" required>
+            </label>
+
+            <label>
+              <span>Email Address</span>
+              <input name="email" type="email" autocomplete="email" required>
+            </label>
+
+            <label>
+              <span>Company Name</span>
+              <input name="company" type="text" autocomplete="organization" required>
+            </label>
+
+            <label>
+              <span>Job Title</span>
+              <input name="job_title" type="text" autocomplete="organization-title" required>
+            </label>
+
+            <label>
+              <span>Phone Number</span>
+              <input name="phone" type="tel" autocomplete="tel" required>
+            </label>
+
+            <label>
+              <span>Country</span>
+              <input name="country" type="text" autocomplete="country-name" required>
+            </label>
+
+            <label>
+              <span>State</span>
+              <input name="state" type="text" autocomplete="address-level1">
+            </label>
+
+            <label>
+              <span>Inquiry Type</span>
+              <select name="inquiry_type" required>
+                <option value="">Select an inquiry type</option>
+                <option>Learn how Zetta OpenspliceDDS can create value for my use case</option>
+                <option>Speak to a Zetta OpenspliceDDS expert</option>
+                <option>Download Software</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Project Timeline</span>
+              <select name="project_timeline" required>
+                <option value="">Select a timeline</option>
+                <option>Immediately</option>
+                <option>Within 3 months</option>
+                <option>Within 6 months</option>
+                <option>Within 12 months</option>
+                <option>More than 12 months</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="form-field-full">
+            <span>Comment</span>
+            <textarea name="comment" rows="5"></textarea>
+          </label>
+
+          <input name="register_date" type="hidden" data-register-date>
+          <input name="utm_source" type="hidden">
+          <input name="utm_campaign" type="hidden">
+          <input name="utm_medium" type="hidden">
+          <input name="utm_keyword" type="hidden">
+
+          <label class="checkbox-field">
+            <input name="privacy_consent" type="checkbox" required>
+            <span>We respect your privacy and will only use your information to process this evaluation request.</span>
+          </label>
+
+          <label class="checkbox-field">
+            <input name="publications_opt_in" type="checkbox">
+            <span>I would like to receive the latest industrial publications from ZettaScale.</span>
+          </label>
+
+          <button class="button primary" type="submit">Download</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
       </section>
     </main>
 
