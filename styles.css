@@ -83,16 +83,32 @@ a {
   min-width: 220px;
 }
 
+.header-branding {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.zettascale-brand {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  text-decoration: none;
+}
+
+.zettascale-brand img {
+  width: clamp(112px, 12vw, 160px);
+  height: 42px;
+  object-fit: contain;
+}
+
 .brand-logo {
   width: 42px;
   height: 42px;
   flex: 0 0 auto;
   border-radius: 8px;
   object-fit: contain;
-}
-
-.zettascale-logo {
-  background: #ffffff;
 }
 
 .brand strong,
@@ -827,6 +843,14 @@ h3 {
 }
 
 @media (max-width: 700px) {
+  .header-branding {
+    width: 100%;
+  }
+
+  .zettascale-brand img {
+    width: 118px;
+  }
+
   .brand {
     min-width: 0;
   }
