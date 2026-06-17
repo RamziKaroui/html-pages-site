@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Webcasts | Opensplice DDS</title>
+    <meta name="description" content="Webcasts and video topics for Opensplice DDS.">
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("theme") ||
+        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Opensplice DDS home">
+        <img class="brand-logo" src="assets/OpenspliceNewLogo2026.png" alt="" width="42" height="42">
+        <span>
+          <strong>Opensplice DDS</strong>
+          <small>Webcasts</small>
+        </span>
+      </a>
+      <div class="header-actions">
+        <nav class="nav" aria-label="Product menu">
+          <a href="product-offering.html">Product Offering</a>
+          <a href="white-papers.html">White papers</a>
+          <a href="download-product.html">Download product</a>
+          <a href="support.html">Support</a>
+          <a href="webcasts.html" aria-current="page">Webcasts</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Switch color mode">Light</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="page-title">
+        <p class="eyebrow">Video library</p>
+        <h1 id="page-title">Webcasts</h1>
+        <p class="lede">
+          Webcast topics for DDS fundamentals, QoS mastery, security, data modeling,
+          industrial internet systems, and resource-constrained environments.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="document-grid">
+          <article class="document-card">
+            <span>Fundamentals</span>
+            <h2>DDS in Action</h2>
+            <p>Introductory material showing DDS behavior in practical distributed systems.</p>
+          </article>
+          <article class="document-card">
+            <span>QoS</span>
+            <h2>Mastering DDS Quality of Service</h2>
+            <p>How QoS policies shape delivery, reliability, timing, and resource behavior.</p>
+          </article>
+          <article class="document-card">
+            <span>Security</span>
+            <h2>DDS Security</h2>
+            <p>Authentication, authorization, confidentiality, and integrity in DDS deployments.</p>
+          </article>
+          <article class="document-card">
+            <span>Modeling</span>
+            <h2>The Art and Science of DDS Data Modeling</h2>
+            <p>Data model design for evolvable and type-safe distributed applications.</p>
+          </article>
+          <article class="document-card">
+            <span>IoT</span>
+            <h2>Industrial Internet Systems</h2>
+            <p>Applying DDS to industrial connectivity, edge systems, and distributed automation.</p>
+          </article>
+          <article class="document-card">
+            <span>Embedded</span>
+            <h2>Resource-Constrained Environments</h2>
+            <p>Using DDS where memory, CPU, and bandwidth budgets are tightly controlled.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <nav class="footer-menu" aria-label="Bottom product menu">
+        <a href="product-offering.html">Product Offering</a>
+        <a href="white-papers.html">White papers</a>
+        <a href="download-product.html">Download product</a>
+        <a href="support.html">Support</a>
+        <a href="webcasts.html" aria-current="page">Webcasts</a>
+      </nav>
+      <p>Opensplice DDS webcasts.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product Offering | Opensplice DDS</title>
+    <meta name="description" content="Product offering for Opensplice DDS.">
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("theme") ||
+        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Opensplice DDS home">
+        <img class="brand-logo" src="assets/OpenspliceNewLogo2026.png" alt="" width="42" height="42">
+        <span>
+          <strong>Opensplice DDS</strong>
+          <small>Product offering</small>
+        </span>
+      </a>
+      <div class="header-actions">
+        <nav class="nav" aria-label="Product menu">
+          <a href="product-offering.html" aria-current="page">Product Offering</a>
+          <a href="white-papers.html">White papers</a>
+          <a href="download-product.html">Download product</a>
+          <a href="support.html">Support</a>
+          <a href="webcasts.html">Webcasts</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Switch color mode">Light</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="page-title">
+        <p class="eyebrow">Commercial software</p>
+        <h1 id="page-title">Product Offering</h1>
+        <p class="lede">
+          Opensplice DDS combines DDS middleware, tooling, services, support, and
+          deployment options for enterprise, embedded, and real-time systems.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="feature-grid">
+          <article class="feature">
+            <h2>DDS Core</h2>
+            <p>Data-centric publish and subscribe middleware with DDSI/RTPS interoperability.</p>
+          </article>
+          <article class="feature">
+            <h2>Tools</h2>
+            <p>Development and operational tooling for testing, tuning, configuration, and runtime visibility.</p>
+          </article>
+          <article class="feature">
+            <h2>Services</h2>
+            <p>Commercial support, security, durability, record and replay, and deployment guidance.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <nav class="footer-menu" aria-label="Bottom product menu">
+        <a href="product-offering.html" aria-current="page">Product Offering</a>
+        <a href="white-papers.html">White papers</a>
+        <a href="download-product.html">Download product</a>
+        <a href="support.html">Support</a>
+        <a href="webcasts.html">Webcasts</a>
+      </nav>
+      <p>Opensplice DDS product offering.</p>
+    </footer>
+  </body>
+</html>

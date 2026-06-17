@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>White Papers | Opensplice DDS</title>
+    <meta name="description" content="White papers and technical papers for Opensplice DDS.">
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("theme") ||
+        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Opensplice DDS home">
+        <img class="brand-logo" src="assets/OpenspliceNewLogo2026.png" alt="" width="42" height="42">
+        <span>
+          <strong>Opensplice DDS</strong>
+          <small>White papers</small>
+        </span>
+      </a>
+      <div class="header-actions">
+        <nav class="nav" aria-label="Product menu">
+          <a href="product-offering.html">Product Offering</a>
+          <a href="white-papers.html" aria-current="page">White papers</a>
+          <a href="download-product.html">Download product</a>
+          <a href="support.html">Support</a>
+          <a href="webcasts.html">Webcasts</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Switch color mode">Light</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="page-title">
+        <p class="eyebrow">Technical library</p>
+        <h1 id="page-title">White Papers</h1>
+        <p class="lede">
+          Focused papers for architecture, platform integration, language bindings,
+          performance, and professional services around Opensplice DDS.
+        </p>
+      </section>
+
+      <section class="section" aria-label="White paper list">
+        <div class="document-grid">
+          <article class="document-card">
+            <span>Architecture</span>
+            <h2>Opensplice DDS Architecture</h2>
+            <p>Deployment modes, federation, shared memory, and network scheduling patterns.</p>
+          </article>
+          <article class="document-card">
+            <span>Core</span>
+            <h2>Core DDS and DDSI</h2>
+            <p>Core data-centric publish and subscribe behavior with interoperable wire protocol support.</p>
+          </article>
+          <article class="document-card">
+            <span>Performance</span>
+            <h2>Performance and Footprint Characteristics</h2>
+            <p>Guidance for throughput, latency, resource usage, and embedded deployment constraints.</p>
+          </article>
+          <article class="document-card">
+            <span>Integration</span>
+            <h2>MATLAB and Simulink Integration</h2>
+            <p>Connecting simulation and design workflows to real-time DDS data spaces.</p>
+          </article>
+          <article class="document-card">
+            <span>Integration</span>
+            <h2>LabVIEW Software DDS Binding</h2>
+            <p>Using DDS bindings from LabVIEW environments for distributed data exchange.</p>
+          </article>
+          <article class="document-card">
+            <span>API</span>
+            <h2>Python DDS Binding</h2>
+            <p>Using Python applications to produce, consume, and inspect DDS data.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <nav class="footer-menu" aria-label="Bottom product menu">
+        <a href="product-offering.html">Product Offering</a>
+        <a href="white-papers.html" aria-current="page">White papers</a>
+        <a href="download-product.html">Download product</a>
+        <a href="support.html">Support</a>
+        <a href="webcasts.html">Webcasts</a>
+      </nav>
+      <p>Opensplice DDS technical resources.</p>
+    </footer>
+  </body>
+</html>

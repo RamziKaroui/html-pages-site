@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Support | Opensplice DDS</title>
+    <meta name="description" content="Support options for Opensplice DDS.">
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("theme") ||
+        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Opensplice DDS home">
+        <img class="brand-logo" src="assets/OpenspliceNewLogo2026.png" alt="" width="42" height="42">
+        <span>
+          <strong>Opensplice DDS</strong>
+          <small>Support</small>
+        </span>
+      </a>
+      <div class="header-actions">
+        <nav class="nav" aria-label="Product menu">
+          <a href="product-offering.html">Product Offering</a>
+          <a href="white-papers.html">White papers</a>
+          <a href="download-product.html">Download product</a>
+          <a href="support.html" aria-current="page">Support</a>
+          <a href="webcasts.html">Webcasts</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Switch color mode">Light</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="page-title">
+        <p class="eyebrow">Customer success</p>
+        <h1 id="page-title">Support</h1>
+        <p class="lede">
+          Support paths for production incidents, platform questions, technical services,
+          training, and long-term maintenance planning.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="support-layout">
+          <form class="support-form" action="#" method="post" data-static-login>
+            <h2>Customer Login</h2>
+            <label for="support-email">Email</label>
+            <input id="support-email" name="email" type="email" autocomplete="email" required>
+
+            <label for="support-password">Password</label>
+            <input
+              id="support-password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+            >
+
+            <button class="button primary" type="submit">Login</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="support-contact">
+            <p class="eyebrow">Technical assistance</p>
+            <h2>Contact support by email</h2>
+            <p>
+              Open a support email with your preferred email application and include
+              platform, version, license, and reproduction details.
+            </p>
+            <a
+              class="button secondary"
+              href="mailto:techsupport@zettascale.tech?subject=Opensplice%20DDS%20Support%20Request"
+            >
+              Contact Support
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <nav class="footer-menu" aria-label="Bottom product menu">
+        <a href="product-offering.html">Product Offering</a>
+        <a href="white-papers.html">White papers</a>
+        <a href="download-product.html">Download product</a>
+        <a href="support.html" aria-current="page">Support</a>
+        <a href="webcasts.html">Webcasts</a>
+      </nav>
+      <p>Opensplice DDS support.</p>
+    </footer>
+  </body>
+</html>

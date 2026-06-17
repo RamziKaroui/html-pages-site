@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Opensplice DDS | Local Brief</title>
+    <meta
+      name="description"
+      content="A local, structured brief for ZettaScale Opensplice DDS."
+    >
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("theme") ||
+        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Opensplice DDS local brief home">
+        <img
+          class="brand-logo"
+          src="assets/OpenspliceNewLogo2026.png"
+          alt=""
+          width="42"
+          height="42"
+        >
+        <span>
+          <strong>Opensplice DDS</strong>
+          <small>Local product brief</small>
+        </span>
+      </a>
+      <div class="header-actions">
+        <nav class="nav" aria-label="Product menu">
+          <a href="product-offering.html">Product Offering</a>
+          <a href="white-papers.html">White papers</a>
+          <a href="download-product.html">Download product</a>
+          <a href="support.html">Support</a>
+          <a href="webcasts.html">Webcasts</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Switch color mode">
+          Light
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">
+            The Reference OMG Data-centric middleware for distributed, real-time,
+            fault-tolerant and secure systems.
+          </h1>
+          <p class="lede">
+            Opensplice DDS is ZettaScale's DDS implementation for enterprise platforms,
+            embedded devices, and real-time operating environments. This local page
+            organizes product information into a concise technical brief.
+          </p>
+        </div>
+        <img
+          class="hero-main-logo"
+          src="assets/OpenspliceNewLogo2026.png"
+          alt="Opensplice DDS logo"
+          width="314"
+          height="304"
+        >
+      </section>
+
+      <section class="section wallet-section" aria-labelledby="wallet-title">
+        <div class="section-heading">
+          <p class="eyebrow">Product sections</p>
+          <h2 id="wallet-title">Select a section</h2>
+        </div>
+        <div class="wallet-grid" role="tablist" aria-label="Home section selector">
+          <button class="wallet-card is-active" type="button" data-wallet-target="overview-panel" role="tab" aria-selected="true">
+            <span>01</span>
+            <strong>Overview</strong>
+          </button>
+          <button class="wallet-card" type="button" data-wallet-target="benefits-panel" role="tab" aria-selected="false">
+            <span>02</span>
+            <strong>Benefits</strong>
+          </button>
+          <button class="wallet-card" type="button" data-wallet-target="architecture-panel" role="tab" aria-selected="false">
+            <span>03</span>
+            <strong>Architecture</strong>
+          </button>
+        </div>
+
+        <div class="wallet-content" data-wallet-content>
+          <article class="wallet-panel is-active" id="overview-panel" role="tabpanel">
+            <div>
+              <p class="eyebrow">Overview</p>
+              <h3>ZettaScale OpenSplice overview</h3>
+              <p>
+                ZettaScale OpenSplice enables data to be shared and integrated across
+                a wide spectrum of operating systems and platforms. It provides a full
+                implementation of both the OMG DDS latest rev1.4 (DCPS profiles) and
+                the OMG-DDSI / RTPS v2.4 interoperable wire-protocol standards. It is
+                targeted for use with server-class (desktops, racks etc.) platforms as
+                well as more specialized real-time embedded environments and operating
+                systems (e.g. single board computer running VxWorks). Opensplice DDS
+                is fully interoperable with Cyclone DDS, Zetta DDS and any OMG
+                compliant implementation.
+              </p>
+            </div>
+            <img src="assets/OpenspliceNewLogo2026.png" alt="" width="157" height="152">
+          </article>
+          <article class="wallet-panel architecture-panel" id="architecture-panel" role="tabpanel" hidden>
+            <div class="architecture-copy">
+              <p class="eyebrow">Architecture</p>
+              <p>
+                In wide distributed systems the Network and the CPUs (Central Processing
+                Units) are considered the most critical resources. As such, they are
+                deemed the main bottleneck of the overall system performance.
+              </p>
+              <p>
+                In Real-time systems, CPUs orchestration and scheduling are controlled by
+                the Operation System scheduler who has very limited capabilities to
+                control the Network, neither the Computer's Network Interface Cards nor
+                the Network Routers in use. This lack of network scheduling is problematic
+                when you need to prioritize the data flows.
+              </p>
+              <p>
+                To take advantage of multicore computing architectures and to address the
+                lack of network scheduling that can manage the data at the DDS level based
+                on its Urgency and Importance, it is crucial to come up with a DDS
+                architecture that can Federate all the applications running on the same
+                computing unit and orchestrate their data dissemination based on their
+                Quality of Services (QoS).
+              </p>
+              <p>
+                Associating QoS to data enables the DDS infrastructure to pre-empt the
+                low-priority traffic in favor of the one with the highest-priority and the
+                most urgent. On the other hand, when there is little processing to
+                factorize and federate, the classical way to implement DDS as a set of
+                libraries you link your application code within a Single Process mode can
+                be good enough.
+              </p>
+              <p>
+                The Single process architecture mode is typically recommended when only a
+                singleton application is running on a given computer.
+              </p>
+              <p>
+                The Opensplice DDS architecture can operate and get deployed in two,
+                fully interoperable, modes:
+              </p>
+              <ul>
+                <li>In a Federated mode, for complex architectures where each computer hosts several DDS aware applications.</li>
+                <li>In a library based Standalone, single process mode, when, typically, only one application is using DDS and there is nothing to federate or orchestrate.</li>
+              </ul>
+              <figure class="architecture-figure">
+                <img
+                  src="assets/deployment.jpg"
+                  alt="opensplice_deployment"
+                >
+                <figcaption>Opensplice DDS Deployment Modes</figcaption>
+              </figure>
+              <h3>Federated Architecture with Shared Memory and Network Scheduling</h3>
+              <p>
+                To rationalize the memory resources when several DDS aware applications
+                are running on the same node, Opensplice DDS architecture can support
+                shared memory to minimize the need to keep the data in the address space
+                of each application. The shared memory segment is common to all the local
+                DDS applications; it can be seen as an in-memory real-time database that
+                can be queried using SQL (Structured Query Language). The Federated
+                architecture with shared memory option has also the advantage to have an
+                ultra-low latency inter-core communication.
+              </p>
+              <p>
+                When configuring Opensplice DDS for the Federated deployment
+                architecture, data is physically stored only once on a machine's
+                federation. A smart administration still provides each subscriber within
+                the federation with his own private 'view' on the data space. This allows
+                a reader's data cache to be perceived as an individual 'database' that can
+                be content-filtered, queried, etc.
+              </p>
+              <p>
+                Opensplice DDS also has a unique architecture in the market that offers
+                a DDS Network Scheduler in order to:
+              </p>
+              <ul>
+                <li>Organize and Classify the data based on its Importance and Urgency, and creates network channels for each urgent and important data stream class. These channels are called to priority lanes.</li>
+                <li>Pre-empt the less urgent data streams and allocate the network bandwidth to the highest priority, most up-to-date, and most urgent data stream, as it is defined in the QoS attached to each data stream.</li>
+                <li>Perform traffic shaping to adapt the amount of data to be sent on the network with the network bandwidth available.</li>
+                <li>Confine the data to the subnetworks where it is actually used when the system is logically and physically partitioned.</li>
+              </ul>
+              <figure class="architecture-figure">
+                <img
+                  src="assets/PriorityLanesInOSPL.jpg"
+                  alt="mode"
+                >
+                <figcaption>Opensplice DDS Network Scheduler and its Network priority Lanes</figcaption>
+              </figure>
+              <p>
+                The DDS Network Scheduler allows you to have maximal nodal scalability. It
+                can be configured to appear as the unique proxy of all the local
+                applications on the network. The system scalability is, therefore,
+                depending on the number of machines rather than being correlated to the
+                number of DDS participant applications, as it is the case with the
+                classical Single Process mode.
+              </p>
+              <p>
+                The Network Scheduler; creates as many network priority lanes as needed
+                and helps you to enforce message priority even on non-priority-preserving
+                transports, such as the TCP/IP or UDP/IP.
+              </p>
+              <p>
+                The DDS Global data space as well as the applications that produce them
+                can be organized in logical groups known as DDS partitions. The
+                Non-Opensplice DDS implementations use the same multicast address to spread
+                the data everywhere and rely on the DDSi protocol stack to discard the
+                unwanted data on a given node.
+              </p>
+              <p>
+                For instance, if your system is organized in four geographical partitions,
+                North, South, East, and West, and you are building an air
+                surveillance-like system, each region needs to have a sub-system to detect
+                intrusions and need to react locally and immediately.
+              </p>
+              <p>
+                When a Radar of given geographical region detects and publishes the
+                position of a given track in the air, you don't want that data to get
+                spread over the entire network and waste you critical network bandwidth
+                and resources and consume unnecessarily CPUs time when the subscribing
+                application that is responding to the threat is in the same region as the
+                publisher.
+              </p>
+              <p>
+                Opensplice DDS Network Scheduler allows you to associate different
+                multicast and unicast addresses to the same DDS logical partition to
+                confine, physically, the traffic to the subnetwork where there is real
+                interest in the produced data.
+              </p>
+              <p>
+                The federated architecture with shared memory results in an extremely low
+                footprint, excellent scalability, and optimal performance when compared to
+                other DDS implementations where each reader and writer are seen as a
+                'communication-endpoints' each one with their own storage.
+              </p>
+              <h3>Simple Standalone/Single Process Architecture</h3>
+              <p>
+                This deployment allows the DDS applications and Opensplice DDS
+                middleware libraries to be simply linked together into a single process.
+              </p>
+              <p>
+                One of the advantages of this deployment option is that; there is no need
+                to pre-configure a shared memory segment as dynamic heap memory is
+                utilized by the process. Along with the 'zero-configuration', there is no
+                need to start up the federation's services as all functionality is bundled
+                within the application process. The middleware, the data and the
+                application lifecycles are tied together.
+              </p>
+              <p>
+                This kind of simple deployment can suffice when you have one DDS aware
+                application per machine and when there is nothing to federate. It can be
+                particularly useful for embedded platforms.
+              </p>
+            </div>
+          </article>
+          <article class="wallet-panel" id="benefits-panel" role="tabpanel" hidden>
+            <div>
+              <p class="eyebrow">Benefits</p>
+              <p>
+                Opensplice DDS sets itself apart from other types of messaging or
+                data sharing technology due to both its advanced features and the
+                non-functional properties it brings to a system. These properties
+                include:
+              </p>
+              <ul>
+                <li>Data Centric - enabling applications to be designed around an extensible and evolvable data model, promoting end-to-end type safety and time and space efficiency. In addition, data-centricity promotes time and space de-coupling leading to systems that are easier to integrate, evolve and reuse.</li>
+                <li>Real-time - the right information is delivered to the right place at the right time, all the time. Failure to deliver key information within the required deadlines can lead to life, mission or business threatening situations.</li>
+                <li>Dependable - ensuring availability, reliability, safety and integrity in spite of hardware and software failures.</li>
+                <li>Secure - provides the ability to maintain confidentiality, integrity and authenticity of exchanged data.</li>
+              </ul>
+              <p>The Opensplice DDS Commercial edition adds with the following benefits:</p>
+              <p>Increased productivity through a powerful tool such as :</p>
+              <ul>
+                <li>the Tuner tool,</li>
+                <li>the Tester tool,</li>
+                <li>the Configurator</li>
+                <li>the Record and Replay Manager tools.</li>
+                <li>the Launcher,</li>
+                <li>the shared memory monitor</li>
+              </ul>
+              <p>
+                Scalable Durability Service that supports disconnections, and
+                automatic alignment policies to guarantee the Eventually consistent
+                model of all the non-volatile data sets within the DDS domain.
+              </p>
+              <p>
+                Better performance, determinism and scalability, through the use of
+                unique architectural patterns such as
+              </p>
+              <ul>
+                <li>the network scheduling,</li>
+                <li>the shared memory,</li>
+                <li>the traffic shaping,</li>
+                <li>the data partitioning, and</li>
+                <li>the priority lanes patterns.</li>
+              </ul>
+              <p>Extra communication paradigms such as</p>
+              <ul>
+                <li>the RMI (Remote Method Invocation) and</li>
+                <li>the Stream APIs.</li>
+              </ul>
+              <p>
+                Extra Connectivity, enabling data to be shared and integrated across a
+                wide spectrum of technologies, including:
+              </p>
+              <ul>
+                <li>web technologies,</li>
+                <li>databases and</li>
+                <li>simulation and modulization environments.</li>
+              </ul>
+              <p>A Complete Professional Service offering that includes:</p>
+              <ul>
+                <li>Consulting,</li>
+                <li>Training,</li>
+                <li>Technical support with different levels of committed Service Level Agreements.</li>
+              </ul>
+              <p>
+                Longevity support. Once your product is deployed with Opensplice DDS,
+                you may wish to only support the given version in-use rather than the
+                most up-to-date. In that case you can get support on a frozen product
+                version and take only updates you really need.
+              </p>
+              <p>Wide range of Enterprise and Embedded platform support including:</p>
+              <ul>
+                <li>Linux</li>
+                <li>Windows</li>
+                <li>VxWorks</li>
+                <li>PikeOS, any many others on-demand</li>
+              </ul>
+            </div>
+            <img src="assets/OpenspliceNewLogo2026.png" alt="" width="157" height="152">
+          </article>
+        </div>
+      </section>
+
+      <section id="related-technologies" class="section resources" aria-labelledby="related-technologies-title">
+        <div class="section-heading">
+          <p class="eyebrow">Related Technologies</p>
+          <h2 id="related-technologies-title">Related Technologies</h2>
+        </div>
+        <div class="resource-grid">
+          <button class="resource-button" type="button">Zenoh</button>
+          <button class="resource-button" type="button">ZettaDDS</button>
+          <button class="resource-button" type="button">CycloneDDS</button>
+        </div>
+      </section>
+
+      <section class="section customer-wallet" aria-labelledby="customers-title">
+        <div class="section-heading">
+          <p class="eyebrow">Customers</p>
+          <h2 id="customers-title">Check Out Who's Using Opensplice DDS</h2>
+        </div>
+        <div class="customer-logo-viewport" data-logo-carousel aria-label="Customer logos">
+          <div class="customer-logo-track">
+            <div class="customer-logo-card">
+              <img src="customerlogos/Airbus-Logo-1986.png" alt="Airbus" loading="lazy">
+            </div>
+            <div class="customer-logo-card">
+              <img src="customerlogos/Boeing-Logo-PNG-Picture.png" alt="Boeing" loading="lazy">
+            </div>
+            <div class="customer-logo-card">
+              <img src="customerlogos/FNHerstal.jpg" alt="FN Herstal" loading="lazy">
+            </div>
+            <div class="customer-logo-card">
+              <img src="customerlogos/NATO-Logo.jpg" alt="NATO" loading="lazy">
+            </div>
+            <div class="customer-logo-card">
+              <img src="customerlogos/OIP.webp" alt="Customer logo" loading="lazy">
+            </div>
+            <div class="customer-logo-card">
+              <img src="customerlogos/Tata.jpg" alt="Tata" loading="lazy">
+            </div>
+            <div class="customer-logo-card">
+              <img src="customerlogos/kmwnexter-defense-systems-knds5028.logowik.com.webp" alt="KNDS" loading="lazy">
+            </div>
+            <div class="customer-logo-card">
+              <img src="customerlogos/logo-sogitec.png" alt="Sogitec" loading="lazy">
+            </div>
+            <div class="customer-logo-card">
+              <img src="customerlogos/png-transparent-bae-systems-hd-logo.png" alt="BAE Systems" loading="lazy">
+            </div>
+            <div class="customer-logo-card">
+              <img src="customerlogos/thales-group7366.jpg" alt="Thales" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <nav class="footer-menu" aria-label="Bottom product menu">
+        <a href="product-offering.html">Product Offering</a>
+        <a href="white-papers.html">White papers</a>
+        <a href="download-product.html">Download product</a>
+        <a href="support.html">Support</a>
+        <a href="webcasts.html">Webcasts</a>
+      </nav>
+      <p>
+        Local product brief for Opensplice DDS. Follow the resource links for current
+        support and ordering details.
+      </p>
+    </footer>
+  </body>
+</html>
