@@ -299,6 +299,29 @@ h3 {
   color: var(--accent);
 }
 
+.back-link {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 28px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--ink);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  border-color: var(--sky);
+  background: var(--sky-soft);
+  color: var(--accent);
+}
+
 .section {
   padding: clamp(62px, 8vw, 108px) clamp(18px, 6vw, 88px);
 }
@@ -387,54 +410,71 @@ h3 {
 .wallet-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 0;
   margin-bottom: 22px;
 }
 
 .wallet-card {
   display: grid;
-  min-height: 150px;
-  align-content: end;
-  gap: 12px;
-  padding: 24px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--card);
+  position: relative;
+  min-height: 112px;
+  align-content: center;
+  justify-content: center;
+  margin-left: -20px;
+  padding: 22px 36px 22px 52px;
+  border: 0;
+  background: var(--line);
+  clip-path: polygon(0 0, calc(100% - 34px) 0, 100% 50%, calc(100% - 34px) 100%, 0 100%, 34px 50%);
   color: var(--ink);
   cursor: pointer;
   font: inherit;
-  text-align: left;
+  isolation: isolate;
+  text-align: center;
   transition:
     background-color 160ms ease,
-    border-color 160ms ease,
     color 160ms ease,
     transform 160ms ease;
 }
 
-.wallet-card span {
-  color: var(--accent);
-  font-size: 0.82rem;
-  font-weight: 900;
+.wallet-card:first-child {
+  margin-left: 0;
+  padding-left: 34px;
+  clip-path: polygon(0 0, calc(100% - 34px) 0, 100% 50%, calc(100% - 34px) 100%, 0 100%);
+}
+
+.wallet-card::before {
+  position: absolute;
+  inset: 1px;
+  z-index: 0;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--sky-soft) 35%, var(--card)), var(--card));
+  clip-path: inherit;
+  content: "";
+  transition:
+    background-color 160ms ease,
+    background 160ms ease;
 }
 
 .wallet-card strong {
-  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  position: relative;
+  z-index: 1;
+  font-size: clamp(1.08rem, 1.5vw, 1.35rem);
   line-height: 1.05;
 }
 
 .wallet-card:hover,
 .wallet-card:focus-visible,
 .wallet-card.is-active {
-  border-color: var(--accent);
   background: var(--accent-dark);
   color: #ffffff;
   transform: translateY(-2px);
 }
 
-.wallet-card:hover span,
-.wallet-card:focus-visible span,
-.wallet-card.is-active span {
-  color: var(--sky);
+.wallet-card:hover::before,
+.wallet-card:focus-visible::before,
+.wallet-card.is-active::before {
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--accent-dark) 92%, var(--sky)), var(--accent));
 }
 
 .wallet-content {
@@ -556,6 +596,21 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--card);
+}
+
+.wallet-panel .overview-product-image,
+.tool-detail img {
+  cursor: zoom-in;
+  position: relative;
+  z-index: 1;
+  transform-origin: center;
+  transition: transform 120ms ease;
+}
+
+.wallet-panel .overview-product-image:active,
+.tool-detail img:active {
+  z-index: 5;
+  transform: scale(1.6);
 }
 
 .feature-grid {
@@ -741,7 +796,7 @@ h3 {
 
 .support-layout {
   display: grid;
-  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
   align-items: stretch;
 }
@@ -759,17 +814,38 @@ h3 {
   gap: 12px;
 }
 
-.support-form h2,
-.support-contact h2 {
-  margin: 0 0 12px;
-  font-size: clamp(1.4rem, 2vw, 1.8rem);
+.download-form {
+  display: grid;
+  gap: 18px;
+  max-width: 1080px;
+  padding: clamp(24px, 5vw, 42px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--card);
 }
 
-.support-form label {
+.download-form h2 {
+  margin-bottom: 4px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.download-form label,
+.form-field-full,
+.checkbox-field {
+  display: grid;
+  gap: 8px;
   color: var(--ink);
-  font-weight: 800;
+  font-weight: 400;
 }
 
+.download-form input,
+.download-form select,
+.download-form textarea,
 .support-form input {
   width: 100%;
   min-height: 48px;
@@ -781,9 +857,51 @@ h3 {
   font: inherit;
 }
 
+.download-form textarea {
+  min-height: 136px;
+  padding-top: 12px;
+  resize: vertical;
+}
+
+.download-form input:focus,
+.download-form select:focus,
+.download-form textarea:focus,
 .support-form input:focus {
   border-color: var(--sky);
   outline: 3px solid rgba(20, 180, 255, 0.22);
+}
+
+.download-form .checkbox-field {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.download-form .checkbox-field input {
+  width: 18px;
+  min-width: 18px;
+  height: 18px;
+  min-height: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.download-form .checkbox-field span {
+  display: inline;
+  line-height: 1.35;
+}
+
+.support-form h2,
+.support-contact h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+}
+
+.support-form label {
+  color: var(--ink);
+  font-weight: 800;
 }
 
 .support-form .button {
@@ -806,6 +924,94 @@ h3 {
   margin: 0;
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.evaluation-section {
+  display: grid;
+  gap: 30px;
+}
+
+.download-note {
+  max-width: 980px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.guide-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.download-table-block {
+  display: grid;
+  gap: 14px;
+}
+
+.download-table-block h2 {
+  font-size: clamp(1.3rem, 2.4vw, 2rem);
+}
+
+.table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--card);
+}
+
+.download-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.download-table th,
+.download-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.download-table th {
+  background: var(--soft);
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.download-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.download-table a,
+.instructions-panel a {
+  color: var(--accent);
+  font-weight: 900;
+}
+
+.instructions-panel {
+  max-width: 980px;
+  padding: clamp(22px, 4vw, 32px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--card);
+}
+
+.instructions-panel p {
+  margin: 0 0 16px;
+  color: var(--muted);
+}
+
+.instructions-panel ol {
+  margin: 0 0 18px;
+  padding-left: 22px;
+  color: var(--muted);
+}
+
+.instructions-panel li + li {
+  margin-top: 8px;
 }
 
 .footer {
@@ -872,6 +1078,28 @@ h3 {
 
   .wallet-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .wallet-card,
+  .wallet-card:first-child {
+    min-height: 92px;
+    margin-left: 0;
+    padding: 20px 24px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    clip-path: none;
+  }
+
+  .wallet-card::before {
+    display: none;
+  }
+
+  .wallet-card:hover,
+  .wallet-card:focus-visible,
+  .wallet-card.is-active {
+    border-color: var(--accent);
+    background: var(--accent-dark);
   }
 
   .overview-panel {
@@ -938,6 +1166,7 @@ h3 {
   .feature-grid,
   .document-grid,
   .ordering-grid,
+  .form-grid,
   .benefit-list,
   .resource-grid,
   .support-layout {
