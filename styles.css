@@ -91,6 +91,10 @@ a {
   object-fit: contain;
 }
 
+.zettascale-logo {
+  background: #ffffff;
+}
+
 .brand strong,
 .brand small {
   display: block;
