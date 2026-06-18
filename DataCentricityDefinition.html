@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data Centricity | Opensplice DDS</title>
+    <meta name="description" content="Definition of Data Centricity for Opensplice DDS systems.">
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("theme") ||
+        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-branding">
+        <a class="zettascale-brand" href="https://www.zettascale.tech" aria-label="ZettaScale home">
+          <img src="ZettalogoWithText.svg" alt="ZettaScale" width="160" height="42">
+        </a>
+        <a class="brand" href="index.html#benefits-panel" aria-label="Opensplice DDS Benefits">
+          <img class="brand-logo" src="assets/OpenspliceNewLogo2026.png" alt="" width="42" height="42">
+          <span>
+            <strong>Opensplice DDS</strong>
+            <small>Data Centricity</small>
+          </span>
+        </a>
+      </div>
+      <div class="header-actions">
+        <nav class="nav" aria-label="Product menu">
+          <a href="product-offering.html">Product Offering</a>
+          <a href="white-papers.html">White papers</a>
+          <a href="download-product.html">Download product</a>
+          <a href="support.html">Support</a>
+          <a href="webcasts.html">Webcasts</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Switch color mode">Light</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="page-title">
+        <p class="eyebrow">Core concept</p>
+        <h1 id="page-title">Data Centricity</h1>
+        <p class="lede">
+          A Data-Centric System treats data as a first-class entity whose identity,
+          state, structure, relationships, and lifecycle are managed independently
+          of the applications that produce or consume it.
+        </p>
+      </section>
+
+      <section class="section">
+        <article class="definition-article">
+          <h2>Data Centricity</h2>
+          <p>
+            A Data-Centric System is a system in which data exists as a first-class
+            entity and is produced, managed, shared, and maintained independently
+            of the applications that create or consume it. Rather than focusing on
+            message exchanges between applications, a Data-Centric architecture
+            focuses on the data itself: its identity, state, structure,
+            relationships, and lifecycle.
+          </p>
+          <p>
+            In a Data-Centric architecture, data becomes the sole integration
+            contract between producers and consumers. Applications publish data
+            into a shared information space and subscribe to the data they need,
+            without requiring direct knowledge of each other. This paradigm
+            promotes a high degree of decoupling in both space and time.
+          </p>
+          <p>
+            Spatial decoupling means that data producers and consumers do not need
+            to know each other's location, network address, implementation
+            language, operating system, or even existence.
+          </p>
+          <p>
+            Temporal decoupling means that communication is inherently
+            asynchronous. Data consumers do not need to be present when data is
+            produced. The infrastructure maintains and distributes information so
+            that applications can access the latest relevant state whenever they
+            become available, including after temporary disconnections, failures,
+            or late joins.
+          </p>
+
+          <h2>Modelling the Real World</h2>
+          <p>
+            One of the greatest strengths of Data Centricity is its ability to
+            represent real-world entities as they naturally exist:
+          </p>
+          <ul>
+            <li>Each entity possesses a unique identity.</li>
+            <li>Each entity maintains a current state.</li>
+            <li>Each entity follows a well-defined lifecycle.</li>
+            <li>Each entity has a structure that can evolve over time.</li>
+          </ul>
+          <p>
+            Instead of exchanging transient messages, applications interact through
+            persistent representations of real-world objects and their states.
+          </p>
+
+          <h2>System-Wide State Awareness</h2>
+          <p>
+            A Data-Centric platform is responsible for maintaining a coherent and
+            consistent representation of the overall system state. Even in the
+            presence of component failures, network interruptions, or application
+            restarts, the infrastructure preserves and reconstructs the latest
+            known valid state.
+          </p>
+          <p>As a result:</p>
+          <ul>
+            <li>The current state of the system is always available.</li>
+            <li>New or restarted applications can immediately discover and retrieve existing state information.</li>
+            <li>Late-joining participants can become operational without requiring special synchronization procedures.</li>
+            <li>System recovery becomes significantly simpler and more deterministic.</li>
+          </ul>
+
+          <h2>Multiple Views of Information</h2>
+          <p>
+            Different applications often require different perspectives of the
+            same underlying information.
+          </p>
+          <p>
+            A Data-Centric system enables applications to create customised views,
+            projections, filters, and subsets of data without impacting the
+            producers of that information. Each application can access exactly the
+            information it requires while remaining independent of how other
+            applications consume the same data.
+          </p>
+
+          <h2>Capturing Relationships Between Data</h2>
+          <p>Data rarely exists in isolation.</p>
+          <p>
+            Data-Centricity naturally models relationships, dependencies,
+            ownership, aggregation, and associations between entities. These
+            relationships become part of the information model itself, allowing
+            applications to reason about systems in terms of connected objects
+            rather than isolated messages.
+          </p>
+          <p>
+            This capability enables the construction of rich digital
+            representations of complex systems such as:
+          </p>
+          <ul>
+            <li>Air traffic management systems</li>
+            <li>Autonomous vehicles</li>
+            <li>Industrial automation systems</li>
+            <li>Smart cities</li>
+            <li>Defense and command-and-control systems</li>
+            <li>Large-scale IoT deployments</li>
+          </ul>
+
+          <h2>Beyond State Representation</h2>
+          <p>
+            Although state management is a fundamental capability, Data-Centric
+            middleware extends far beyond simple state distribution.
+          </p>
+          <p>A Data-Centric platform can efficiently model and support:</p>
+
+          <h3>Event and Notification-Based Communication</h3>
+          <p>
+            Real-time events, alarms, notifications, and status changes can be
+            represented and distributed with predictable behavior and scalable
+            dissemination.
+          </p>
+
+          <h3>Request/Reply and Conversational Protocols</h3>
+          <p>
+            Synchronous and asynchronous service interactions can be modelled
+            using data abstractions rather than tightly coupled communication
+            endpoints, enabling efficient implementation of request/reply patterns.
+          </p>
+
+          <h3>Transactional and Consistent Data Exchange</h3>
+          <p>
+            Data-Centric systems can support lightweight transactional behavior
+            through mechanisms such as coherent sets, grouped updates, and
+            eventually consistent data models, allowing multiple related state
+            changes to be treated as a single logical operation.
+          </p>
+
+          <h3>Structured and Unstructured Information</h3>
+          <p>The information space can accommodate:</p>
+          <ul>
+            <li>Well-structured data</li>
+            <li>Semi-structured data</li>
+            <li>Unstructured data</li>
+          </ul>
+          <p>
+            This allows diverse information sources to coexist within a unified
+            architecture.
+          </p>
+
+          <h3>Message-Oriented Communication</h3>
+          <p>
+            While Data-Centricity focuses primarily on state and information
+            models, it can also efficiently support traditional message-oriented
+            communication patterns when required by specific subsystems.
+          </p>
+
+          <h2>The Data-Centric Advantage</h2>
+          <p>
+            Data-Centricity shifts the focus of distributed-system design from
+            application connectivity to information management. By elevating data
+            to the primary architectural element, organizations gain:
+          </p>
+          <ul>
+            <li>Loose coupling between applications</li>
+            <li>Greater scalability</li>
+            <li>Improved resilience and fault tolerance</li>
+            <li>Simplified system evolution</li>
+            <li>Stronger interoperability</li>
+            <li>Natural representation of real-world entities</li>
+            <li>Continuous visibility of system state</li>
+            <li>Faster integration of new applications and services</li>
+          </ul>
+          <p>
+            The result is an architecture that is inherently more adaptable,
+            maintainable, and resilient, particularly for large-scale, real-time,
+            mission-critical, and long-lived distributed systems.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <nav class="footer-menu" aria-label="Bottom product menu">
+        <a href="product-offering.html">Product Offering</a>
+        <a href="white-papers.html">White papers</a>
+        <a href="download-product.html">Download product</a>
+        <a href="support.html">Support</a>
+        <a href="webcasts.html">Webcasts</a>
+      </nav>
+      <p>Opensplice DDS data-centric middleware.</p>
+    </footer>
+  </body>
+</html>

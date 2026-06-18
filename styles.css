@@ -842,6 +842,53 @@ h3 {
   line-height: 1.25;
 }
 
+.definition-article {
+  display: grid;
+  gap: 16px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 48px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 86% 12%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 36%),
+    var(--card);
+  color: var(--muted);
+  font-size: 1.06rem;
+}
+
+.definition-article h2,
+.definition-article h3 {
+  margin: 0;
+  color: var(--ink);
+}
+
+.definition-article h2 {
+  padding-top: 12px;
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+}
+
+.definition-article h2:first-child {
+  padding-top: 0;
+}
+
+.definition-article h3 {
+  font-size: 1.12rem;
+}
+
+.definition-article p,
+.definition-article ul {
+  margin: 0;
+}
+
+.definition-article ul {
+  padding-left: 22px;
+}
+
+.definition-article li + li {
+  margin-top: 6px;
+}
+
 .resource-grid a {
   display: flex;
   min-height: 108px;
