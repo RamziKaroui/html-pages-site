@@ -155,6 +155,31 @@
   activateWalletPanelFromHash();
   window.addEventListener("hashchange", activateWalletPanelFromHash);
 
+  document.querySelectorAll("[data-benefits-workflow]").forEach((workflow) => {
+    const steps = Array.from(workflow.querySelectorAll("[data-benefit-target]"));
+    const details = Array.from(workflow.querySelectorAll(".benefit-detail"));
+
+    const activateBenefit = (targetId) => {
+      steps.forEach((step) => {
+        const isActive = step.dataset.benefitTarget === targetId;
+        step.classList.toggle("is-active", isActive);
+        step.setAttribute("aria-selected", String(isActive));
+      });
+
+      details.forEach((detail) => {
+        const isActive = detail.id === targetId;
+        detail.hidden = !isActive;
+        detail.classList.toggle("is-active", isActive);
+      });
+    };
+
+    steps.forEach((step) => {
+      step.addEventListener("click", () => {
+        activateBenefit(step.dataset.benefitTarget);
+      });
+    });
+  });
+
   document.querySelectorAll("[data-logo-carousel]").forEach((carousel) => {
     const cards = Array.from(carousel.querySelectorAll(".customer-logo-card"));
     let index = 0;
