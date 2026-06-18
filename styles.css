@@ -586,18 +586,26 @@ h3 {
 
 .benefit-detail {
   display: grid;
-  align-content: start;
-  gap: 14px;
-  min-height: 300px;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.9fr);
+  align-items: center;
+  gap: clamp(22px, 4vw, 42px);
+  min-height: 520px;
   padding: clamp(22px, 4vw, 34px);
   border: 1px solid var(--line);
   border-radius: 8px;
   background:
-    linear-gradient(135deg, color-mix(in srgb, var(--sky-soft) 32%, var(--card)), var(--card));
+    radial-gradient(circle at 78% 48%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 42%),
+    linear-gradient(135deg, color-mix(in srgb, var(--sky-soft) 32%, var(--card)), var(--card) 58%, color-mix(in srgb, #061c3b 34%, var(--card)));
 }
 
 .benefit-detail[hidden] {
   display: none;
+}
+
+.benefit-copy {
+  display: grid;
+  align-content: start;
+  gap: 14px;
 }
 
 .benefit-detail h3 {
@@ -624,6 +632,30 @@ h3 {
 .benefit-detail a {
   color: var(--accent);
   font-weight: 900;
+}
+
+.benefit-visual {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background:
+    radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 54%),
+    radial-gradient(circle at 68% 36%, color-mix(in srgb, var(--sky) 16%, transparent), transparent 42%);
+}
+
+.benefit-visual img {
+  width: 100%;
+  max-width: min(100%, 520px);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 6px;
+  filter: drop-shadow(0 24px 46px color-mix(in srgb, var(--accent-dark) 22%, transparent));
 }
 
 .overview-panel {
@@ -1235,6 +1267,20 @@ h3 {
 
   .overview-panel {
     grid-template-columns: 1fr;
+  }
+
+  .benefit-detail {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .benefit-visual {
+    width: min(100%, 420px);
+    justify-self: center;
+  }
+
+  .benefit-visual img {
+    max-width: 420px;
   }
 
   .feature-grid,
