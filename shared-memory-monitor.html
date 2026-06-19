@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tuner Tool | Opensplice DDS</title>
-    <meta name="description" content="Tuner tool overview for Opensplice DDS.">
+    <title>Shared Memory Monitoring Tool | Opensplice DDS</title>
+    <meta name="description" content="Shared memory monitoring tool overview for Opensplice DDS.">
     <script>
       document.documentElement.dataset.theme =
         localStorage.getItem("theme") ||
@@ -23,7 +23,7 @@
           <img class="brand-logo" src="assets/OpenspliceNewLogo2026.png" alt="" width="42" height="42">
           <span>
             <strong>Opensplice DDS</strong>
-            <small>Tuner tool</small>
+            <small>Shared memory monitor</small>
           </span>
         </a>
       </div>
@@ -42,7 +42,7 @@
     <main>
       <section class="page-hero" aria-labelledby="page-title">
         <p class="eyebrow">Tools</p>
-        <h1 id="page-title">Tuner Tool</h1>
+        <h1 id="page-title">Shared Memory Monitoring Tool</h1>
         <a class="back-link" href="index.html#benefits-panel" aria-label="Back to Benefits">
           &larr; Back
         </a>
@@ -50,20 +50,36 @@
 
       <section class="section tool-detail">
         <div>
-          <p>The Tuner tool , is a DDS Domain moniroting tool that allow you to</p>
+          <p>
+            Opensplice DDS provides mechanisms to monitor and analyse the shared
+            memory database used in Federated deployment mode. Effective monitoring
+            helps designers, testers and system administrators to calculate,
+            dimension and track memory consumption.
+          </p>
+          <p>
+            It helps identifying resource bottlenecks and ensures sufficient shared
+            memory remains available for DDS applications and middleware services
+            by providing real-time statistics on shared memory utilization, data
+            object allocation, and overall in-memory database health.
+          </p>
+          <h2>Key Features</h2>
           <ul>
-            <li>Tune your DDS based system changing at Runtime the changeable QoSs</li>
-            <li>Inspect on the fly all Tune DDS Entities, from DataWriters , DataReaders to Participants, Publishers and Subscribers</li>
-            <li>Detect and help resolving QoSs Mismatch</li>
-            <li>Create, Read and Write data for arbitrary topics</li>
-            <li>Inject Topic Definitions</li>
-            <li>Externalize recorded data in XML</li>
-            <li>Inspect Statics, when enabled in your configuration</li>
-            <li>Connect from everywhere, Add through SOAP /http secure connections</li>
+            <li>Monitor total, used, and available shared memory</li>
+            <li>Display current and peak memory utilization</li>
+            <li>Track memory allocation and release trends</li>
+            <li>Analyse memory growth using differential statistics</li>
+            <li>Identify object types consuming shared memory</li>
+            <li>Monitor reusable and fragmented memory</li>
+            <li>Support periodic sampling for long-term observation</li>
+            <li>Assist in database sizing and capacity planning</li>
+            <li>Detect abnormal memory growth and resource leaks</li>
+            <li>Help verify shared memory watermark thresholds</li>
+            <li>Lightweight command-line tool suitable for diagnostic monitoring</li>
+            <li>Available for Opensplice DDS Federated shared memory deployments only</li>
+            <li>Monitor process attachment and detachment events within the shared memory database</li>
           </ul>
-          <p>Tuner allows you to perform whitebox testing</p>
         </div>
-        <img src="assets/TunerPicture.png" alt="Tuner tool interface">
+        <img src="assets/mmstat++.png" alt="Shared memory monitoring tool interface">
       </section>
       <div class="page-bottom-nav">
         <a class="back-link" href="index.html#benefits-panel" aria-label="Back to Benefits">
