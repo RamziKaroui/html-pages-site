@@ -116,181 +116,147 @@
             <img class="overview-product-image" src="assets/ProductOfferingV2.PNG" alt="Opensplice DDS product offering" width="640" height="360">
           </article>
           <article class="wallet-panel architecture-panel" id="architecture-panel" role="tabpanel" hidden>
-            <div class="architecture-copy">
-              <p class="eyebrow">Architecture</p>
-              <p>
-                In wide distributed systems the Network and the CPUs (Central Processing
-                Units) are considered the most critical resources. As such, they are
-                deemed the main bottleneck of the overall system performance.
-              </p>
-              <p>
-                In Real-time systems, CPUs orchestration and scheduling are controlled by
-                the Operation System scheduler who has very limited capabilities to
-                control the Network, neither the Computer's Network Interface Cards nor
-                the Network Routers in use. This lack of network scheduling is problematic
-                when you need to prioritize the data flows.
-              </p>
-              <p>
-                To take advantage of multicore computing architectures and to address the
-                lack of network scheduling that can manage the data at the DDS level based
-                on its Urgency and Importance, it is crucial to come up with a DDS
-                architecture that can Federate all the applications running on the same
-                computing unit and orchestrate their data dissemination based on their
-                Quality of Services (QoS).
-              </p>
-              <p>
-                Associating QoS to data enables the DDS infrastructure to pre-empt the
-                low-priority traffic in favor of the one with the highest-priority and the
-                most urgent. On the other hand, when there is little processing to
-                factorize and federate, the classical way to implement DDS as a set of
-                libraries you link your application code within a Single Process mode can
-                be good enough.
-              </p>
-              <p>
-                The Single process architecture mode is typically recommended when only a
-                singleton application is running on a given computer.
-              </p>
-              <p>
-                The Opensplice DDS architecture can operate and get deployed in two,
-                fully interoperable, modes:
-              </p>
-              <ul>
-                <li>In a Federated mode, for complex architectures where each computer hosts several DDS aware applications.</li>
-                <li>In a library based Standalone, single process mode, when, typically, only one application is using DDS and there is nothing to federate or orchestrate.</li>
-              </ul>
-              <figure class="architecture-figure">
-                <img
-                  src="assets/deployment.jpg"
-                  alt="opensplice_deployment"
-                >
-                <figcaption>Opensplice DDS Deployment Modes</figcaption>
-              </figure>
-              <h3>Federated Architecture with Shared Memory and Network Scheduling</h3>
-              <p>
-                To rationalize the memory resources when several DDS aware applications
-                are running on the same node, Opensplice DDS architecture can support
-                shared memory to minimize the need to keep the data in the address space
-                of each application. The shared memory segment is common to all the local
-                DDS applications; it can be seen as an in-memory real-time database that
-                can be queried using SQL (Structured Query Language). The Federated
-                architecture with shared memory option has also the advantage to have an
-                ultra-low latency inter-core communication.
-              </p>
-              <p>
-                When configuring Opensplice DDS for the Federated deployment
-                architecture, data is physically stored only once on a machine's
-                federation. A smart administration still provides each subscriber within
-                the federation with his own private 'view' on the data space. This allows
-                a reader's data cache to be perceived as an individual 'database' that can
-                be content-filtered, queried, etc.
-              </p>
-              <p>
-                Opensplice DDS also has a unique architecture in the market that offers
-                a DDS Network Scheduler in order to:
-              </p>
-              <ul>
-                <li>Organize and Classify the data based on its Importance and Urgency, and creates network channels for each urgent and important data stream class. These channels are called to priority lanes.</li>
-                <li>Pre-empt the less urgent data streams and allocate the network bandwidth to the highest priority, most up-to-date, and most urgent data stream, as it is defined in the QoS attached to each data stream.</li>
-                <li>Perform traffic shaping to adapt the amount of data to be sent on the network with the network bandwidth available.</li>
-                <li>Confine the data to the subnetworks where it is actually used when the system is logically and physically partitioned.</li>
-              </ul>
-              <figure class="architecture-figure">
-                <img
-                  src="assets/PriorityLanesInOSPL.jpg"
-                  alt="mode"
-                >
-                <figcaption>Opensplice DDS Network Scheduler and its Network priority Lanes</figcaption>
-              </figure>
-              <p>
-                The DDS Network Scheduler allows you to have maximal nodal scalability. It
-                can be configured to appear as the unique proxy of all the local
-                applications on the network. The system scalability is, therefore,
-                depending on the number of machines rather than being correlated to the
-                number of DDS participant applications, as it is the case with the
-                classical Single Process mode.
-              </p>
-              <p>
-                The Network Scheduler; creates as many network priority lanes as needed
-                and helps you to enforce message priority even on non-priority-preserving
-                transports, such as the TCP/IP or UDP/IP.
-              </p>
-              <p>
-                The DDS Global data space as well as the applications that produce them
-                can be organized in logical groups known as DDS partitions. The
-                Non-Opensplice DDS implementations use the same multicast address to spread
-                the data everywhere and rely on the DDSi protocol stack to discard the
-                unwanted data on a given node.
-              </p>
-              <p>
-                For instance, if your system is organized in four geographical partitions,
-                North, South, East, and West, and you are building an air
-                surveillance-like system, each region needs to have a sub-system to detect
-                intrusions and need to react locally and immediately.
-              </p>
-              <p>
-                When a Radar of given geographical region detects and publishes the
-                position of a given track in the air, you don't want that data to get
-                spread over the entire network and waste you critical network bandwidth
-                and resources and consume unnecessarily CPUs time when the subscribing
-                application that is responding to the threat is in the same region as the
-                publisher.
-              </p>
-              <p>
-                Opensplice DDS Network Scheduler allows you to associate different
-                multicast and unicast addresses to the same DDS logical partition to
-                confine, physically, the traffic to the subnetwork where there is real
-                interest in the produced data.
-              </p>
-              <p>
-                The federated architecture with shared memory results in an extremely low
-                footprint, excellent scalability, and optimal performance when compared to
-                other DDS implementations where each reader and writer are seen as a
-                'communication-endpoints' each one with their own storage.
-              </p>
-              <h3>Simple Standalone/Single Process Architecture</h3>
-              <p>
-                This deployment allows the DDS applications and Opensplice DDS
-                middleware libraries to be simply linked together into a single process.
-              </p>
-              <p>
-                One of the advantages of this deployment option is that; there is no need
-                to pre-configure a shared memory segment as dynamic heap memory is
-                utilized by the process. Along with the 'zero-configuration', there is no
-                need to start up the federation's services as all functionality is bundled
-                within the application process. The middleware, the data and the
-                application lifecycles are tied together.
-              </p>
-              <p>
-                This kind of simple deployment can suffice when you have one DDS aware
-                application per machine and when there is nothing to federate. It can be
-                particularly useful for embedded platforms.
-              </p>
+            <div class="benefits-workflow architecture-workflow" data-panel-workflow>
+              <div class="benefit-step-list architecture-step-list" role="tablist" aria-label="Architecture workflow">
+                <button class="benefit-step is-active" type="button" data-panel-target="architecture-intro" role="tab" aria-selected="true">
+                  Architecture Key Elements
+                </button>
+                <button class="benefit-step" type="button" data-panel-target="architecture-federated" data-panel-href="architecture-federated-shared-memory.html" role="tab" aria-selected="false">
+                  Federated &amp; Shared Memory
+                </button>
+                <button class="benefit-step" type="button" data-panel-target="architecture-standalone" data-panel-href="architecture-standalone.html" role="tab" aria-selected="false">
+                  Standalone Mode
+                </button>
+                <button class="benefit-step" type="button" data-panel-target="architecture-scheduler" data-panel-href="architecture-network-scheduler.html" role="tab" aria-selected="false">
+                  Network Scheduler
+                </button>
+                <button class="benefit-step" type="button" data-panel-target="architecture-confinement" data-panel-href="architecture-network-traffic-confinement.html" role="tab" aria-selected="false">
+                  Traffic Confinement
+                </button>
+              </div>
+
+              <section data-panel-detail class="benefit-detail architecture-detail architecture-detail--text-only is-active" id="architecture-intro" role="tabpanel">
+                <div class="benefit-copy">
+                  <p class="eyebrow">Architecture</p>
+                  <h3>Architecture Key Elements</h3>
+                  <p>
+                    In wide distributed systems the Network and the CPUs are considered
+                    the most critical resources and are therefore the main bottleneck of
+                    overall system performance.
+                  </p>
+                  <p>
+                    Opensplice DDS addresses multicore and network orchestration by
+                    federating applications running on the same computing unit and
+                    orchestrating their data dissemination based on QoS urgency and
+                    importance.
+                  </p>
+                  <p>
+                    The architecture can operate in fully interoperable Federated and
+                    Standalone single-process modes, and both deployment styles can be
+                    mixed within the same system or even on the same machine.
+                  </p>
+                  <a class="button secondary" href="architecture-intro.html">Open full page</a>
+                </div>
+              </section>
+
+              <section data-panel-detail class="benefit-detail architecture-detail" id="architecture-federated" role="tabpanel" hidden>
+                <div class="benefit-copy">
+                  <h3>Federated Architecture and Shared Memory</h3>
+                  <p>
+                    To rationalize memory resources when several DDS-aware applications
+                    run on the same node, Opensplice DDS can use a shared memory segment
+                    common to local DDS applications.
+                  </p>
+                  <p>
+                    This shared memory segment behaves like an in-memory real-time
+                    database and provides ultra-low latency inter-core communication while
+                    keeping data physically stored only once on a machine federation.
+                  </p>
+                </div>
+                <figure class="benefit-visual architecture-visual">
+                  <img src="assets/FederatedArchitectureandSharedmemory.png" alt="Federated architecture and shared memory diagram">
+                </figure>
+              </section>
+
+              <section data-panel-detail class="benefit-detail architecture-detail" id="architecture-standalone" role="tabpanel" hidden>
+                <div class="benefit-copy">
+                  <h3>Simple Standalone/Single Process Architecture</h3>
+                  <p>
+                    This deployment allows DDS applications and Opensplice DDS middleware
+                    libraries to be linked together into a single process.
+                  </p>
+                  <p>
+                    It is useful when one DDS-aware application runs on a computer and
+                    there is nothing to federate, making it particularly suitable for
+                    embedded platforms.
+                  </p>
+                </div>
+                <figure class="benefit-visual architecture-visual">
+                  <img src="assets/StandAloneArchitecture.png" alt="Standalone architecture diagram">
+                </figure>
+              </section>
+
+              <section data-panel-detail class="benefit-detail architecture-detail" id="architecture-scheduler" role="tabpanel" hidden>
+                <div class="benefit-copy">
+                  <h3>Network Scheduler and Priority Lanes</h3>
+                  <p>
+                    The Opensplice DDS Network Scheduler can create network priority
+                    lanes for urgent and important data stream classes.
+                  </p>
+                  <p>
+                    It helps pre-empt less urgent data streams and allocate network
+                    bandwidth to the highest-priority, most up-to-date and most urgent
+                    data streams as defined by their QoS.
+                  </p>
+                </div>
+                <figure class="benefit-visual architecture-visual">
+                  <img src="assets/NetworkSchedulerAndNetworkPriorityLanes.png" alt="Network scheduler and priority lanes diagram">
+                </figure>
+              </section>
+
+              <section data-panel-detail class="benefit-detail architecture-detail" id="architecture-confinement" role="tabpanel" hidden>
+                <div class="benefit-copy">
+                  <h3>Network Traffic Confinement</h3>
+                  <p>
+                    DDS global data spaces and producing applications can be organized in
+                    logical groups known as DDS partitions.
+                  </p>
+                  <p>
+                    Opensplice DDS Network Scheduler can associate different multicast
+                    and unicast addresses to the same DDS logical partition to physically
+                    confine traffic to the subnetwork where it is actually used.
+                  </p>
+                </div>
+                <figure class="benefit-visual architecture-visual">
+                  <img src="assets/NetworkTrafficConfinment.png" alt="Network traffic confinement diagram">
+                </figure>
+              </section>
             </div>
           </article>
           <article class="wallet-panel benefits-panel" id="benefits-panel" role="tabpanel" hidden>
-            <div class="benefits-workflow" data-benefits-workflow>
+            <div class="benefits-workflow" data-panel-workflow>
               <div class="benefit-step-list" role="tablist" aria-label="Benefits workflow">
-                <button class="benefit-step is-active" type="button" data-benefit-target="benefit-data" role="tab" aria-selected="true">
+                <button class="benefit-step is-active" type="button" data-panel-target="benefit-data" role="tab" aria-selected="true">
                   DataCentricity
                 </button>
-                <button class="benefit-step" type="button" data-benefit-target="benefit-tooling" role="tab" aria-selected="false">
+                <button class="benefit-step" type="button" data-panel-target="benefit-tooling" role="tab" aria-selected="false">
                   Tools &amp; OS
                 </button>
-                <button class="benefit-step" type="button" data-benefit-target="benefit-connectors" role="tab" aria-selected="false">
+                <button class="benefit-step" type="button" data-panel-target="benefit-connectors" role="tab" aria-selected="false">
                   Connectors
                 </button>
-                <button class="benefit-step" type="button" data-benefit-target="benefit-architecture" role="tab" aria-selected="false">
+                <button class="benefit-step" type="button" data-panel-target="benefit-architecture" role="tab" aria-selected="false">
                   Architectural patterns
                 </button>
-                <button class="benefit-step" type="button" data-benefit-target="benefit-communication" role="tab" aria-selected="false">
+                <button class="benefit-step" type="button" data-panel-target="benefit-communication" role="tab" aria-selected="false">
                   Com Paradigms
                 </button>
-                <button class="benefit-step" type="button" data-benefit-target="benefit-services" role="tab" aria-selected="false">
+                <button class="benefit-step" type="button" data-panel-target="benefit-services" role="tab" aria-selected="false">
                   Services
                 </button>
               </div>
 
-              <section class="benefit-detail is-active" id="benefit-data" role="tabpanel">
+              <section data-panel-detail class="benefit-detail is-active" id="benefit-data" role="tabpanel">
                 <div class="benefit-copy">
                   <h3>DataCentricity</h3>
                   <p>
@@ -311,7 +277,7 @@
                 </figure>
               </section>
 
-              <section class="benefit-detail" id="benefit-tooling" role="tabpanel" hidden>
+              <section data-panel-detail class="benefit-detail" id="benefit-tooling" role="tabpanel" hidden>
                 <div class="benefit-copy">
                   <h3>Tooling &amp; OS Portability</h3>
                   <p>Increased productivity through powerful tools such as:</p>
@@ -336,7 +302,7 @@
                 </figure>
               </section>
 
-              <section class="benefit-detail" id="benefit-connectors" role="tabpanel" hidden>
+              <section data-panel-detail class="benefit-detail" id="benefit-connectors" role="tabpanel" hidden>
                 <div class="benefit-copy">
                   <h3>Opensplice DDS Connectors</h3>
                   <p>
@@ -354,7 +320,7 @@
                 </figure>
               </section>
 
-              <section class="benefit-detail" id="benefit-architecture" role="tabpanel" hidden>
+              <section data-panel-detail class="benefit-detail" id="benefit-architecture" role="tabpanel" hidden>
                 <div class="benefit-copy">
                   <h3>Unique Architectural Patterns for Scalability and Low-Jitter</h3>
                   <p>
@@ -379,7 +345,7 @@
                 </figure>
               </section>
 
-              <section class="benefit-detail" id="benefit-communication" role="tabpanel" hidden>
+              <section data-panel-detail class="benefit-detail" id="benefit-communication" role="tabpanel" hidden>
                 <div class="benefit-copy">
                   <h3>Extra Communication Paradigms</h3>
                   <ul>
@@ -393,7 +359,7 @@
                 </figure>
               </section>
 
-              <section class="benefit-detail" id="benefit-services" role="tabpanel" hidden>
+              <section data-panel-detail class="benefit-detail" id="benefit-services" role="tabpanel" hidden>
                 <div class="benefit-copy">
                   <h3>Professional Service Offering</h3>
                   <ul>

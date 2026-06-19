@@ -539,6 +539,20 @@ h3 {
   gap: 0;
 }
 
+.architecture-step-list {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.architecture-page-workflow {
+  padding: clamp(22px, 4vw, 42px) clamp(18px, 6vw, 88px) 0;
+}
+
+.architecture-page-workflow .benefit-step {
+  display: grid;
+  align-items: center;
+  text-decoration: none;
+}
+
 .benefit-step {
   position: relative;
   min-height: 72px;
@@ -662,6 +676,24 @@ h3 {
   object-fit: contain;
   border-radius: 6px;
   filter: drop-shadow(0 24px 46px color-mix(in srgb, var(--accent-dark) 22%, transparent));
+}
+
+.architecture-detail--text-only {
+  grid-template-columns: 1fr;
+}
+
+.architecture-detail--text-only .benefit-copy {
+  max-width: 980px;
+}
+
+.architecture-visual {
+  aspect-ratio: 16 / 9;
+}
+
+.architecture-visual img {
+  max-width: min(100%, 680px);
+  aspect-ratio: auto;
+  object-fit: contain;
 }
 
 .overview-panel {

@@ -155,13 +155,13 @@
   activateWalletPanelFromHash();
   window.addEventListener("hashchange", activateWalletPanelFromHash);
 
-  document.querySelectorAll("[data-benefits-workflow]").forEach((workflow) => {
-    const steps = Array.from(workflow.querySelectorAll("[data-benefit-target]"));
-    const details = Array.from(workflow.querySelectorAll(".benefit-detail"));
+  document.querySelectorAll("[data-panel-workflow]").forEach((workflow) => {
+    const steps = Array.from(workflow.querySelectorAll("[data-panel-target]"));
+    const details = Array.from(workflow.querySelectorAll("[data-panel-detail]"));
 
-    const activateBenefit = (targetId) => {
+    const activateWorkflowPanel = (targetId) => {
       steps.forEach((step) => {
-        const isActive = step.dataset.benefitTarget === targetId;
+        const isActive = step.dataset.panelTarget === targetId;
         step.classList.toggle("is-active", isActive);
         step.setAttribute("aria-selected", String(isActive));
       });
@@ -175,7 +175,12 @@
 
     steps.forEach((step) => {
       step.addEventListener("click", () => {
-        activateBenefit(step.dataset.benefitTarget);
+        if (step.dataset.panelHref) {
+          window.location.href = step.dataset.panelHref;
+          return;
+        }
+
+        activateWorkflowPanel(step.dataset.panelTarget);
       });
     });
   });

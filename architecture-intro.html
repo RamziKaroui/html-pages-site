@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Architecture Key Elements | Opensplice DDS</title>
+    <meta name="description" content="Architecture key elements for Opensplice DDS.">
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("theme") ||
+        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-branding">
+        <a class="zettascale-brand" href="https://www.zettascale.tech" aria-label="ZettaScale home">
+          <img src="ZettalogoWithText.svg" alt="ZettaScale" width="160" height="42">
+        </a>
+        <a class="brand" href="index.html#architecture-panel" aria-label="Opensplice DDS Architecture">
+          <img class="brand-logo" src="assets/OpenspliceNewLogo2026.png" alt="" width="42" height="42">
+          <span>
+            <strong>Opensplice DDS</strong>
+            <small>Architecture</small>
+          </span>
+        </a>
+      </div>
+      <div class="header-actions">
+        <nav class="nav" aria-label="Product menu">
+          <a href="product-offering.html">Product Offering</a>
+          <a href="white-papers.html">White papers</a>
+          <a href="download-product.html">Download product</a>
+          <a href="support.html">Support</a>
+          <a href="webcasts.html">Webcasts</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Switch color mode">Light</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="page-title">
+        <p class="eyebrow">Architecture</p>
+        <h1 id="page-title">Architecture Key Elements</h1>
+        <a class="back-link" href="index.html#architecture-panel" aria-label="Back to Architecture">
+          &larr; Back
+        </a>
+      </section>
+
+      <nav class="architecture-page-workflow" aria-label="Architecture workflow">
+        <div class="benefit-step-list architecture-step-list">
+          <a class="benefit-step is-active" href="architecture-intro.html" aria-current="page">Architecture Key Elements</a>
+          <a class="benefit-step" href="architecture-federated-shared-memory.html">Federated &amp; Shared Memory</a>
+          <a class="benefit-step" href="architecture-standalone.html">Standalone Mode</a>
+          <a class="benefit-step" href="architecture-network-scheduler.html">Network Scheduler</a>
+          <a class="benefit-step" href="architecture-network-traffic-confinement.html">Traffic Confinement</a>
+        </div>
+      </nav>
+
+      <section class="section">
+        <article class="definition-article">
+          <p>
+            In wide distributed systems the Network and the CPUs are considered
+            the most critical resources. As such, they are deemed the main
+            bottleneck of the overall system performance.
+          </p>
+          <p>
+            In real-time systems, CPU orchestration and scheduling are controlled
+            by the operating system scheduler, which has very limited ability to
+            control the network, the computer network interface cards, or the
+            network routers in use. This lack of network scheduling is
+            problematic when data flows must be prioritized.
+          </p>
+          <p>
+            To take advantage of multicore computing architectures and to address
+            network scheduling at the DDS level based on urgency and importance,
+            Opensplice DDS can federate all applications running on the same
+            computing unit and orchestrate their data dissemination based on
+            Quality of Service.
+          </p>
+          <p>
+            Associating QoS to data enables the DDS infrastructure to pre-empt
+            low-priority traffic in favor of the highest-priority and most urgent
+            traffic.
+          </p>
+          <p>
+            Opensplice DDS can operate and be deployed in two fully interoperable
+            modes:
+          </p>
+          <ul>
+            <li>Federated mode, for complex architectures where each computer hosts several DDS-aware applications.</li>
+            <li>Standalone single-process mode, when only one application uses DDS and there is nothing to federate or orchestrate.</li>
+          </ul>
+          <p>
+            Federated and Standalone deployment modes can be mixed within the
+            same system or even on the same machine.
+          </p>
+        </article>
+      </section>
+      <div class="page-bottom-nav">
+        <a class="back-link" href="index.html#architecture-panel" aria-label="Back to Architecture">
+          &larr; Back
+        </a>
+      </div>
+    </main>
+  </body>
+</html>
