@@ -50,29 +50,148 @@
         <p class="eyebrow">Commercial software</p>
         <h1 id="page-title">Product Offering</h1>
         <p class="lede">
-          Opensplice DDS combines DDS middleware, tooling, services, support, and
-          deployment options for enterprise, embedded, and real-time systems.
+          An all-inclusive offer that brings together all features, tools, services
+          and connectors - with no add-ons, no surprises, and no hidden costs.
         </p>
         <a class="back-link" href="index.html" aria-label="Back to home">
           &larr; Back
         </a>
       </section>
 
-      <section class="section">
-        <div class="feature-grid">
-          <article class="feature">
-            <h2>DDS Core</h2>
-            <p>Data-centric publish and subscribe middleware with DDSI/RTPS interoperability.</p>
+      <section class="section product-lifecycle" aria-label="DDS system lifecycle">
+        <figure class="product-lifecycle-visual">
+          <img src="assets/DDSSystemLifecycle.png" alt="DDS system lifecycle from development through long-term support">
+        </figure>
+        <div class="feature-grid product-lifecycle-grid">
+          <article class="feature product-lifecycle-phase">
+            <span>Development phase</span>
+            <p>
+              Use the right tools to check your data model, generate code, and
+              build and configure applications with the APIs for your preferred
+              programming language.
+            </p>
           </article>
-          <article class="feature">
-            <h2>Tools</h2>
-            <p>Development and operational tooling for testing, tuning, configuration, and runtime visibility.</p>
+          <article class="feature product-lifecycle-phase">
+            <span>Integration, test &amp; validation phase</span>
+            <p>
+              Use the tools and DDS services needed to integrate, tune, test,
+              and validate your complete DDS-based system.
+            </p>
           </article>
-          <article class="feature">
-            <h2>Services</h2>
-            <p>Commercial support, security, durability, record and replay, and deployment guidance.</p>
+          <article class="feature product-lifecycle-phase">
+            <span>Deployment phase</span>
+            <p>
+              Deploy optimized runtime libraries, services, and tools to run and
+              monitor your system on premises or from outside your premises.
+            </p>
+          </article>
+          <article class="feature product-lifecycle-phase">
+            <span>Long-term support phase</span>
+            <p>
+              For long-standing systems and programs, ZettaScale provides
+              continued long-term and frozen support options.
+            </p>
           </article>
         </div>
+      </section>
+      <section class="section quotation-section" aria-label="Quotation request">
+        <div class="quotation-actions">
+          <button class="button primary" type="button" data-quotation-trigger aria-controls="quotation-request" aria-expanded="false">
+            Request a quotation
+          </button>
+        </div>
+
+        <form class="download-form quotation-form" id="quotation-request" action="#" method="post" data-quotation-form hidden>
+          <h2>Zetta OpenspliceDDS Quotation Request</h2>
+
+          <div class="form-grid">
+            <label>
+              <span>First Name</span>
+              <input name="first_name" type="text" autocomplete="given-name" required>
+            </label>
+
+            <label>
+              <span>Last Name</span>
+              <input name="last_name" type="text" autocomplete="family-name" required>
+            </label>
+
+            <label>
+              <span>Email Address</span>
+              <input name="email" type="email" autocomplete="email" required>
+            </label>
+
+            <label>
+              <span>Company Name</span>
+              <input name="company" type="text" autocomplete="organization" required>
+            </label>
+
+            <label>
+              <span>Job Title</span>
+              <input name="job_title" type="text" autocomplete="organization-title" required>
+            </label>
+
+            <label>
+              <span>Phone Number</span>
+              <input name="phone" type="tel" autocomplete="tel" required>
+            </label>
+
+            <label>
+              <span>Country</span>
+              <input name="country" type="text" autocomplete="country-name" required>
+            </label>
+
+            <label>
+              <span>State</span>
+              <input name="state" type="text" autocomplete="address-level1">
+            </label>
+
+            <label>
+              <span>Project Size</span>
+              <select name="project_size" required>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+                <option selected>Undetermined</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Project Timeline</span>
+              <select name="project_timeline" required>
+                <option value="">Select a timeline</option>
+                <option>Immediately</option>
+                <option>Within 3 months</option>
+                <option>Within 6 months</option>
+                <option>Within 12 months</option>
+                <option>More than 12 months</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="form-field-full">
+            <span>Additional Information</span>
+            <textarea name="comment" rows="5"></textarea>
+          </label>
+
+          <input name="register_date" type="hidden" data-register-date>
+          <input name="utm_source" type="hidden">
+          <input name="utm_campaign" type="hidden">
+          <input name="utm_medium" type="hidden">
+          <input name="utm_keyword" type="hidden">
+
+          <label class="checkbox-field">
+            <input name="privacy_consent" type="checkbox" required>
+            <span>We respect your privacy and will only use your information to process this quotation request.</span>
+          </label>
+
+          <label class="checkbox-field">
+            <input name="publications_opt_in" type="checkbox">
+            <span>I would like to receive the latest industrial publications from ZettaScale.</span>
+          </label>
+
+          <button class="button primary" type="submit">Submit quotation request</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
       </section>
       <div class="page-bottom-nav">
         <a class="back-link" href="index.html" aria-label="Back to home">

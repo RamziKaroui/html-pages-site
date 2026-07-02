@@ -107,6 +107,86 @@
     });
   });
 
+  document.querySelectorAll("[data-quotation-form]").forEach((form) => {
+    const trigger = document.querySelector(`[data-quotation-trigger][aria-controls="${form.id}"]`);
+    const registerDate = form.querySelector("[data-register-date]");
+    const params = new URLSearchParams(window.location.search);
+    const utmFields = ["utm_source", "utm_campaign", "utm_medium", "utm_keyword"];
+
+    if (registerDate) {
+      registerDate.value = new Date().toISOString();
+    }
+
+    utmFields.forEach((field) => {
+      const input = form.querySelector(`[name="${field}"]`);
+      if (input) {
+        input.value = params.get(field) || "";
+      }
+    });
+
+    trigger?.addEventListener("click", () => {
+      form.hidden = false;
+      trigger.setAttribute("aria-expanded", "true");
+      form.scrollIntoView({ block: "start", behavior: "smooth" });
+      window.setTimeout(() => {
+        form.querySelector("input, select, textarea")?.focus();
+      }, 180);
+    });
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (!form.reportValidity()) {
+        return;
+      }
+
+      const status = form.querySelector(".form-status");
+      const data = new FormData(form);
+      const labels = {
+        first_name: "First Name",
+        last_name: "Last Name",
+        email: "Email Address",
+        company: "Company Name",
+        job_title: "Job Title",
+        phone: "Phone Number",
+        country: "Country",
+        state: "State",
+        project_size: "Project Size",
+        project_timeline: "Project Timeline",
+        comment: "Additional Information",
+        register_date: "Register Date",
+        utm_source: "utm_source",
+        utm_campaign: "utm_campaign",
+        utm_medium: "utm_medium",
+        utm_keyword: "utm_keyword",
+        privacy_consent: "Privacy Consent",
+        publications_opt_in: "Industrial Publications Opt-in",
+      };
+
+      const body = [
+        "Zetta OpenspliceDDS Quotation Request",
+        "",
+        ...Object.entries(labels).map(([name, label]) => {
+          const value = data.get(name);
+          if (name === "privacy_consent" || name === "publications_opt_in") {
+            return `${label}: ${value ? "Yes" : "No"}`;
+          }
+          return `${label}: ${value || ""}`;
+        }),
+      ].join("\n");
+
+      const mailto = new URL("mailto:Ramzi.Karoui@Zettascale.tech,Contact@Zettascale.tech");
+      mailto.searchParams.set("subject", "Zetta OpenspliceDDS Quotation Request");
+      mailto.searchParams.set("body", body);
+
+      if (status) {
+        status.textContent = "Opening your email application with a structured quotation request.";
+      }
+
+      window.location.href = mailto.toString();
+    });
+  });
+
   const walletButtons = document.querySelectorAll("[data-wallet-target]");
   const walletPanels = document.querySelectorAll(".wallet-panel");
   const walletContent = document.querySelector("[data-wallet-content]");
