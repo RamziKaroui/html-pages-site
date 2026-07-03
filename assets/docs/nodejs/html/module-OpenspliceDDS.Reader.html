@@ -1,0 +1,2583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: Reader</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: Reader</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>
+            <span class="ancestors"><a href="module-OpenspliceDDS.html">OpenspliceDDS</a>.</span>Reader<span class="signature">()</span><span class="type-signature"></span></h2>
+        
+            <div class="class-description"><p>Represents a DDS data reader.</p>
+<p>A reader may be owned by either a
+<a href="module-OpenspliceDDS.Participant.html">Participant</a> or
+<a href="module-OpenspliceDDS.Subscriber.html">Subscriber</a>.
+Using a Subscriber to create a Reader allows the reader to benefit
+from quality-of-service policies assigned the the Subscriber,
+in particular the
+<a href="module-OpenspliceDDS.QoS.html#partition">QoS.partition</a> policy.</p>
+<p>Class instances are created by the
+<a href="module-OpenspliceDDS.Participant.html#createReader">Participant.createReader()</a>
+or
+<a href="module-OpenspliceDDS.Subscriber.html#createReader">Subscriber.createReader()</a>
+methods.</p>
+<p>Note that DDS resources and memory consumed by DDS entities
+cannot be automatically reclaimed by the NodeJS engine.
+Once your application is finished with an Entity, you must
+call <a href="module-OpenspliceDDS.Entity.html#delete">delete()</a>
+to release these DDS resources.</p></div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+    <h2>Constructor</h2>
+    
+
+    
+    <h4 class="name" id="Reader"><span class="type-signature"></span>new Reader<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Internal use only. Use
+<a href="module-OpenspliceDDS.Participant.html#createReader"> Participant.createReader()</a>
+or
+<a href="module-OpenspliceDDS.Subscriber.html#createReader"> Subscriber.createReader()</a>.</p>
+</div>
+
+
+
+    <h5>Extends:</h5>
+    
+
+
+    <ul>
+        <li><a href="module-OpenspliceDDS.Entity.html">module:OpenspliceDDS.Entity</a></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="module-OpenspliceDDS.QoS.html#.readerDefault">QoS.readerDefault()</a>
+to create a QoS object for a reader</li>
+        
+            <li><a href="module-OpenspliceDDS.QoSProvider.html#getReaderQos"> QoSProvider.getReaderQos()</a> on retreiving an externaly reader
+QoS policy from a QoSProvider.</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="module-OpenspliceDDS.Entity.html">module:OpenspliceDDS.Entity</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="livelinessChangedStatus"><span class="type-signature"></span>livelinessChangedStatus<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~LivelinessChangedStatus">module:OpenspliceDDS~LivelinessChangedStatus</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>Get the <a href="module-OpenspliceDDS.html#~LivelinessChangedStatus"> LivelinessChangedStatus</a> object of the reader.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~LivelinessChangedStatus">module:OpenspliceDDS~LivelinessChangedStatus</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="qos"><span class="type-signature"></span>qos<span class="type-signature"> :<a href="module-OpenspliceDDS.QoS.html">module:OpenspliceDDS.QoS</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The existing QoS policies for the entity.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.QoS.html">module:OpenspliceDDS.QoS</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="module-OpenspliceDDS.Entity.html#qos">module:OpenspliceDDS.Entity#qos</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="requestedDeadlineMissedStatus"><span class="type-signature"></span>requestedDeadlineMissedStatus<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~RequestedDeadlineMissedStatus">module:OpenspliceDDS~RequestedDeadlineMissedStatus</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>Get the <a href="module-OpenspliceDDS.html#~RequestedDeadlineMissedStatus"> RequestedDeadlineMissedStatus</a> object of the reader.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~RequestedDeadlineMissedStatus">module:OpenspliceDDS~RequestedDeadlineMissedStatus</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="requestedIncompatibleQosStatus"><span class="type-signature"></span>requestedIncompatibleQosStatus<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~RequestedIncompatibleQosStatus">module:OpenspliceDDS~RequestedIncompatibleQosStatus</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>Get the <a href="module-OpenspliceDDS.html#~RequestedIncompatibleQosStatus"> RequestedIncompatibleQosStatus</a> object of the reader.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~RequestedIncompatibleQosStatus">module:OpenspliceDDS~RequestedIncompatibleQosStatus</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="sampleLostStatus"><span class="type-signature"></span>sampleLostStatus<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~SampleLostStatus">module:OpenspliceDDS~SampleLostStatus</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>Get the <a href="module-OpenspliceDDS.html#~SampleLostStatus"> SampleLostStatus</a> object of the reader.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~SampleLostStatus">module:OpenspliceDDS~SampleLostStatus</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="sampleRejectedStatus"><span class="type-signature"></span>sampleRejectedStatus<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~SampleRejectedStatus">module:OpenspliceDDS~SampleRejectedStatus</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>Get the <a href="module-OpenspliceDDS.html#~SampleRejectedStatus"> SampleRejectedStatus</a> object of the reader.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~SampleRejectedStatus">module:OpenspliceDDS~SampleRejectedStatus</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="subscriptionMatchedStatus"><span class="type-signature"></span>subscriptionMatchedStatus<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~SubscriptionMatchedStatus">module:OpenspliceDDS~SubscriptionMatchedStatus</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>Get the <a href="module-OpenspliceDDS.html#~SubscriptionMatchedStatus"> SubscriptionMatchedStatus</a> object of the reader.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~SubscriptionMatchedStatus">module:OpenspliceDDS~SubscriptionMatchedStatus</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="topic"><span class="type-signature"></span>topic<span class="type-signature"> :<a href="module-OpenspliceDDS.Topic.html">module:OpenspliceDDS.Topic</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The topic instance with which the
+reader is associated.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.Topic.html">module:OpenspliceDDS.Topic</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="createQueryCondition"><span class="type-signature"></span>createQueryCondition<span class="signature">(mask, expression, params)</span><span class="type-signature"> &rarr; {<a href="module-OpenspliceDDS.QueryCondition.html">module:OpenspliceDDS.QueryCondition</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Create a Query Condition.</p>
+<p>A query condition may be attached to a
+<a href="module-OpenspliceDDS.Waitset.html">Waitset</a>
+or as part of a conditional read via
+<a href="module-OpenspliceDDS.Reader.html#takeCond">Reader.takeCond()</a>
+or
+<a href="module-OpenspliceDDS.Reader.html#readCond">Reader.readCond()</a>.</p>
+<p>Note that DDS resources and memory consumed by conditions
+cannot be automatically reclaimed by the NodeJS engine.
+Conditions are automatically
+deleted when the parent entity is deleted.
+Otherwise, when your application is finished with a Condition, you may
+call <a href="module-OpenspliceDDS.Condition.html#delete">Condition.delete()</a>
+to release these DDS resources.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>mask</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#.StateMask">module:OpenspliceDDS.StateMask</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a mask of instance, view and
+sample state values to accept</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>expression</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a SQL <em>where</em> expression, with optional
+parameter substitution markers of the form <em>%n</em>, where <em>n</em> is a number.
+Parameter numbers start at 0 and must be sequential.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>params</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an array of string substitutions for
+parameter markers placed in <em>expression</em>.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Throws:</h5>
+
+        
+
+<dl>
+    <dt>
+        <div class="param-desc">
+        <p>if the query condition could not
+be created.</p>
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl>
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
+<span class="param-type"><a href="module-OpenspliceDDS.DDSError.html">module:OpenspliceDDS.DDSError</a></span>
+
+
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
+
+
+    
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="module-OpenspliceDDS.QueryCondition.html">module:OpenspliceDDS.QueryCondition</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="createReadCondition"><span class="type-signature"></span>createReadCondition<span class="signature">(mask)</span><span class="type-signature"> &rarr; {<a href="module-OpenspliceDDS.ReadCondition.html">module:OpenspliceDDS.ReadCondition</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Create a read condition.</p>
+<p>A read condition may be attached to a
+<a href="module-OpenspliceDDS.Waitset.html">Waitset</a>
+or as part of a conditional read via
+<a href="module-OpenspliceDDS.Reader.html#takeCond">Reader.takeCond()</a>
+or
+<a href="module-OpenspliceDDS.Reader.html#readCond">Reader.readCond()</a>.</p>
+<p>Note that DDS resources and memory consumed by conditions
+cannot be automatically reclaimed by the NodeJS engine.
+Conditions are automatically
+deleted when the parent entity is deleted.
+Otherwise, when your application is finished with a Condition, you may
+call <a href="module-OpenspliceDDS.Condition.html#delete">Condition.delete()</a>
+to release these DDS resources.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>mask</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#.StateMask">module:OpenspliceDDS.StateMask</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a mask of instance,
+view and sample state values to accept</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>a read condition</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="module-OpenspliceDDS.ReadCondition.html">module:OpenspliceDDS.ReadCondition</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="createStatusCondition"><span class="type-signature"></span>createStatusCondition<span class="signature">(mask<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="module-OpenspliceDDS.StatusCondition.html">module:OpenspliceDDS.StatusCondition</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Creates a StatusCondition for use in wait set.</p>
+<p>Omitting the <em>mask</em> value results in all
+entity-appropriate status conditions being
+enabled.</p>
+<p>Note that DDS resources and memory consumed by conditions
+cannot be automatically reclaimed by the NodeJS engine.
+Conditions are automatically
+deleted when the parent entity is deleted.
+Otherwise, when your application is finished with a Condition, you may
+call <a href="module-OpenspliceDDS.Condition.html#delete">Condition.delete()</a>
+to release these DDS resources.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>mask</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#.StatusMask">module:OpenspliceDDS.StatusMask</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    null
+                
+                </td>
+            
+
+            <td class="description last"><p>mask of StatusMask values
+of interest</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="module-OpenspliceDDS.Entity.html#createStatusCondition">module:OpenspliceDDS.Entity#createStatusCondition</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Throws:</h5>
+
+        
+
+<dl>
+    <dt>
+        <div class="param-desc">
+        <p>if the status mask is invalid</p>
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl>
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
+<span class="param-type"><a href="module-OpenspliceDDS.DDSError.html">module:OpenspliceDDS.DDSError</a></span>
+
+
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
+
+
+    
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="module-OpenspliceDDS.StatusCondition.html">module:OpenspliceDDS.StatusCondition</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="delete"><span class="type-signature"></span>delete<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="external-Promise.html">external:Promise</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Releases the DDS resources associated with
+the entity and all its 'child' entities.</p>
+<p>In some cases, releasing DDS resources can take
+several seconds. This methods returns a Promise
+that enables you to do processing after all
+the resources have been released.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="module-OpenspliceDDS.Entity.html#delete">module:OpenspliceDDS.Entity#delete</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="external-Promise.html">external:Promise</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="read"><span class="type-signature"></span>read<span class="signature">(maxSample)</span><span class="type-signature"> &rarr; {<a href="external-Array.html">external:Array</a>.&lt;<a href="module-OpenspliceDDS.html#~SampleData">module:OpenspliceDDS~SampleData</a>>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Read samples available for the topic.</p>
+<p>Note that, in DDS, a 'read' operation returns all published samples
+available for the topic, whether the Reader has previously seen them
+or not. If you want to see only changed data, you should use a 'take'
+operation, instead.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>maxSample</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>maximum number of samples to read</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Throws:</h5>
+
+        
+
+<dl>
+    <dt>
+        <div class="param-desc">
+        <p>if the read operation fails.</p>
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl>
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
+<span class="param-type"><a href="module-OpenspliceDDS.DDSError.html">module:OpenspliceDDS.DDSError</a></span>
+
+
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
+
+
+    
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>an array of sample and info pairs</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="external-Array.html">external:Array</a>.&lt;<a href="module-OpenspliceDDS.html#~SampleData">module:OpenspliceDDS~SampleData</a>></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="readCond"><span class="type-signature"></span>readCond<span class="signature">(maxSample, cond)</span><span class="type-signature"> &rarr; {<a href="external-Array.html">external:Array</a>.&lt;<a href="module-OpenspliceDDS.html#~SampleData">module:OpenspliceDDS~SampleData</a>>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Conditionally Read samples available for the topic according to the
+supplied
+<a href="module-OpenspliceDDS.ReadCondition.html">ReadCondition</a>
+or
+<a href="module-OpenspliceDDS.QueryCondition.html">QueryCondition</a>.</p>
+<p>Note that, in DDS, a 'read' operation returns all published samples
+available for the topic, whether the Reader has previously seen them
+or not. If you want to see only changed data, you should use a 'take'
+operation, instead.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>maxSample</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>maximum number of samples to read</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cond</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.Condition.html">module:OpenspliceDDS.Condition</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a condtion with with to
+filter results</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Throws:</h5>
+
+        
+
+<dl>
+    <dt>
+        <div class="param-desc">
+        <p>if the read operation fails.</p>
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl>
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
+<span class="param-type"><a href="module-OpenspliceDDS.DDSError.html">module:OpenspliceDDS.DDSError</a></span>
+
+
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
+
+
+    
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>an array of sample and info pairs</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="external-Array.html">external:Array</a>.&lt;<a href="module-OpenspliceDDS.html#~SampleData">module:OpenspliceDDS~SampleData</a>></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="statusChanges"><span class="type-signature"></span>statusChanges<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="module-OpenspliceDDS.html#.StatusMask">module:OpenspliceDDS.StatusMask</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Return the DDS communication statuses that have changed since
+this method was last called.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="module-OpenspliceDDS.Entity.html#statusChanges">module:OpenspliceDDS.Entity#statusChanges</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>a mask of statuses that
+have changed</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="module-OpenspliceDDS.html#.StatusMask">module:OpenspliceDDS.StatusMask</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="take"><span class="type-signature"></span>take<span class="signature">(maxSample)</span><span class="type-signature"> &rarr; {<a href="external-Array.html">external:Array</a>.&lt;<a href="module-OpenspliceDDS.html#~SampleData">module:OpenspliceDDS~SampleData</a>>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Take previously unseen samples available for the topic.</p>
+<p>Note that, in DDS, a 'take' operation returns only published samples
+available for the topic not previously seen by this Reader.
+If you want to see all available samples, you should use a 'read'
+operation, instead.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>maxSample</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>maximum number of samples to take</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Throws:</h5>
+
+        
+
+<dl>
+    <dt>
+        <div class="param-desc">
+        <p>if the take operation fails.</p>
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl>
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
+<span class="param-type"><a href="module-OpenspliceDDS.DDSError.html">module:OpenspliceDDS.DDSError</a></span>
+
+
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
+
+
+    
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>an array of sample and info pairs</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="external-Array.html">external:Array</a>.&lt;<a href="module-OpenspliceDDS.html#~SampleData">module:OpenspliceDDS~SampleData</a>></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="takeCond"><span class="type-signature"></span>takeCond<span class="signature">(maxSample, cond)</span><span class="type-signature"> &rarr; {<a href="external-Array.html">external:Array</a>.&lt;<a href="module-OpenspliceDDS.html#~SampleData">module:OpenspliceDDS~SampleData</a>>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Conditionally take samples not previously seen available for the topic
+according to the supplied
+<a href="module-OpenspliceDDS.ReadCondition.html">ReadCondition</a>
+or
+<a href="module-OpenspliceDDS.QueryCondition.html">QueryCondition</a>.</p>
+<p>Note that, in DDS, a 'take' operation returns only published samples
+available for the topic not previously seen by this Reader.
+If you want to see all available samples, you should use a 'read'
+operation, instead.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>maxSample</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>maximum number of samples to take</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cond</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.Condition.html">module:OpenspliceDDS.Condition</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a condtion with with to
+filter results</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Throws:</h5>
+
+        
+
+<dl>
+    <dt>
+        <div class="param-desc">
+        <p>if the take operation fails.</p>
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl>
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
+<span class="param-type"><a href="module-OpenspliceDDS.DDSError.html">module:OpenspliceDDS.DDSError</a></span>
+
+
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
+
+
+    
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>an array of sample and info pairs</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="external-Array.html">external:Array</a>.&lt;<a href="module-OpenspliceDDS.html#~SampleData">module:OpenspliceDDS~SampleData</a>></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="waitForHistoricalData"><span class="type-signature"></span>waitForHistoricalData<span class="signature">(timeout)</span><span class="type-signature"> &rarr; {<a href="external-Promise.html">external:Promise</a>.&lt;number>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Asynchronously wait for historical data to be delivered
+by the DDS Service.</p>
+<p>Returns a <a href="external-Promise.html">Promise</a> to which
+asynchronous listeners may be attached
+once historical data has been retrieved.
+If a timeout or error occurs, the promise is rejected.
+Otherwise, the promise will resolve with
+a value of 0.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>timeout</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a timeout in nanoseconds
+how long to wait for historical data before time out</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="external-Promise.html">external:Promise</a>.&lt;number></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-OpenspliceDDS.html">OpenspliceDDS</a></li></ul><h3>Externals</h3><ul><li><a href="external-Array.html">Array</a></li><li><a href="external-Buffer.html">Buffer</a></li><li><a href="external-Error.html">Error</a></li><li><a href="external-Map.html">Map</a></li><li><a href="external-Promise.html">Promise</a></li></ul><h3>Classes</h3><ul><li><a href="module-OpenspliceDDS.Condition.html">Condition</a></li><li><a href="module-OpenspliceDDS.DDSError.html">DDSError</a></li><li><a href="module-OpenspliceDDS.Entity.html">Entity</a></li><li><a href="module-OpenspliceDDS.GuardCondition.html">GuardCondition</a></li><li><a href="module-OpenspliceDDS.Participant.html">Participant</a></li><li><a href="module-OpenspliceDDS.Publisher.html">Publisher</a></li><li><a href="module-OpenspliceDDS.QoS.html">QoS</a></li><li><a href="module-OpenspliceDDS.QoSProvider.html">QoSProvider</a></li><li><a href="module-OpenspliceDDS.QueryCondition.html">QueryCondition</a></li><li><a href="module-OpenspliceDDS.ReadCondition.html">ReadCondition</a></li><li><a href="module-OpenspliceDDS.Reader.html">Reader</a></li><li><a href="module-OpenspliceDDS.StatusCondition.html">StatusCondition</a></li><li><a href="module-OpenspliceDDS.Subscriber.html">Subscriber</a></li><li><a href="module-OpenspliceDDS.Topic.html">Topic</a></li><li><a href="module-OpenspliceDDS.TypeSupport.html">TypeSupport</a></li><li><a href="module-OpenspliceDDS.Waitset.html">Waitset</a></li><li><a href="module-OpenspliceDDS.Writer.html">Writer</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Fri Jan 17 2025 12:25:28 GMT+0000 (GMT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

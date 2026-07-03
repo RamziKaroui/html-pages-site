@@ -1,0 +1,12798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Module: OpenspliceDDS</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Module: OpenspliceDDS</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description"><p>Module defining OpenspliceDDS API for Node JS.</p></div>
+        
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="module-OpenspliceDDS.Condition.html">Condition</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-OpenspliceDDS.DDSError.html">DDSError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-OpenspliceDDS.Entity.html">Entity</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-OpenspliceDDS.GuardCondition.html">GuardCondition</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-OpenspliceDDS.Participant.html">Participant</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-OpenspliceDDS.Publisher.html">Publisher</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-OpenspliceDDS.QoS.html">QoS</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-OpenspliceDDS.QoSProvider.html">QoSProvider</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-OpenspliceDDS.QueryCondition.html">QueryCondition</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-OpenspliceDDS.ReadCondition.html">ReadCondition</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-OpenspliceDDS.Reader.html">Reader</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-OpenspliceDDS.StatusCondition.html">StatusCondition</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-OpenspliceDDS.Subscriber.html">Subscriber</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-OpenspliceDDS.Topic.html">Topic</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-OpenspliceDDS.TypeSupport.html">TypeSupport</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-OpenspliceDDS.Waitset.html">Waitset</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-OpenspliceDDS.Writer.html">Writer</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id=".DDSConstants"><span class="type-signature">(static, constant) </span>DDSConstants<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>Miscellaneous DDS constants</p>
+</div>
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>DDS_LENGTH_UNLIMITED</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>specified unlimited length in multiple QoS policies:</p>
+<ul>
+<li><a href="module-OpenspliceDDS.QoS.html#resourceLimits">resourceLimits</a>
+fields: <em>maxInstances</em>, <em>maxSamples</em>, <em>maxInstancesPerSample</em></li>
+<li><a href="module-OpenspliceDDS.QoS.html#history">history</a>
+fields: <em>depth</em></li>
+<li><a href="module-OpenspliceDDS.QoS.html#durabilityService">durabilityService</a>
+fields: <em>maxInstances</em>, <em>maxSamples</em>, <em>maxInstancesPerSample</em>,
+<em>historyDepth</em></li>
+</ul></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DDS_DOMAIN_DEFAULT</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>specifies the default domain when creating a
+<a href="module-OpenspliceDDS.Participant.html">Participant</a>.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DDS_HANDLE_NIL</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>DO NOT USE.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DDS_INFINITY</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>specifies an infinite duration in multiple QoS policies
+and some method calls.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DDS_RETCODE_TIMEOUT</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>DO NOT USE. Use <a href="module-OpenspliceDDS.html#.DDSErrorCode#.TIMEOUT">DDSErrorCode.TIMEOUT</a></p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".DDSErrorCode"><span class="type-signature">(static, constant) </span>DDSErrorCode<span class="type-signature"> :number</span></h4>
+
+
+
+
+<div class="description">
+    <p>An enumeration of error codes understood
+by <a href="module-OpenspliceDDS.DDSError.html">DDSError</a></p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>OK</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Success</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ERROR</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Non specific error</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UNSUPPORTED</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Feature unsupported</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>BAD_PARAMETER</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Bad parameter value</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PRECONDITION_NOT_MET</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Preconditon for operation not met</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>OUT_OF_RESOURCES</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Operation failed because of a lack of resources</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>NOT_ENABLED</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A configurable feature is not enabled</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>IMMUTABLE_POLICY</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Attempt was made to modify an immutable policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>INCONSISTENT_POLICY</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A policy was used with inconsistent values</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ALREADY_DELETED</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An attempt was made to delete something more than once</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>TIMEOUT</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A timeout has occurred</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>NO_DATA</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Expected data was not provided</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ILLEGAL_OPERATION</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A function was called when it should not have been</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".DestinationOrderKind"><span class="type-signature">(static, constant) </span>DestinationOrderKind<span class="type-signature"> :number</span></h4>
+
+
+
+
+<div class="description">
+    <p>The kinds of
+<a href="module-OpenspliceDDS.QoS.html#destinationOrder">destinationOrder</a>
+QoS policy</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ByReceptionTimestamp</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Indicates that data is ordered based on the reception time
+at each Subscriber. Since each subscriber may receive the
+data at different times there is no guaranteed that the
+changes will be seen in the same order. Consequently, it is
+possible for each subscriber to end up with a different final
+value for the data.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>BySourceTimestamp</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Indicates that data is ordered based on a timestamp placed
+at the source (by the DDS Service or by the application).
+In any case this guarantees a consistent final value for
+the data in all subscribers.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".DurabilityKind"><span class="type-signature">(static, constant) </span>DurabilityKind<span class="type-signature"> :number</span></h4>
+
+
+
+
+<div class="description">
+    <p>Specifies the type of durability policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>Volatile</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The Service does not need to keep
+any samples of data-instances on
+behalf of any DataReader that is not
+known by the DataWriter at the
+time the instance is written. In other
+words the Service will only attempt
+to provide the data to existing
+subscribers. This is the default kind.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>TransientLocal</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The Service will attempt to keep
+some samples so that they can be
+delivered to any potential late-
+joining DataReader. Which
+particular samples are kept depends
+on other QoS such as HISTORY and
+RESOURCE_LIMITS.
+For TRANSIENT_LOCAL, the
+service is only required to keep the
+data in the memory of the
+DataWriter that wrote the data and
+the data is not required to survive
+the DataWriter.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Transient</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The Service will attempt to keep
+some samples so that they can be
+delivered to any potential late-
+joining DataReader. Which
+particular samples are kept depends
+on other QoS such as HISTORY and
+RESOURCE_LIMITS.
+For TRANSIENT, the service is
+only required to keep the data in
+memory and not in permanent
+storage; but the data is not tied to
+the lifecycle of the DataWriter and
+will, in general, survive it.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Persistent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Data is kept on permanent
+storage, so that they can outlive a
+system session.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".getTopicTypeSupportsForIDL"><span class="type-signature">(static) </span>getTopicTypeSupportsForIDL<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>An alias for {module:OpenspliceDDS.importIDL}.</p>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <dt class="important tag-deprecated">Deprecated:</dt><dd><ul class="dummy"><li>Use <a href="module-OpenspliceDDS.html#.importIDL">module:OpenspliceDDS.importIDL</a></li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".HistoryKind"><span class="type-signature">(static, constant) </span>HistoryKind<span class="type-signature"> :number</span></h4>
+
+
+
+
+<div class="description">
+    <p>Constants specifying behaviours of the
+History Service.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>KeepLast</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>On the publishing side, the Service
+will only attempt to keep the most
+recent “depth” samples of each
+instance of data (identified by its
+key) managed by the DataWriter.
+On the subscribing side, the
+DataReader will only attempt to
+keep the most recent “depth”
+samples received for each instance
+(identified by its key) until the
+application “takes” them via the
+DataReader’s take operation.
+KeepLast is the default kind.
+The default value of depth is 1.
+If a value other than 1 is specified, it
+should be consistent with the
+settings of the
+RESOURCE_LIMITS QoS policy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>KeepAll</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>On the publishing side, the Service
+will attempt to keep all samples
+(representing each value written) of
+each instance of data (identified by
+its key) managed by the DataWriter
+until they can be delivered to all
+subscribers. On the subscribing side,
+the Service will attempt to keep all
+samples of each instance of data
+(identified by its key) managed by
+the DataReader. These samples are
+kept until the application “takes”
+them from the Service via the take
+operation. The setting of depth has
+no effect. Its implied value is
+LENGTH_UNLIMITED.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".LivelinessKind"><span class="type-signature">(static, constant) </span>LivelinessKind<span class="type-signature"> :number</span></h4>
+
+
+
+
+<div class="description">
+    <p>Defines the kinds of
+<a href="module-OpenspliceDDS.QoS.html#liveliness">liveliness</a>
+QoS policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>Automatic</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The infrastructure will automatically
+signal liveliness for the Writers at least as
+often as required by the
+<a href="module-OpenspliceDDS.html#~LivelinessPolicy"> LivelinessPolicy</a>
+<em>leaseDuration</em> field.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ManualByParticipant</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The user application takes responsibility to signal
+liveliness to the DDS Service using one of the
+mechanisms described in Section 7.1.3.11, “LIVELINESS,”
+on page 113 DDS 1.2 Specification.
+Liveliness must be asserted as
+often as required by the
+<a href="module-OpenspliceDDS.html#~LivelinessPolicy"> LivelinessPolicy</a>
+<em>leaseDuration</em> field.
+Otherwise the DDS Service will assume the
+corresponding Entity is no longer “active/alive.”</p>
+<p>The DDS Service will assume that as long as at least one
+Entity within the Participant has asserted its liveliness
+the other Entities in that same Participant are also alive.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ManualByTopic</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The user application takes responsibility to signal
+liveliness to the DDS Service using one of the
+mechanisms described in Section 7.1.3.11, “LIVELINESS,”
+on page 113 of the DDS 1.2 Specification}.
+Liveliness must be asserted as
+often as required by the
+<a href="module-OpenspliceDDS.html#~LivelinessPolicy"> LivelinessPolicy</a>
+<em>leaseDuration</em> field.
+Otherwise the DDS Service will assume the
+corresponding Entity is no longer “active/alive.”</p>
+<p>The DDS Service will only assume liveliness of the Writer if
+the application has asserted liveliness of that Writer itself.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".OwnershipKind"><span class="type-signature">(static, constant) </span>OwnershipKind<span class="type-signature"> :number</span></h4>
+
+
+
+
+<div class="description">
+    <p>Defines the kinds of ownership for the
+<a href="module-OpenspliceDDS.QoS.html#ownership">ownership</a>
+policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>Shared</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Indicates shared ownership for each instance.
+Multiple writers are allowed to update the same instance
+and all the updates are made available to the readers.
+In other words there is no concept of an “owner” for
+the instances. This is the default behavior if the
+<a href="module-OpenspliceDDS.QoS.html#ownership">ownership</a>
+QoS policy is not specified.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Exclusive</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Indicates each instance can only be owned by one Writer,
+but the owner of an instance can change dynamically.
+The selection of the owner is controlled by the setting of
+the
+<a href="module-OpenspliceDDS.QoS.html#ownershipStrength">ownershipStrength</a>
+QoS policy. The owner is always set to be the highest-strength
+Writer object among the ones currently “active” (as determined by
+the
+<a href="module-OpenspliceDDS.QoS.html#liveliness">liveliness</a>
+QoS).</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".PresentationAccessScopeKind"><span class="type-signature">(static, constant) </span>PresentationAccessScopeKind<span class="type-signature"> :number</span></h4>
+
+
+
+
+<div class="description">
+    <p>Constants defining the kinds of presentation
+policy scopes.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>Instance</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>No coherent change sets are expected</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Topic</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Samples written by a Writer within
+a 'coherent change' will not be interleaved
+by other samples when read by a Reader.</p>
+<p>Note: The NodeJS API does not support Topic kind.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Group</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Samples written by multiple Writers within
+a 'coherent change' will not be interleaved
+by other samples written by other Writers when
+accessed from a coherent Subscriber..</p>
+<p>Note: The NodeJS API does not support Group kind.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".QosPolicyID"><span class="type-signature">(static, constant) </span>QosPolicyID<span class="type-signature"> :number</span></h4>
+
+
+
+
+<div class="description">
+    <p>Defines identifiers for each available QoS policy.
+Returned by DDS status objects.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>INVALID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Invalid QoS policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>USERDATA</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A <a href="module-OpenspliceDDS.QoS.html#userdata">QoS.userdata</a> policy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DURABILITY</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A <a href="module-OpenspliceDDS.QoS.html#durability">QoS.durability</a> policy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PRESENTATION</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A <a href="module-OpenspliceDDS.QoS.html#presentation">QoS.presentation</a> policy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DEADLINE</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A <a href="module-OpenspliceDDS.QoS.html#deadline">QoS.deadline</a> policy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>LATENCYBUDGET</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A <a href="module-OpenspliceDDS.QoS.html#latencyBudget">QoS.latencyBudget</a> policy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>OWNERSHIP</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A <a href="module-OpenspliceDDS.QoS.html#ownership">QoS.ownership</a> policy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>OWNERSHIPSTRENGTH</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A <a href="module-OpenspliceDDS.QoS.html#ownershipStrength"> QoS.ownershipStrength</a> policy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>LIVELINESS</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A <a href="module-OpenspliceDDS.QoS.html#liveliness">QoS.liveliness</a> policy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>TIMEBASEDFILTER</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A <a href="module-OpenspliceDDS.QoS.html#timebasedFilter">QoS.timebasedFilter</a> policy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PARTITION</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A <a href="module-OpenspliceDDS.QoS.html#partition">QoS.partition</a> policy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RELIABILITY</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A <a href="module-OpenspliceDDS.QoS.html#reliability">QoS.reliability</a> policy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DESTINATIONORDER</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A <a href="module-OpenspliceDDS.QoS.html#destinationOrder"> QoS.destinationOrder</a> policy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>HISTORY</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A <a href="module-OpenspliceDDS.QoS.html#history">QoS.history</a> policy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RESOURCELIMITS</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A <a href="module-OpenspliceDDS.QoS.html#resourceLimits">QoS.resourceLimits</a> policy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ENTITYFACTORY</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An entityFactory policy. Not supported by this API</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WRITERDATALIFECYCLE</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A <a href="module-OpenspliceDDS.QoS.html#writerDataLifecycle"> QoS.writerDataLifecycle</a> policy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>READERDATALIFECYCLE</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A <a href="module-OpenspliceDDS.QoS.html#readerDataLifecycle"> QoS.readerDataLifecycle</a> policy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>TOPICDATA</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A <a href="module-OpenspliceDDS.QoS.html#topicdata">QoS.topicdata</a> policy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>GROUPDATA</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A <a href="module-OpenspliceDDS.QoS.html#groupdata">QoS.groupdata</a> policy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>TRANSPORTPRIORITY</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A <a href="module-OpenspliceDDS.QoS.html#transportPriority"> QoS.transportPriority</a> policy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>LIFESPAN</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A <a href="module-OpenspliceDDS.QoS.html#lifespan">QoS.lifespan</a> policy.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DURABILITYSERVICE</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A <a href="module-OpenspliceDDS.QoS.html#durabilityService"> QoS.durabilityService</a> policy.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".ReliabilityKind"><span class="type-signature">(static, constant) </span>ReliabilityKind<span class="type-signature"> :number</span></h4>
+
+
+
+
+<div class="description">
+    <p>The kinds of
+<a href="module-OpenspliceDDS.QoS.html#reliability">reliability</a>
+QoS policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>BestEffort</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Specifies the DDS Service will attempt to deliver all samples
+in its history. Missed samples may be retried. In steady-state
+(no modifications communicated via the Writer) the middleware
+guarantees that all samples in the Writer history will eventually
+be delivered to all the Reader a objects. Outside steady state
+the
+<a href="module-OpenspliceDDS.QoS.html#history">history</a>
+and
+<a href="module-OpenspliceDDS.QoS.html#resourceLimits">resourceLimits</a>
+policies will determine how samples become part of the history
+and whether samples can be discarded from it. This is the default
+value for Writers.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Reliable</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Indicates that it is acceptable to not retry propagation
+of any samples. Presumably new values for the samples
+are generated often enough that it is not necessary to
+re-send or acknowledge any samples. This is the default
+value for Readers and Topics.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".SampleRejectedStatusKind"><span class="type-signature">(static, constant) </span>SampleRejectedStatusKind<span class="type-signature"> :number</span></h4>
+
+
+
+
+<div class="description">
+    <p>Constants representing reasons for a sample being rejected.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>NOT_REJECTED</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The sample was not rejected</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>BY_INSTANCES_LIMIT</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The limit imposed by the QoS
+<a href="module-OpenspliceDDS.QoS.html#resourceLimits"> resourceLimits</a> policy
+<em>maxInstances</em>
+has been exceeded.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>BY_SAMPLES_LIMIT</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The limit imposed by the QoS
+<a href="module-OpenspliceDDS.QoS.html#resourceLimits"> resourceLimits</a> policy
+<em>maxSamples</em>
+has been exceeded.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>BY_SAMPLES_PER_INSTANCE_LIMIT</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The limit imposed by the QoS
+<a href="module-OpenspliceDDS.QoS.html#resourceLimits"> resourceLimits</a> policy
+<em>maxSamplesPerInstance</em>
+has been exceeded.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".StateMask"><span class="type-signature">(static, constant) </span>StateMask<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>A collection of constants use for expressing DDS 'state masks'.</p>
+<p>State masks are used to creating
+<a href="module-OpenspliceDDS.ReadCondition.html">ReadCondition</a>s
+and
+<a href="module-OpenspliceDDS.QueryCondition.html">QueryCondition</a>s.
+They are use returned as part of the
+SampleInfo
+object returned by operations such as
+by
+<a href="module-OpenspliceDDS.Reader.html#read">Reader.read()</a>
+and
+<a href="module-OpenspliceDDS.Reader.html#take">Reader.take()</a>.</p>
+<p>The state of a DDS sample is the union of three substates:
+sample, view and instance.</p>
+<ul>
+<li>Sample state indicates whether the sample has been previously
+been returned by the DDS
+<a href="module-OpenspliceDDS.Reader.html">Reader</a>.
+The sample state may be
+either <em>read</em> or <em>not_read</em>.</li>
+<li>View state indicates whether the key values of the sample have
+previously been returned by the DDS
+<a href="module-OpenspliceDDS.Reader.html">Reader</a>.
+The view state may be
+either <em>new</em> or <em>not_new</em>.</li>
+<li>Instance state indicates whether state of the instance represented
+by the key values of the sample.
+The instance state may be
+one of <em>alive</em>, <em>not_alive_disposed</em> or <em>not_alive_no_writers</em>.</li>
+</ul>
+<p>A 'state mask' may be composed by indicate the sub-states that
+your are interested in accepting. For example, a mask that would accept
+disposed samples that had previously been seen by your data reader:</p>
+<pre><code>const dds = require('OpenspliceDDS');
+const disposeMask = dds.StateMask.sample.any
+    | dds.StateMask.view.not_new
+    | dds.StateMask.instance.not_alive_disposed;
+</code></pre>
+</div>
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>sample</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Sample State</p>
+                <h6>Properties</h6>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>read</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Sample read</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>not_read</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Sample not read</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>any</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Either of the above</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>view</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>View State</p>
+                <h6>Properties</h6>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>new</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>First time the Data Reader has accessed
+samples of this instance</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>not_new</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The Data Reader has already accessed
+samples of this intance before</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>any</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Either of the above</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>instance</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance State</p>
+                <h6>Properties</h6>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>alive</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Samples have been received for this
+instance, there are live data writers
+for this instance, and the instance is
+not disposed</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>not_alive_disposed</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The instance has been
+explicitly disposed</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>not_alive_no_writers</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>There are no live Data
+Writers</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>any</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Any of the above</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".StatusMask"><span class="type-signature">(static, constant) </span>StatusMask<span class="type-signature"> :number</span></h4>
+
+
+
+
+<div class="description">
+    <p>Constants representing DDS communication statuses.</p>
+<p>Status masks are a combination of one or more of these constants,
+and are used to indicate to DDS which communication statuses
+are of interest to you status listeners.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data_available</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>New data available. Applies to Subscribers.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>data_on_readers</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>New data available. Applies to a Readers.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>inconsistent_topic</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Another topic with the same name but
+different characteristics exists.
+Applies to Topics.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>liveliness_changed</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The liveliness QoS policy has been violated.
+Applies to Writers.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>liveliness_lost</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The liveliness QoS policy has been
+violated. Applies to Writers.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>offered_deadline_missed</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The deadline QoS policy has been
+violated. Applies to Writers.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>offered_incompatible_qos</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A QoS policy was incompatible with what was requested.
+Applies to Writers.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>publication_matched</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The number of matching Readers has changed.
+Applies to Writers.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>requested_deadline_missed</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The deadline that a Reader expected through a QoS policy
+was violated. Applies to Readers.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>requested_incompatible_qos</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A QoS policy was incompatible with what was offered.
+Applies to Readers.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sample_lost</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A sample was never received.
+Applies to Readers.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sample_rejected</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A sample was rejected.
+Applies to Readers.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>subscription_matched</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The number of matching Writers has changed.
+Applies to Readers.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".importIDL"><span class="type-signature">(static) </span>importIDL<span class="signature">(idlpath)</span><span class="type-signature"> &rarr; {<a href="external-Promise.html">external:Promise</a>.&lt;<a href="external-Map.html">external:Map</a>.&lt;string, <a href="module-OpenspliceDDS.TypeSupport.html">module:OpenspliceDDS.TypeSupport</a>>>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Given an absolute path to an idl file,
+processes the idl file using IDLPP and
+return
+<a href="module-OpenspliceDDS.TypeSupport.html">module:OpenspliceDDS.TypeSupport</a>
+information on the processed types.</p>
+<p>This function executes asynchronously and
+returns a <a href="external-Promise.html">Promise</a>
+to which you can attach callbacks in order
+to handle the returned IDL type information.</p>
+<p>When the returned Promise resolves, its value is
+a <a href="external-Map.html">Map</a> whose key values
+are fully-qualified IDL type names, and whose
+entries are
+<a href="module-OpenspliceDDS.TypeSupport.html">module:OpenspliceDDS.TypeSupport</a> objects.</p>
+<p>The function processes the IDL file as follows:</p>
+<ul>
+<li>attempt to find an xml file (a cached IDLPP result)
+beside the idl file to parse the cached data.</li>
+<li>if the xml file is not found, IDLPP is called to process
+the idl file.</li>
+<li>a TypeSupport object is created for
+each topic in the IDL file and is added to a Map.</li>
+<li>a <a href="external-Map.html">Map</a> entry is created
+with key being the full topic name, and the value
+being a
+<a href="module-OpenspliceDDS.TypeSupport.html">TypeSupport</a>
+object.</li>
+<li>once all IDL types are processed, the
+Promise is resolved with the generated
+<a href="external-Map.html">Map</a>.</li>
+</ul>
+<p>IDLPP is unavailable on OpenSplice RTS builds. So if you are
+deploying your application onto that machine, you need to
+invoke the &quot;compile-idl&quot; script (provided by the Node.js DCPS
+API) from an environment where IDLPP is available.
+Please refer to the OpenSplice Node.js DCPS API Guide's
+&quot;Compile IDL file into XML document&quot; section for detailed information.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>idlpath</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>absolute path to idl file</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="external-Promise.html">external:Promise</a>.&lt;<a href="external-Map.html">external:Map</a>.&lt;string, <a href="module-OpenspliceDDS.TypeSupport.html">module:OpenspliceDDS.TypeSupport</a>>></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Examples</h5>
+    
+    <pre class="prettyprint"><code>// print all data types defined in an IDL file
+const dds = require('OpenspliceDDS');
+dds.importIDL('/home/adlink/myidl.idl')
+.then(map => {
+  console.log('Declared IDL types');
+  for(const typename of map.keys()) {
+    console.log(' type: ', typename);
+  }
+})
+.catch(err => {
+  console.log('IDL parsing error', err);
+});</code></pre>
+
+    <pre class="prettyprint"><code>// register a topic...
+const dds = require('OpenspliceDDS');
+const dp = dds.Participant();
+dds.importIDL('/home/adlink/myidl.idl')
+.then(map => {
+  console.log('Declared IDL types');
+  const topic = dp.createTopic('MyTopic',
+    map.get('mymod::MyType'));
+  // ... do other processing ...
+})
+.catch(err => {
+  console.log('IDL parsing error', err);
+})
+.then(_ => {
+  // cleanup, no matter what
+  dp.delete();
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".SEC_TO_NANO"><span class="type-signature">(static) </span>SEC_TO_NANO<span class="signature">(n)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Converts seconds to nanoseconds.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>n</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>seconds</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>nanoseconds</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// create the waitset
+let waitset = new dcps.Waitset();
+
+// skip code to setup waitset with conditions
+
+let conds = await waitset.wait(SEC_TO_NANO(1));</code></pre>
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+
+        
+                
+<h4 class="name" id="~DataPolicy">DataPolicy</h4>
+
+
+
+
+<div class="description">
+    <p>A QoS policy that enables the programmer
+to specified data to be included as part
+of the QoS for Topic (TopicData),
+Subscriber (GroupData)
+and Reader (UserData) entities.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type"><a href="external-Buffer.html">external:Buffer</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A string value
+(which will be ISO-8859-1 encoded to a Buffer)
+or a Buffer (which will be ininterpreted) that is
+attached to the entity's QoS.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~DeadlinePolicy">DeadlinePolicy</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the fields of the
+<a href="module-OpenspliceDDS.QoS.html#deadline">deadline</a>
+QoS policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>deadline</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Reader expects a new sample updating
+the value of each instance at least once every deadline period.
+Writer indicates that the application commits to write a new
+value (using the Writer) for each instance managed by the Writer at least
+once every deadline period.
+It is inconsistent for a reader to have a <em>deadline</em> period less than
+its <a href="module-OpenspliceDDS.QoS.html#timebasedFilter">timebasedFilter</a>'s
+<em>minimumSeparation</em>. The default value of the
+deadline period is infinite.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~DestinationOrderPolicy">DestinationOrderPolicy</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the fields of the
+<a href="module-OpenspliceDDS.QoS.html#destinationOrder">destinationOrder</a>
+QoS policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>kind</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#.DestinationOrderKind">module:OpenspliceDDS.DestinationOrderKind</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the
+kind of ordering to use.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~DurabilityPolicy">DurabilityPolicy</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the fields of the
+<a href="module-OpenspliceDDS.QoS.html#durability">durability</a>
+QoS policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>kind</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#.DurabilityKind">module:OpenspliceDDS.DurabilityKind</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the kind
+of durability to employ.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~DurabilityServicePolicy">DurabilityServicePolicy</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the fields of the
+<a href="module-OpenspliceDDS.QoS.html#durabilityService">durabilityService</a>
+QoS policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>serviceCleanupDelay</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a time in nanoseconds
+after which the durability
+service can remove all information regarding a data-instance</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>historyKind</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#.HistoryKind">module:OpenspliceDDS.HistoryKind</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>controls
+the
+<a href="module-OpenspliceDDS.QoS.html#history">history</a>
+QoS of the fictitious Reader that stores the data within the
+durability service.
+The default value is KeepLast.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>historyDepth</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>controls
+the
+<a href="module-OpenspliceDDS.QoS.html#history">history</a>
+QoS of the fictitious Reader that stores the data within the
+durability service.
+The default value is 1.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>maxSamples</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Controls the
+<a href="module-OpenspliceDDS.QoS.html#resourceLimits">resourceLimits</a>
+QoS of the durability server Reader.
+The default value is LENGTH_UNLIMITED.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>maxInstances</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Controls the
+<a href="module-OpenspliceDDS.QoS.html#resourceLimits">resourceLimits</a>
+QoS of the durability server Reader.
+The default value is LENGTH_UNLIMITED.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>maxSamplesPerInstance</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Controls the
+<a href="module-OpenspliceDDS.QoS.html#resourceLimits">resourceLimits</a>
+QoS of the durability server Reader.
+The default value is LENGTH_UNLIMITED.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~HistoryPolicy">HistoryPolicy</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the fields of the
+<a href="module-OpenspliceDDS.QoS.html#history">history</a>
+QoS policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>kind</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#.HistoryKind">module:OpenspliceDDS.HistoryKind</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the kind
+of history to maintain.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>depth</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Applicable only if kind is KeepLast.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~InconsistentTopicStatus">InconsistentTopicStatus</h4>
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>totalCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Total cumulative count of the Topics
+discovered whose name matches the Topic to which this status is
+attached and whose type is inconsistent with the Topic.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>totalCountChange</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The incremental number of
+inconsistent topics discovered since the last time the listener
+was called or the status was read.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~LatencyBudgetPolicy">LatencyBudgetPolicy</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the fields of the
+<a href="module-OpenspliceDDS.QoS.html#latencyBudget">latencyBudget</a>
+QoS policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>duration</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Specifies the maximum acceptable delay
+(in nanoseconds) from the time the data is written until the data is
+inserted in the receiver's application-cache and the receiving
+application is notified of the fact</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~LifespanPolicy">LifespanPolicy</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the fields of the
+<a href="module-OpenspliceDDS.QoS.html#lifespan">lifespan</a>
+QoS policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>lifespan</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Expiration time (in nanoseconds)
+relative to source timestamp beyond which the sample shall
+be removed from the caches.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~LivelinessChangedStatus">LivelinessChangedStatus</h4>
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>aliveCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The total number of currently
+active Writers that write the Topic read by the Reader.
+This count increases when a newly matched Writer asserts its
+liveliness for the first time or when a Writer previously
+considered to be not alive reasserts its liveliness.
+The count decreases when a Writer considered alive fails to
+assert its liveliness and becomes not alive, whether because
+it was deleted normally or for some other reason.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>notAliveCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The total count of currently
+Writers that write the Topic read by the Reader that are no longer
+asserting their liveliness. This count increases when a Writer
+considered alive fails to assert its liveliness and becomes not
+alive for some reason other than the normal deletion of that Writer.
+It decreases when a previously not alive Writer either reasserts
+its liveliness or is deleted normally.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>aliveCountChange</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The change in the aliveCount
+since the last time the listener was called or the status was read.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>notAliveCountChange</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The change in the
+notAliveCount since the last time the listener was called or the
+status was read.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lastPublicationHandle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Handle to the
+last Writer whose change in liveliness caused this status to change.
+Represents a 64-bit value. May be a string
+if the JavaScript numeric representation would result in
+a loss of precision.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~LivelinessLostStatus">LivelinessLostStatus</h4>
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>totalCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Total cumulative number of times
+that a previously-alive Writer became not alive due to a failure
+to actively signal its liveliness within its offered liveliness
+period. This count does not change when an already not alive
+Writer simply remains not alive for another liveliness period.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>totalCountChange</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The change in totalCount
+since the last time the listener was called or the status was read.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~LivelinessPolicy">LivelinessPolicy</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the fields of the
+<a href="module-OpenspliceDDS.QoS.html#liveliness">liveliness</a>
+QoS policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>kind</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#.LivelinessKind">module:OpenspliceDDS.LivelinessKind</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the
+kind of livilness policy to implement.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>leaseDuration</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the duration (in
+nanoseconds) of the interval
+within which liveliness must be reported.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~OfferedDeadlineMissedStatus">OfferedDeadlineMissedStatus</h4>
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>totalCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Total cumulative number of offered
+deadline periods elapsed during which a Writer failed to provide
+data. Missed deadlines accumulate; that is, each deadline period
+the totalCount will be incremented by one.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>totalCountChange</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The change in totalCount
+since the last time the listener was called or the status was read.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lastInstanceHandle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Handle to the last
+instance in the Writer for which an offered deadline was missed.
+Represents a 64-bit value. May be a string
+if the JavaScript numeric representation would result in
+a loss of precision.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~OfferedIncompatibleQosStatus">OfferedIncompatibleQosStatus</h4>
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>totalCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Total cumulative number of times
+the concerned Writer discovered a Reader for the same Topic
+with a requested QoS that is incompatible with that offered by
+the Writer.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>totalCountChange</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The change in totalCount
+since the last time the listener was called or the status was read.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lastPolicyId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#.QosPolicyID">module:OpenspliceDDS.QosPolicyID</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The id of
+one of the policies that was found to be incompatible the last
+time an incompatibility was detected.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+
+    
+
+    
+    <h4 class="name" id="~onDataAvailable"><span class="type-signature"></span>onDataAvailable<span class="signature">(reader)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Signature of ReaderListener <em>onDataAvailable</em>
+callback.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>reader</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.Reader.html">module:OpenspliceDDS.Reader</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the reader
+upon which the callback was trigger</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+                
+
+    
+
+    
+    <h4 class="name" id="~onInconsistentTopic"><span class="type-signature"></span>onInconsistentTopic<span class="signature">(topic, status)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Signature of TopicListener <em>onInconsistentTopic</em>
+callback.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>topic</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.Topic.html">module:OpenspliceDDS.Topic</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the topic
+upon which the callback was trigger</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>status</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~InconsistentTopicStatus">module:OpenspliceDDS~InconsistentTopicStatus</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the associated status information.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+                
+
+    
+
+    
+    <h4 class="name" id="~onLivelinessChanged"><span class="type-signature"></span>onLivelinessChanged<span class="signature">(reader, status)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Signature of ReaderListener <em>onLivelinessChanged</em>
+callback.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>reader</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.Reader.html">module:OpenspliceDDS.Reader</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the reader
+upon which the callback was trigger</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>status</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~LivelinessChangedStatus">module:OpenspliceDDS~LivelinessChangedStatus</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the associated status information.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+                
+
+    
+
+    
+    <h4 class="name" id="~onLivelinessLost"><span class="type-signature"></span>onLivelinessLost<span class="signature">(writer, status)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Signature of WriterListener <em>onLivelinessLost</em>
+callback.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>writer</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.Writer.html">module:OpenspliceDDS.Writer</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the writer
+upon which the callback was trigger</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>status</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~LivelinessLostStatus">module:OpenspliceDDS~LivelinessLostStatus</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the associated status information.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+                
+
+    
+
+    
+    <h4 class="name" id="~onOfferedDeadlineMissed"><span class="type-signature"></span>onOfferedDeadlineMissed<span class="signature">(writer, status)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Signature of WriterListener <em>onOfferedDeadlineMissed</em>
+callback.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>writer</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.Writer.html">module:OpenspliceDDS.Writer</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the writer
+upon which the callback was trigger</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>status</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~OfferedDeadlineMissedStatus">module:OpenspliceDDS~OfferedDeadlineMissedStatus</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the associated status information.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+                
+
+    
+
+    
+    <h4 class="name" id="~onOfferedIncompatibleQos"><span class="type-signature"></span>onOfferedIncompatibleQos<span class="signature">(writer, status)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Signature of WriterListener <em>onOfferedIncompatibleQos</em>
+callback.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>writer</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.Writer.html">module:OpenspliceDDS.Writer</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the writer
+upon which the callback was trigger</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>status</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~OfferedIncompatibleQosStatus">module:OpenspliceDDS~OfferedIncompatibleQosStatus</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the associated status information.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+                
+
+    
+
+    
+    <h4 class="name" id="~onPublicationMatched"><span class="type-signature"></span>onPublicationMatched<span class="signature">(writer, status)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Signature of WriterListener <em>onPublicationMatched</em>
+callback.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>writer</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.Writer.html">module:OpenspliceDDS.Writer</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the writer
+upon which the callback was trigger</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>status</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~PublicationMatchedStatus">module:OpenspliceDDS~PublicationMatchedStatus</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the associated status information.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+                
+
+    
+
+    
+    <h4 class="name" id="~onRequestedDeadlineMissed"><span class="type-signature"></span>onRequestedDeadlineMissed<span class="signature">(reader, status)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Signature of ReaderListener <em>onRequestedDeadlineMissed</em>
+callback.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>reader</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.Reader.html">module:OpenspliceDDS.Reader</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the reader
+upon which the callback was trigger</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>status</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~RequestedDeadlineMissedStatus">module:OpenspliceDDS~RequestedDeadlineMissedStatus</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the associated status information</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+                
+
+    
+
+    
+    <h4 class="name" id="~onRequestedIncompatibleQos"><span class="type-signature"></span>onRequestedIncompatibleQos<span class="signature">(reader, status)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Signature of ReaderListener <em>onRequestedIncompatibleQos</em>
+callback.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>reader</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.Reader.html">module:OpenspliceDDS.Reader</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the reader
+upon which the callback was trigger</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>status</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~RequestedIncompatibleQosStatus">module:OpenspliceDDS~RequestedIncompatibleQosStatus</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the associated status information</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+                
+
+    
+
+    
+    <h4 class="name" id="~onSampleLost"><span class="type-signature"></span>onSampleLost<span class="signature">(reader, status)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Signature of ReaderListener <em>onSampleLost</em>
+callback.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>reader</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.Reader.html">module:OpenspliceDDS.Reader</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the reader
+upon which the callback was trigger</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>status</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~SampleLostStatus">module:OpenspliceDDS~SampleLostStatus</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the associated status information.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+                
+
+    
+
+    
+    <h4 class="name" id="~onSampleRejected"><span class="type-signature"></span>onSampleRejected<span class="signature">(reader, status)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Signature of ReaderListener <em>onSampleRejected</em>
+callback.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>reader</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.Reader.html">module:OpenspliceDDS.Reader</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the reader
+upon which the callback was trigger.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>status</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~SampleRejectedStatus">module:OpenspliceDDS~SampleRejectedStatus</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the associated status information.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+                
+
+    
+
+    
+    <h4 class="name" id="~onSubscriptionMatched"><span class="type-signature"></span>onSubscriptionMatched<span class="signature">(reader, status)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Signature of ReaderListener <em>onSubscriptionMatched</em>
+callback.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>reader</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.Reader.html">module:OpenspliceDDS.Reader</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the reader
+upon which the callback was trigger</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>status</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~SubscriptionMatchedStatus">module:OpenspliceDDS~SubscriptionMatchedStatus</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the associated status information.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~OwnershipPolicy">OwnershipPolicy</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the fields of the
+<a href="module-OpenspliceDDS.QoS.html#ownership">ownership</a>
+QoS policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>kind</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#.OwnershipKind">module:OpenspliceDDS.OwnershipKind</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>selects
+the kind of ownership to be implemented.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~OwnershipStrengthPolicy">OwnershipStrengthPolicy</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the fields for the
+<a href="module-OpenspliceDDS.QoS.html#ownershipStrength">ownershipStrength</a>
+QoS policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Specifies the value of the
+“strength” used to arbitrate among multiple DataWriter
+objects that attempt to modify the same instance
+of a data-object (identified by Topic + key).
+This policy only applies if the
+<a href="module-OpenspliceDDS.QoS.html#ownership">ownership</a>
+QoS policy is of <em>kind</em> <em>Exclusive</em>. The default
+value of the ownership_strength is zero.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~PartitionPolicy">PartitionPolicy</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the fields of the
+<a href="module-OpenspliceDDS.QoS.html#partition">partition</a>
+QoS policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>names</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A partiton name or an
+array of partition names</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~PresentationPolicy">PresentationPolicy</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the fields of the
+<a href="module-OpenspliceDDS.QoS.html#presentation">presentation</a>
+QoS policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>accessScope</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#.PresentationAccessScopeKind">module:OpenspliceDDS.PresentationAccessScopeKind</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the
+presentation access scope. Note that only <em>Instance</em> is supported by this
+API.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>coherentAccess</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Specifies support coherent access.
+That is, the ability to group a set of changes as a unit on the publishing
+end such that they are received as a unit at the subscribing end.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>orderedAccess</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Specifies support for ordered access to
+the samples received at the subscription end. That is, the ability of the
+Subscriber to see changes in the same order as they occurred on the
+publishing end.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~PublicationMatchedStatus">PublicationMatchedStatus</h4>
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>totalCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Total cumulative count the concerned
+Writer discovered a “match” with a Reader. That is, it found a Reader
+for the same Topic with a requested QoS that is compatible with that
+offered by the Writer.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>totalCountChange</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The change in totalCount since
+the last time the listener was called or the status was read.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lastSubscriptionHandle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Handle to the last
+Reader that matched the Writer causing the status to change.
+Represents a 64-bit value. May be a string
+if the JavaScript numeric representation would result in
+a loss of precision.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>current_count</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The number of Readers currently
+matched to the concerned Writer.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>current_count_change</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The change in currentCount
+since the last time the listener was called or the status was read.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~QosPolicies">QosPolicies</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the availabe policies for a
+<a href="module-OpenspliceDDS.QoS.html">QoS</a> object.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>userdata</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~DataPolicy">module:OpenspliceDDS~DataPolicy</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object for defining userdata QoS policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>topicdata</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~DataPolicy">module:OpenspliceDDS~DataPolicy</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object for defining topicdata QoS policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>groupdata</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~DataPolicy">module:OpenspliceDDS~DataPolicy</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object for defining groupdata QoS policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>durability</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~DurabilityPolicy">module:OpenspliceDDS~DurabilityPolicy</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object for defining durability QoS policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>history</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~HistoryPolicy">module:OpenspliceDDS~HistoryPolicy</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object for defining history QoS policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>resourceLimits</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~ResourceLimitsPolicy">module:OpenspliceDDS~ResourceLimitsPolicy</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object for defining resource limits QoS policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>presentation</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~PresentationPolicy">module:OpenspliceDDS~PresentationPolicy</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object for defining presentation QoS policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lifespan</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~LifespanPolicy">module:OpenspliceDDS~LifespanPolicy</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object for defining lifespan QoS policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>deadline</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~DeadlinePolicy">module:OpenspliceDDS~DeadlinePolicy</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object for defining deadline QoS policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>latencyBudget</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~LatencyBudgetPolicy">module:OpenspliceDDS~LatencyBudgetPolicy</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object for defining latency budget QoS policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ownership</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~OwnershipPolicy">module:OpenspliceDDS~OwnershipPolicy</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object for defining ownership QoS policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ownershipStrength</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~OwnershipStrengthPolicy">module:OpenspliceDDS~OwnershipStrengthPolicy</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object for defining ownership strength QoS policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>liveliness</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~LivelinessPolicy">module:OpenspliceDDS~LivelinessPolicy</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object for defining liveliness QoS policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>timebasedFilter</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~TimebasedFilterPolicy">module:OpenspliceDDS~TimebasedFilterPolicy</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object for defining time based filter QoS policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>partition</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~PartitionPolicy">module:OpenspliceDDS~PartitionPolicy</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object for defining partition QoS policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>reliability</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~ReliabilityPolicy">module:OpenspliceDDS~ReliabilityPolicy</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object for defining reliability QoS policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>transportPriority</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~TransportPriorityPolicy">module:OpenspliceDDS~TransportPriorityPolicy</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object for defining transport priority QoS policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>destinationOrder</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~DestinationOrderPolicy">module:OpenspliceDDS~DestinationOrderPolicy</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object for defining destination order QoS policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>writerDataLifecycle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~WriterDataLifecyclePolicy">module:OpenspliceDDS~WriterDataLifecyclePolicy</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object for defining writer data
+lifecycle QoS policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>readerDataLifecycle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~ReaderDataLifecyclePolicy">module:OpenspliceDDS~ReaderDataLifecyclePolicy</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object for defining reader data
+lifecycle QoS policy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>durabilityService</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~DurabilityServicePolicy">module:OpenspliceDDS~DurabilityServicePolicy</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object for defining durability service QoS policy</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~ReaderDataLifecyclePolicy">ReaderDataLifecyclePolicy</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the fields of the
+<a href="module-OpenspliceDDS.QoS.html#readerDataLifecycle"> readerDataLifecycle</a>
+QoS policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>autopurgeNoWriterSamples</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Indicates the duration
+(in nanoseconds) the Reader must retain information regarding instances
+that have the
+<a href="module-OpenspliceDDS.html#.StateMask">instance state</a>
+<em>not_alive_no_writers</em>.
+The default value is infinite.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>autopurgeDisposedSamplesDelay</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Indicates
+the duration (in nanoseconds) the Reader must retain information
+regarding instances that have the instance state
+<a href="module-OpenspliceDDS.html#.StateMask">instance state</a>
+<em>not_alive_disposed</em>.
+The default value is infinite.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~ReaderListener">ReaderListener</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the availabe callbacks for a
+<a href="module-OpenspliceDDS.Reader.html">Reader</a>
+listener.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>onRequestedDeadlineMissed</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~onRequestedDeadlineMissed">module:OpenspliceDDS~onRequestedDeadlineMissed</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>callback to receive notice of missed deadlines by the reader.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onRequestedIncompatibleQos</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~onRequestedIncompatibleQos">module:OpenspliceDDS~onRequestedIncompatibleQos</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>callback to receive notice of changes in the number
+writers with QoS incompatible with the reader.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onSampleRejected</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~onSampleRejected">module:OpenspliceDDS~onSampleRejected</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>callback to receive notice of samples rejected by the reader.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onLivelinessChanged</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~onLivelinessChanged">module:OpenspliceDDS~onLivelinessChanged</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>callback to receive notice of changes in liveliness of connected writers.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onSubscriptionMatched</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~onSubscriptionMatched">module:OpenspliceDDS~onSubscriptionMatched</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>callback to receive notice of changes in matched writers.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onSampleLost</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~onSampleLost">module:OpenspliceDDS~onSampleLost</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>callback to receive notice of changes on lost samples.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onDataAvailable</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~onDataAvailable">module:OpenspliceDDS~onDataAvailable</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>callback to receive notice of data available.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~ReliabilityPolicy">ReliabilityPolicy</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the fields on the
+<a href="module-OpenspliceDDS.QoS.html#reliability">reliability</a>
+QoS policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>kind</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#.ReliabilityKind">module:OpenspliceDDS.ReliabilityKind</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the
+reliability policy kind.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>maxBlockingTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the maximum time the
+operation Writer <em>write</em> operation is allowed to block if
+the Writer does not have space to store the value written.
+The default is 100ms (100,000,000ns).</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~RequestedDeadlineMissedStatus">RequestedDeadlineMissedStatus</h4>
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>totalCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>total cumulative number of missed
+deadlines detected for any instance read by the Reader.
+Missed deadlines accumulate; that is, each deadline period
+the totalCount will be incremented by one for each instance
+for which data was not received.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>totalCountChange</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the incremental number of
+deadlines detected since the last time the
+listener was called or the status was read.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lastInstanceHandle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Handle to the last
+instance in the Reader for which a deadline was detected.
+Represents a 64-bit value. May be a string
+if the JavaScript numeric representation would result in
+a loss of precision.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~RequestedIncompatibleQosStatus">RequestedIncompatibleQosStatus</h4>
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>totalCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Total cumulative number of times
+the concerned Reader discovered a Writer for the same Topic with
+an offered QoS that was incompatible with that requested by the Reader.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>totalCountChange</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The change in total_count since
+the last time the listener was called or the status was read.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lastPolicyId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#.QosPolicyID">module:OpenspliceDDS.QosPolicyID</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the identifier
+of the last policy that was deemed incompatible</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~ResourceLimitsPolicy">ResourceLimitsPolicy</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the fields of the
+<a href="module-OpenspliceDDS.QoS.html#resourceLimits">resourceLimits</a>
+QoS policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>maxSamples</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>specifies the maximum number of
+data-samples the Writer (or
+Reader) can manage across all
+the instances associated with it.
+Represents the maximum samples
+the middleware can store for any
+one Writer (or Reader). It
+is inconsistent for this value to be
+less than
+<em>maxSamplesPerInstance</em>.
+By default,
+LENGTH_UNLIMITED.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>maxInstances</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Represents the maximum number of
+instances a Writer (or
+Reader) can manage.
+By default,
+LENGTH_UNLIMITED.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>maxSamplesPerInstance</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Represents the maximum number of
+samples of any one instance a
+Writer (or Reader) can manage. It is inconsistent for this
+value to be greater than <em>maxSamples</em>. By default,
+LENGTH_UNLIMITED.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~SampleData">SampleData</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the information returned about a data sample returned by a
+<a href="module-OpenspliceDDS.Reader.html">Reader</a>.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>sample</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the sample. A full sample if <em>info.valid_data</em>
+is <em>true</em>, otherwise contains key fields only.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>info</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~SampleInfo">module:OpenspliceDDS~SampleInfo</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>properties of the sample</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~SampleInfo">SampleInfo</h4>
+
+
+
+
+<div class="description">
+    <p>Provides information on a sample read from a
+<a href="module-OpenspliceDDS.Reader.html">Reader</a>.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>sample_state</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#.StateMask">module:OpenspliceDDS.StateMask</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>whether the sample
+is currently 'alive' or 'not alive'</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>instance_state</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#.StateMask">module:OpenspliceDDS.StateMask</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>whether this
+key values of the sample have been previously read or not by the Reader.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>view_state</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#.StateMask">module:OpenspliceDDS.StateMask</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>whether this
+particular sample has been previously read or not by the Reader.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>valid_data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>if <em>true</em>, the sample returned contains
+all fields defined by the topic type, otherwise, only the key fields
+defined in the topic type have values.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>source_timestamp</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Timestamp provided by the
+Writer at the time the sample was produced.
+Represents a 64-bit value. May be a string
+if the JavaScript numeric representation would result in
+a loss of precision.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>instance_handle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Instance handle of the sample.
+Represents a 64-bit value. May be a string
+if the JavaScript numeric representation would result in
+a loss of precision.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>publication_handle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Publication handle of
+the sample.
+Represents a 64-bit value. May be a string
+if the JavaScript numeric representation would result in
+a loss of precision.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>disposed_generation_count</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Number of times the instance
+has become alive after it was disposed explicitly by a Writer</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>no_writers_generation_count</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Number of times the instance
+has become alive after it was disposed because there were to alive
+Writers at the time the sample was received</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sample_rank</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Number of samples that follow this one, in
+the array returned by read,take,readCond or takeCond</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>generation_rank</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The generation difference between the
+time this sample was received, and the time the latest sample in the array
+returned by read,take,readCond and takeCond was received</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>absolute_generation_rank</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The generation difference between
+the time this sample was received, and the time the latest sample that the
+Reader has received related to this instance</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>reception_timestamp</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The time when the Reader has
+received this sample.
+Represents a 64-bit value. May be a string
+if the JavaScript numeric representation would result in
+a loss of precision.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~SampleLostStatus">SampleLostStatus</h4>
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>totalCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Total cumulative count of all samples
+lost across of instances of data published under the Topic.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>totalCountChange</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The incremental number of
+samples lost since the last time the listener was called or the
+status was read.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~SampleRejectedStatus">SampleRejectedStatus</h4>
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>totalCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Total cumulative count of samples
+rejected by the Reader.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>totalCountChange</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The incremental number of
+samples rejected since the last time the listener was called
+or the status was read.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lastReason</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#.SampleRejectedStatusKind">module:OpenspliceDDS.SampleRejectedStatusKind</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Reason
+for rejecting the last sample rejected. If no samples have been rejected,
+the reason is the special value <em>not_rejected</em>.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lastInstanceHandle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Handle to the last
+instance in the Reader for which a deadline was detected.
+Represents a 64-bit value. May be a string
+if the JavaScript numeric representation would result in
+a loss of precision.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~SubscriptionMatchedStatus">SubscriptionMatchedStatus</h4>
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>totalCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Total cumulative count the concerned
+Reader discovered a “match” with a Writer. That is, it found a
+Writer for the same Topic with a requested QoS that is compatible
+with that offered by the Reader.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>totalCountChange</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The change in totalCount since
+the last time the listener was called or the status was read.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lastPublicationHandle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Handle to the last
+Writer that matched the DataReader causing the status to change.
+Represents a 64-bit value. May be a string
+if the JavaScript numeric representation would result in
+a loss of precision.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>currentCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The number of Writers currently
+matched to the concerned Reader.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>currentCountChange</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The change in currentCount
+since the last time the listener was called or the status was read.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~TimebasedFilterPolicy">TimebasedFilterPolicy</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the fields of the
+<a href="module-OpenspliceDDS.QoS.html#timebasedFilter">timebasedFilter</a>
+QoS policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>minimumSeparation</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the minimum amount of
+time (in nanoseconds) by which the Reader wants samples it
+receives to be separated, regardsless of how fast the changes occur.
+It is inconsistent for a Reader to have a <em>minimumSeparation</em>
+longer than its
+<a href="module-OpenspliceDDS.QoS.html#deadline">deadline</a>
+policy period. By default minimumSeparation is zero,
+indicating Reader is potentially interested in all values.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~TopicListener">TopicListener</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the availabe callbacks for a
+<a href="module-OpenspliceDDS.Topic.html">Topic</a>
+listener.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>onInconsistentTopic</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~onInconsistentTopic">module:OpenspliceDDS~onInconsistentTopic</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>callback to receive notice of inconsistent topic registrations.
+Note that this callback is triggered only in hybrid DDS domains
+in which OpenspliceDDS and another DDS implementation co-exist.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~TransportPriorityPolicy">TransportPriorityPolicy</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the fields of the
+<a href="module-OpenspliceDDS.QoS.html#transportPriority">transportPriority</a>
+QoS policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a hint to the infrastructure as to how to
+set the priority of the underlying transport used to send the data.
+The default value is zero.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~WriterDataLifecyclePolicy">WriterDataLifecyclePolicy</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the fields of the
+<a href="module-OpenspliceDDS.QoS.html#writerDataLifecycle"> writerDataLifecyle</a> QoS policy.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>autodisposeUnregisteredInstances</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Controls
+whether a Writer will automatically dispose instances each time
+they are unregistered. A value of <em>true</em> indicates that unregistered
+instances will also be considered disposed.
+The default value is <em>true</em>.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="~WriterListener">WriterListener</h4>
+
+
+
+
+<div class="description">
+    <p>Defines the availabe callbacks for a
+<a href="module-OpenspliceDDS.Writer.html">Writer</a>
+listener.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>onOfferedDeadlineMissed</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~onOfferedDeadlineMissed">module:OpenspliceDDS~onOfferedDeadlineMissed</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>callback to receive notice of missed offered deadlines by
+the writer.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onOfferedIncompatibleQos</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~onOfferedIncompatibleQos">module:OpenspliceDDS~onOfferedIncompatibleQos</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>callback to receive notice of Readers that are incompatible
+with the writer's QoS.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onLivelinessLost</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~onLivelinessLost">module:OpenspliceDDS~onLivelinessLost</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>callback to receive notice of that the writer has not
+adhered to its liveliness QoS.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onPublicationMatched</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~onPublicationMatched">module:OpenspliceDDS~onPublicationMatched</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>callback to receive notice of changes in matched readers.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-OpenspliceDDS.html">OpenspliceDDS</a></li></ul><h3>Externals</h3><ul><li><a href="external-Array.html">Array</a></li><li><a href="external-Buffer.html">Buffer</a></li><li><a href="external-Error.html">Error</a></li><li><a href="external-Map.html">Map</a></li><li><a href="external-Promise.html">Promise</a></li></ul><h3>Classes</h3><ul><li><a href="module-OpenspliceDDS.Condition.html">Condition</a></li><li><a href="module-OpenspliceDDS.DDSError.html">DDSError</a></li><li><a href="module-OpenspliceDDS.Entity.html">Entity</a></li><li><a href="module-OpenspliceDDS.GuardCondition.html">GuardCondition</a></li><li><a href="module-OpenspliceDDS.Participant.html">Participant</a></li><li><a href="module-OpenspliceDDS.Publisher.html">Publisher</a></li><li><a href="module-OpenspliceDDS.QoS.html">QoS</a></li><li><a href="module-OpenspliceDDS.QoSProvider.html">QoSProvider</a></li><li><a href="module-OpenspliceDDS.QueryCondition.html">QueryCondition</a></li><li><a href="module-OpenspliceDDS.ReadCondition.html">ReadCondition</a></li><li><a href="module-OpenspliceDDS.Reader.html">Reader</a></li><li><a href="module-OpenspliceDDS.StatusCondition.html">StatusCondition</a></li><li><a href="module-OpenspliceDDS.Subscriber.html">Subscriber</a></li><li><a href="module-OpenspliceDDS.Topic.html">Topic</a></li><li><a href="module-OpenspliceDDS.TypeSupport.html">TypeSupport</a></li><li><a href="module-OpenspliceDDS.Waitset.html">Waitset</a></li><li><a href="module-OpenspliceDDS.Writer.html">Writer</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Fri Jan 17 2025 12:25:28 GMT+0000 (GMT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

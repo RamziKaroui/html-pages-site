@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: DDSError</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: DDSError</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>
+            <span class="ancestors"><a href="module-OpenspliceDDS.html">OpenspliceDDS</a>.</span>DDSError<span class="signature">(error, message<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
+        
+            <div class="class-description"><p>An error originating from the DDS system.</p>
+<p>Every DDS error has two properties:</p>
+<ul>
+<li><a href="module-OpenspliceDDS.DDSError.html#ddsErrCode">ddsErrCode</a>
+a numeric value between 0 and 12</li>
+<li><a href="module-OpenspliceDDS.DDSError.html#ddsErrMsg">ddsErrMsg</a>
+a short textual description of the error code</li>
+</ul>
+<p>Note that every DDSError results in entries in the ospl-error.log
+file.
+These entries provide significantly more information on the
+nature of the error.</p></div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+    <h2>Constructor</h2>
+    
+
+    
+    <h4 class="name" id="DDSError"><span class="type-signature"></span>new DDSError<span class="signature">(error, message<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Not typically used by customers. Creates a DDSError instance.</p>
+</div>
+
+
+
+    <h5>Extends:</h5>
+    
+
+
+    <ul>
+        <li><a href="external-Error.html">external:Error</a></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>error</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#.DDSErrorCode">module:OpenspliceDDS.DDSErrorCode</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>an integer between 0
+and 12 or a negative integer returned from one of the C99
+APIs (used internally)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>message</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    ''
+                
+                </td>
+            
+
+            <td class="description last"><p>a message providing context of the error</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="external-Error.html">external:Error</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="ddsErrCode"><span class="type-signature"></span>ddsErrCode<span class="type-signature"> :<a href="module-OpenspliceDDS.html#.DDSErrorCode">module:OpenspliceDDS.DDSErrorCode</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The DDS error code</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#.DDSErrorCode">module:OpenspliceDDS.DDSErrorCode</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="ddsErrMsg"><span class="type-signature"></span>ddsErrMsg<span class="type-signature"> :string</span></h4>
+
+
+
+
+<div class="description">
+    <p>A short textual description of the DDS error code</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-OpenspliceDDS.html">OpenspliceDDS</a></li></ul><h3>Externals</h3><ul><li><a href="external-Array.html">Array</a></li><li><a href="external-Buffer.html">Buffer</a></li><li><a href="external-Error.html">Error</a></li><li><a href="external-Map.html">Map</a></li><li><a href="external-Promise.html">Promise</a></li></ul><h3>Classes</h3><ul><li><a href="module-OpenspliceDDS.Condition.html">Condition</a></li><li><a href="module-OpenspliceDDS.DDSError.html">DDSError</a></li><li><a href="module-OpenspliceDDS.Entity.html">Entity</a></li><li><a href="module-OpenspliceDDS.GuardCondition.html">GuardCondition</a></li><li><a href="module-OpenspliceDDS.Participant.html">Participant</a></li><li><a href="module-OpenspliceDDS.Publisher.html">Publisher</a></li><li><a href="module-OpenspliceDDS.QoS.html">QoS</a></li><li><a href="module-OpenspliceDDS.QoSProvider.html">QoSProvider</a></li><li><a href="module-OpenspliceDDS.QueryCondition.html">QueryCondition</a></li><li><a href="module-OpenspliceDDS.ReadCondition.html">ReadCondition</a></li><li><a href="module-OpenspliceDDS.Reader.html">Reader</a></li><li><a href="module-OpenspliceDDS.StatusCondition.html">StatusCondition</a></li><li><a href="module-OpenspliceDDS.Subscriber.html">Subscriber</a></li><li><a href="module-OpenspliceDDS.Topic.html">Topic</a></li><li><a href="module-OpenspliceDDS.TypeSupport.html">TypeSupport</a></li><li><a href="module-OpenspliceDDS.Waitset.html">Waitset</a></li><li><a href="module-OpenspliceDDS.Writer.html">Writer</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Fri Jan 17 2025 12:25:28 GMT+0000 (GMT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

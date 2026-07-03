@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Home</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Home</h1>
+
+    
+
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><p>The OpenspliceDDS API for NodeJS.</p>
+<h3>Require the 'OpenspliceDDS' module</h3>
+<p>Import the OpenspliceDDS module into your server-side JavaScript files:</p>
+<pre><code>const dds = require('OpenspliceDDS');
+</code></pre>
+<h3>Asynchronous aspects of the API</h3>
+<p>Some DDS operations can take a long time.
+In order to not block the execution of other asynchronous JavaScript
+operation, the OpenspliceDDS API for NodeJS uses asynchronous operations
+the return standard JavaScript
+<a href="external-Promise.html">Promise</a> objects.</p>
+<p>In addition, at creation, some entities accept a 'listener'
+object, which defines one or more 'callback' methods, which are called
+asynchronously by the NodeJS engine when the appropriate event occurs.
+Entities supporting listeners are:
+<a href="module-OpenspliceDDS.Topic.html">Topic</a>,
+<a href="module-OpenspliceDDS.Reader.html">Reader</a>
+and
+<a href="module-OpenspliceDDS.Writer.html">Writer</a>.
+See their factory methods for documentation on these listeners.</p>
+<h3>Releasing DDS resources</h3>
+<p>Many DDS objects have associated with them resources obtained from
+the DDS system. The NodeJS engine does not reclaim these resources,
+even if it garbage collects an object the represents such a resource.</p>
+<p>In order to avoid leaking of DDS resources, you should take care to
+call the appropriate <em>delete()</em> method when you are finished with
+a DDS object. Once the <em>delete()</em> method is called on an object,
+it is no longer usable.</p>
+<p>Many DDS objects are organized into a hierarchy. DDS objects created
+by factory methods on another DDS object are implicitly 'owned' by that
+'parent' object. If a parent object is deleted, then all directly and
+indirectly owned objects are also deleted. The only DDS types that
+are not 'owned' by other objects are:</p>
+<ul>
+<li><a href="module-OpenspliceDDS.Participant.html">Participant</a>, which sit at the top
+of the ownership hierarchy</li>
+<li><a href="module-OpenspliceDDS.Waitset.html">Waitset</a> instances.</li>
+<li><a href="module-OpenspliceDDS.GuardCondition.html">GuardCondition</a> instances.</li>
+<li><a href="module-OpenspliceDDS.QoSProvider.html">QoSProvider</a> instances.</li>
+</ul>
+<p>To completely clean-up DDS resources, at a minimum, your program must explicitly
+delete all instances of the above types.
+Instances of other DDS objects
+may be explicitly deleted by your program once you no longer require them.
+Explicitly deleted such objects will reduce the footprint of your DDS application.</p>
+<h3>Exceptions</h3>
+<p>Most APIs will throw exceptions, rather than return 'error codes'.</p>
+<p>The most common exception thrown is
+<a href="module-OpenspliceDDS.DDSError.html">DDSError</a>,
+which represents an error within the DDS system.
+Frequently, additional information is written to the file <em>dds-error.log</em>.
+All methods that throw DDSError have this fact explicitly documented.</p>
+<p>Most methods also type-check their arguments. If errors are found in
+these arguments, then a standard JavaScript <em>TypeError</em> is typically throw.
+The documentation does not explicitly document when <em>TypeError</em> is thrown.</p>
+<h3>Key API references</h3>
+<ul>
+<li>To import data types defined in an OpenspliceDDS compliant IDL file, see
+<a href="module-OpenspliceDDS.html#.importIDL">importIDL()</a>.</li>
+<li>To connect to a DDS domain, create a
+<a href="module-OpenspliceDDS.Participant.html">Participant</a>.</li>
+<li>To register a DDS topic, use
+<a href="module-OpenspliceDDS.Participant.html#createTopic">Participant.createTopic()</a>.</li>
+<li>To create a DDS data reader, use
+<a href="module-OpenspliceDDS.Participant.html#createReader">Participant.createReader()</a>
+or
+<a href="module-OpenspliceDDS.Subscriber.html#createReader">Subscriber.createReader()</a>.</li>
+<li>To create a DDS data writer, use
+<a href="module-OpenspliceDDS.Participant.html#createWriter">Participant.createWriter()</a>
+or
+Subscriber.createWriter().</li>
+<li>Import a externally defined quality-of-service (QoS) 'profiles', see
+<a href="module-OpenspliceDDS.QoSProvider.html">QoSProvider</a>.</li>
+<li>To programmatically create or examine quality-of-service (QoS) policies on
+an entity, see
+<a href="module-OpenspliceDDS.QoS.html">QoS</a> and
+<a href="module-OpenspliceDDS.Entity.html#qos">Entity.qos</a>.</li>
+<li>To create a DDS 'waitset' that enables you to wait (asynchronously) for
+specific conditions, see
+<a href="module-OpenspliceDDS.Waitset.html">Waitset</a>.</li>
+</ul></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-OpenspliceDDS.html">OpenspliceDDS</a></li></ul><h3>Externals</h3><ul><li><a href="external-Array.html">Array</a></li><li><a href="external-Buffer.html">Buffer</a></li><li><a href="external-Error.html">Error</a></li><li><a href="external-Map.html">Map</a></li><li><a href="external-Promise.html">Promise</a></li></ul><h3>Classes</h3><ul><li><a href="module-OpenspliceDDS.Condition.html">Condition</a></li><li><a href="module-OpenspliceDDS.DDSError.html">DDSError</a></li><li><a href="module-OpenspliceDDS.Entity.html">Entity</a></li><li><a href="module-OpenspliceDDS.GuardCondition.html">GuardCondition</a></li><li><a href="module-OpenspliceDDS.Participant.html">Participant</a></li><li><a href="module-OpenspliceDDS.Publisher.html">Publisher</a></li><li><a href="module-OpenspliceDDS.QoS.html">QoS</a></li><li><a href="module-OpenspliceDDS.QoSProvider.html">QoSProvider</a></li><li><a href="module-OpenspliceDDS.QueryCondition.html">QueryCondition</a></li><li><a href="module-OpenspliceDDS.ReadCondition.html">ReadCondition</a></li><li><a href="module-OpenspliceDDS.Reader.html">Reader</a></li><li><a href="module-OpenspliceDDS.StatusCondition.html">StatusCondition</a></li><li><a href="module-OpenspliceDDS.Subscriber.html">Subscriber</a></li><li><a href="module-OpenspliceDDS.Topic.html">Topic</a></li><li><a href="module-OpenspliceDDS.TypeSupport.html">TypeSupport</a></li><li><a href="module-OpenspliceDDS.Waitset.html">Waitset</a></li><li><a href="module-OpenspliceDDS.Writer.html">Writer</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Fri Jan 17 2025 12:25:28 GMT+0000 (GMT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

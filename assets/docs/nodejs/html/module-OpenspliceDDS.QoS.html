@@ -1,0 +1,2903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: QoS</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: QoS</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>
+            <span class="ancestors"><a href="module-OpenspliceDDS.html">OpenspliceDDS</a>.</span>QoS<span class="signature">(policies<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
+        
+            <div class="class-description"><p>Quality of service (QoS) policy container</p>
+<p>Twenty-one (21) QoS policies are defined, although
+most policies apply to only a subset of the DDS
+entity types. Policies that do not apply to a
+particular entity are ignored. The documentation
+for each property specifies the applicable entities.</p>
+<p>The available QoS policies are:
+<a href="module-OpenspliceDDS.QoS.html#userdata">userdata</a>,
+<a href="module-OpenspliceDDS.QoS.html#topicdata">topicdata</a>,
+<a href="module-OpenspliceDDS.QoS.html#groupdata">groupdata</a>,
+<a href="module-OpenspliceDDS.QoS.html#durability">durability</a>,
+<a href="module-OpenspliceDDS.QoS.html#durabilityService">durabilityService</a>,
+<a href="module-OpenspliceDDS.QoS.html#presentation">presentation</a>,
+<a href="module-OpenspliceDDS.QoS.html#deadline">deadline</a>,
+<a href="module-OpenspliceDDS.QoS.html#latencyBudget">latencyBudget</a>,
+<a href="module-OpenspliceDDS.QoS.html#ownership">ownership</a>,
+<a href="module-OpenspliceDDS.QoS.html#ownershipStrength">ownershipStrength</a>,
+<a href="module-OpenspliceDDS.QoS.html#liveliness">liveliness</a>,
+<a href="module-OpenspliceDDS.QoS.html#timebasedFilter">timebasedFilter</a>,
+<a href="module-OpenspliceDDS.QoS.html#partition">partition</a>,
+<a href="module-OpenspliceDDS.QoS.html#reliability">reliability</a>,
+<a href="module-OpenspliceDDS.QoS.html#transportPriority">transportPriority</a>,
+<a href="module-OpenspliceDDS.QoS.html#lifespan">lifespan</a>,
+<a href="module-OpenspliceDDS.QoS.html#destinationOrder">destinationOrder</a>,
+<a href="module-OpenspliceDDS.QoS.html#history">history</a>,
+<a href="module-OpenspliceDDS.QoS.html#resourceLimits">resourceLimits</a>,
+<a href="module-OpenspliceDDS.QoS.html#writerDataLifecycle">writerDataLifecycle</a>
+and
+<a href="module-OpenspliceDDS.QoS.html#readerDataLifecycle">readerDataLifecycle</a>.</p></div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+    <h2>Constructor</h2>
+    
+
+    
+    <h4 class="name" id="QoS"><span class="type-signature"></span>new QoS<span class="signature">(policies<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Create a QoS object.</p>
+<p>While creating a QoS object, all the QoS policies
+are initialized to the default QoS policies except
+for the policies that are provided and set accordingly.</p>
+<p>Note that you should consider using one of the
+following factory functions to create defaults
+appropriate for the type of DDS entity you will
+be creating:</p>
+<ul>
+<li><a href="module-OpenspliceDDS.QoS.html#.participantDefault"> QoS.participantDefault()</a></li>
+<li><a href="module-OpenspliceDDS.QoS.html#.topicDefault"> QoS.topicDefault()</a></li>
+<li><a href="module-OpenspliceDDS.QoS.html#.publisherDefault"> QoS.publisherDefault()</a></li>
+<li><a href="module-OpenspliceDDS.QoS.html#.subscriberDefault"> QoS.subscriberDefault()</a></li>
+<li><a href="module-OpenspliceDDS.QoS.html#.readerDefault"> QoS.readerDefault()</a></li>
+<li><a href="module-OpenspliceDDS.QoS.html#.writerDefault"> QoS.writerDefault()</a></li>
+</ul>
+<p>These functions return an initialized QoS object
+that differs from a constructed QoS object with no parameter.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>policies</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-OpenspliceDDS.html#~QosPolicies">module:OpenspliceDDS~QosPolicies</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    null
+                
+                </td>
+            
+
+            <td class="description last"><p>an object
+defining QoS policies</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const dds = require('OpenspliceDDS');
+const qos = new dds.QoS({
+  durability: { kind: qos.DurabilityKind.Persistent },
+ });</code></pre>
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="deadline"><span class="type-signature"></span>deadline<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~DeadlinePolicy">module:OpenspliceDDS~DeadlinePolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The deadline policy.</p>
+<p>Applies to: Topic, Reader, Writer</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~DeadlinePolicy">module:OpenspliceDDS~DeadlinePolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const dds = require('OpenspliceDDS');
+const qos = dds.QoS.topicDefault();
+const SEC_TO_NS = 10 ^ 9;
+qos.deadline = { deadline: 10 * SECS_TO_NS};</code></pre>
+
+
+
+        
+            
+<h4 class="name" id="destinationOrder"><span class="type-signature"></span>destinationOrder<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~DestinationOrderPolicy">module:OpenspliceDDS~DestinationOrderPolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The destination order policy.</p>
+<p>Applies to: Topic, Reader, Writer</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~DestinationOrderPolicy">module:OpenspliceDDS~DestinationOrderPolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const dds = require('OpenspliceDDS');
+const qos = dds.QoS.topicDefault();
+qos.destinationOrder = {
+    kind: dds.DestinationOrderKind.BySourceTimestamp
+};</code></pre>
+
+
+
+        
+            
+<h4 class="name" id="durability"><span class="type-signature"></span>durability<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~DurabilityPolicy">module:OpenspliceDDS~DurabilityPolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The durability policy.</p>
+<p>Applies to: Reader, Writer, Topic</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~DurabilityPolicy">module:OpenspliceDDS~DurabilityPolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const dds = require('OpenspliceDDS');
+const qos = dds.QoS.writerDefault();
+qos.durability.kind = dds.DurabilityKind.Persistent;</code></pre>
+
+
+
+        
+            
+<h4 class="name" id="durabilityService"><span class="type-signature"></span>durabilityService<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~DurabilityServicePolicy">module:OpenspliceDDS~DurabilityServicePolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The durability service policy.</p>
+<p>Applies to: Topic, Writer</p>
+<p>You only need to provide the fields that you want to change.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~DurabilityServicePolicy">module:OpenspliceDDS~DurabilityServicePolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const dds = require('OpenspliceDDS');
+const qos = dds.QoS.topicDefault();
+const MS_TO_NS = 10 ^ 6;
+qos.durabilityService = {
+    serviceCleanupDelay: 100 * MS_TO_NS,
+    historyKind: dds.HistoryKind.KeepLast,
+    historyDepth: 1,
+    maxSamples: 1000,
+    maxInstances 100,
+    maxSamplesPerInstance: 10
+};</code></pre>
+
+
+
+        
+            
+<h4 class="name" id="groupdata"><span class="type-signature"></span>groupdata<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~DataPolicy">module:OpenspliceDDS~DataPolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The group data policy.</p>
+<p>Applies to: Publisher, Subscriber</p>
+<p>When setting this policy, the <em>value</em> field
+of the passed
+<a href="module-OpenspliceDDS.html#~DataPolicy"> DataPolicy</a> may be one of:</p>
+<ul>
+<li>a <a href="external-Buffer.html">Buffer</a></li>
+<li>a string</li>
+</ul>
+<p>If <em>value</em> is a string, it will be converted
+to a Buffer using the ISO-8859-1 encoding.</p>
+<p>When retrieving the policy, the <em>value</em> field
+will be returned as a 'string' which has
+been ISO-8859-1 decoded from the raw binary
+data physically stored by DDS.</p>
+<p>To directly retrieve the raw binary data
+stored by DDS, use the
+<a href="module-OpenspliceDDS.QoS.html#groupdataRaw">groupdataRaw</a>
+data.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~DataPolicy">module:OpenspliceDDS~DataPolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="groupdataRaw"><span class="type-signature"></span>groupdataRaw<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~DataPolicy">module:OpenspliceDDS~DataPolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The group data policy, uninterpreted</p>
+<p>Applies to: Publisher, Subscriber</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~DataPolicy">module:OpenspliceDDS~DataPolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="history"><span class="type-signature"></span>history<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~HistoryPolicy">module:OpenspliceDDS~HistoryPolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The history policy.</p>
+<p>Applies to: Reader, Writer, Topic</p>
+<p>You only need to provide the fields that you want to change.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~HistoryPolicy">module:OpenspliceDDS~HistoryPolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const dds = require('OpenspliceDDS');
+const qos = dds.QoS.topicDefault();
+qos.history = {
+    kind: dds.HistoryKind.KeepLast,
+    depth: 5
+};</code></pre>
+
+
+
+        
+            
+<h4 class="name" id="latencyBudget"><span class="type-signature"></span>latencyBudget<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~LatencyBudgetPolicy">module:OpenspliceDDS~LatencyBudgetPolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The latency budget policy.</p>
+<p>Applies to: Topic, Reader, Writer</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~LatencyBudgetPolicy">module:OpenspliceDDS~LatencyBudgetPolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const dds = require('OpenspliceDDS');
+const qos = dds.QoS.topicDefault();
+const SEC_TO_NS = 10 ^ 9;
+qos.latencyBudget = { duration: 5 * SEC_TO_NS };</code></pre>
+
+
+
+        
+            
+<h4 class="name" id="lifespan"><span class="type-signature"></span>lifespan<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~LifespanPolicy">module:OpenspliceDDS~LifespanPolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The lifespan policy.</p>
+<p>Applies to: Topic, Writer</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~LifespanPolicy">module:OpenspliceDDS~LifespanPolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const dds = require('OpenspliceDDS');
+const qos = dds.QoS.topicDefault();
+const SECS_TO_NS = 10 ^ 9;
+qos.lifespan = { lifespan: 1 * SECS_TO_NS };</code></pre>
+
+
+
+        
+            
+<h4 class="name" id="liveliness"><span class="type-signature"></span>liveliness<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~LivelinessPolicy">module:OpenspliceDDS~LivelinessPolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The liveliness policy.</p>
+<p>Applies to: Topic, Reader, Writer</p>
+<p>You only need to provide the fields that you want to change.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~LivelinessPolicy">module:OpenspliceDDS~LivelinessPolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const dds = require('OpenspliceDDS');
+const qos = dds.QoS.topicDefault();
+const MS_TO_NS = 10 ^ 6;
+qos.liveliness = {
+    kind: dds.LivelinessKind.Automatic,
+    leaseDuration: 100 * MS_to_NS
+};</code></pre>
+
+
+
+        
+            
+<h4 class="name" id="ownership"><span class="type-signature"></span>ownership<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~OwnershipPolicy">module:OpenspliceDDS~OwnershipPolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The ownership policy.</p>
+<p>Applies to: Topic, Reader, Writer</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~OwnershipPolicy">module:OpenspliceDDS~OwnershipPolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const dds = require('OpenspliceDDS');
+const qos = dds.QoS.topicDefault();
+qos.ownership = {
+    kind: dds.OwnershipKind.Exclusive
+};</code></pre>
+
+
+
+        
+            
+<h4 class="name" id="ownershipStrength"><span class="type-signature"></span>ownershipStrength<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~OwnershipStrengthPolicy">module:OpenspliceDDS~OwnershipStrengthPolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The ownership strength policy.</p>
+<p>Applies to: Writer</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~OwnershipStrengthPolicy">module:OpenspliceDDS~OwnershipStrengthPolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const dds = require('OpenspliceDDS');
+const qos = dds.QoS.writerDefault();
+qos.ownership = {
+    kind: dds.OwnershipKind.Exclusive
+};
+qos.ownershipStrength = {
+    value: 100
+};</code></pre>
+
+
+
+        
+            
+<h4 class="name" id="partition"><span class="type-signature"></span>partition<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~PartitionPolicy">module:OpenspliceDDS~PartitionPolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The partition policy.</p>
+<p>Applies to: Publisher, Subscriber</p>
+<p>We retrieving the partition policy, the <em>names</em> field
+of the returned
+<a href="module-OpenspliceDDS.html#~PartitionPolicy">policy</a>
+object is always an array of strings.</p>
+<p>We setting the partition policy, you may set the <em>names</em> field
+of the returned
+<a href="module-OpenspliceDDS.html#~PartitionPolicy">policy</a>
+to be either a single string, or an array of strings.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~PartitionPolicy">module:OpenspliceDDS~PartitionPolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Examples</h5>
+    
+    <pre class="prettyprint"><code>// set a single partition
+const dds = require('OpenspliceDDS');
+const qos = dds.QoS.publisherDefault();
+qos.partition = {names: 'mypartition'};</code></pre>
+
+    <pre class="prettyprint"><code>// set multiplpe partitions
+const dds = require('OpenspliceDDS');
+const qos = dds.QoS.publisherDefault();
+qos.partition = {names: [
+  'mypartition1',
+  'mypartition2'
+]};</code></pre>
+
+
+
+        
+            
+<h4 class="name" id="presentation"><span class="type-signature"></span>presentation<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~PresentationPolicy">module:OpenspliceDDS~PresentationPolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The presentation policy.</p>
+<p>Applies to: Publisher, Subscriber</p>
+<p>You only need to provide the fields that you want to change.</p>
+<p>Note that the Node JS API for DDS only supports
+the <em>Instance</em> access scope.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~PresentationPolicy">module:OpenspliceDDS~PresentationPolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const dds = require('OpenspliceDDS');
+const qos = dds.QoS.publisherDefault();
+qos.presentation = {
+ accessScope: dds.PresentationAccessScopeKind.Instance
+};</code></pre>
+
+
+
+        
+            
+<h4 class="name" id="readerDataLifecycle"><span class="type-signature"></span>readerDataLifecycle<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~ReaderDataLifecyclePolicy">module:OpenspliceDDS~ReaderDataLifecyclePolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The reader data lifecycle policy.</p>
+<p>Applies to: Reader</p>
+<p>You only need to provide the fields that you want to change.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~ReaderDataLifecyclePolicy">module:OpenspliceDDS~ReaderDataLifecyclePolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const dds = require('OpenspliceDDS');
+const qos = dds.QoS.readerDefault();
+const MS_TO_NS = 10 ^ 6;
+qos.readerDataLifecycle = {
+    autopurgeNoWriterSamples: 100 * MS_TO_NS,
+    autopurgeDisposedSamplesDelay: 100 * MS_TO_NS
+};</code></pre>
+
+
+
+        
+            
+<h4 class="name" id="reliability"><span class="type-signature"></span>reliability<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~ReliabilityPolicy">module:OpenspliceDDS~ReliabilityPolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The reliability policy.</p>
+<p>Applies to: Topic, Reader, Writer</p>
+<p>You only need to provide the fields that you want to change.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~ReliabilityPolicy">module:OpenspliceDDS~ReliabilityPolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const dds = require('OpenspliceDDS');
+const qos = dds.QoS.topicDefault();
+const MS_TO_NS = 10 ^ 6;
+qos.reliability = {
+    kind: dds.ReliabilityKind.Reliable,
+    maxBlockingTime: 100 * MS_TO_NS
+};</code></pre>
+
+
+
+        
+            
+<h4 class="name" id="resourceLimits"><span class="type-signature"></span>resourceLimits<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~ResourceLimitsPolicy">module:OpenspliceDDS~ResourceLimitsPolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The resource limits policy.</p>
+<p>Applies to: Reader, Writer, Topic</p>
+<p>You only need to provide the fields that you want to change.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~ResourceLimitsPolicy">module:OpenspliceDDS~ResourceLimitsPolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const dds = require('OpenspliceDDS');
+const qos = dds.QoS.topicDefault();
+qos.resourceLimits = {
+    maxSamples: 100,
+    maxInstances: 10,
+    maxSamplesPerInstance: 10,
+};</code></pre>
+
+
+
+        
+            
+<h4 class="name" id="timebasedFilter"><span class="type-signature"></span>timebasedFilter<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~TimebasedFilterPolicy">module:OpenspliceDDS~TimebasedFilterPolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The time based filter policy.</p>
+<p>Applies to: Reader</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~TimebasedFilterPolicy">module:OpenspliceDDS~TimebasedFilterPolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const dds = require('OpenspliceDDS');
+const qos = dds.QoS.readerDefault();
+const MS_TO_NS = 10 ^ 6;
+qos.timebasedFilter = {
+    minimumSeparation: 100 * MS_TO_NS
+};</code></pre>
+
+
+
+        
+            
+<h4 class="name" id="topicdata"><span class="type-signature"></span>topicdata<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~DataPolicy">module:OpenspliceDDS~DataPolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The topic data policy.</p>
+<p>Applies to: Topic
+When setting this policy, the <em>value</em> field
+of the passed
+<a href="module-OpenspliceDDS.html#~DataPolicy"> DataPolicy</a> may be one of:</p>
+<ul>
+<li>a <a href="external-Buffer.html">Buffer</a></li>
+<li>a string</li>
+</ul>
+<p>If <em>value</em> is a string, it will be converted
+to a Buffer using the ISO-8859-1 encoding.</p>
+<p>When retrieving the policy, the <em>value</em> field
+will be returned as a 'string' which has
+been ISO-8859-1 decoded from the raw binary
+data physically stored by DDS.</p>
+<p>To directly retrieve the raw binary data
+stored by DDS, use the
+<a href="module-OpenspliceDDS.QoS.html#topicdataRaw">topicdataRaw</a>
+property.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~DataPolicy">module:OpenspliceDDS~DataPolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="topicdataRaw"><span class="type-signature"></span>topicdataRaw<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~DataPolicy">module:OpenspliceDDS~DataPolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The topic data policy, uninterpreted</p>
+<p>Applies to: Topic</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~DataPolicy">module:OpenspliceDDS~DataPolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="transportPriority"><span class="type-signature"></span>transportPriority<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~TransportPriorityPolicy">module:OpenspliceDDS~TransportPriorityPolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The transport priority policy.</p>
+<p>Applies to: Topic, Writer</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~TransportPriorityPolicy">module:OpenspliceDDS~TransportPriorityPolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const dds = require('OpenspliceDDS');
+const qos = dds.QoS.topicDefault();
+qos.transportPriority = {
+    value: 100
+};</code></pre>
+
+
+
+        
+            
+<h4 class="name" id="userdata"><span class="type-signature"></span>userdata<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~DataPolicy">module:OpenspliceDDS~DataPolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The user data policy.</p>
+<p>Applies to: Participant, Reader, Writer</p>
+<p>When setting this policy, the <em>value</em> field
+of the passed
+<a href="module-OpenspliceDDS.html#~DataPolicy"> DataPolicy</a> may be one of:</p>
+<ul>
+<li>a <a href="external-Buffer.html">Buffer</a></li>
+<li>a string</li>
+</ul>
+<p>If <em>value</em> is a string, it will be converted
+to a Buffer using the ISO-8859-1 encoding.</p>
+<p>When retrieving the policy, the <em>value</em> field
+will be returned as a 'string' which has
+been ISO-8859-1 decoded from the raw binary
+data physically stored by DDS.</p>
+<p>To directly retrieve the raw binary data
+stored by DDS, use the
+<a href="module-OpenspliceDDS.QoS.html#userdataRaw">userdataRaw</a>
+data.</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~DataPolicy">module:OpenspliceDDS~DataPolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="userdataRaw"><span class="type-signature"></span>userdataRaw<span class="type-signature"> :module:OpenspliceDDS.DataPolicy</span></h4>
+
+
+
+
+<div class="description">
+    <p>The user data policy, uninterpreted</p>
+<p>Applies to: Participant, Reader, Writer</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">module:OpenspliceDDS.DataPolicy</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="writerDataLifecycle"><span class="type-signature"></span>writerDataLifecycle<span class="type-signature"> :<a href="module-OpenspliceDDS.html#~WriterDataLifecyclePolicy">module:OpenspliceDDS~WriterDataLifecyclePolicy</a></span></h4>
+
+
+
+
+<div class="description">
+    <p>The writer data lifecycle policy.</p>
+<p>Applies to: Writer</p>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="module-OpenspliceDDS.html#~WriterDataLifecyclePolicy">module:OpenspliceDDS~WriterDataLifecyclePolicy</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const dds = require('OpenspliceDDS');
+const qos = dds.QoS.writerDefault();
+qos.writerDataLifecycle = {
+    autodisposeUnregisteredInstances: false
+};</code></pre>
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".participantDefault"><span class="type-signature">(static) </span>participantDefault<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="module-OpenspliceDDS.QoS.html">module:OpenspliceDDS.QoS</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Create a default QoS object suitable for
+creating
+<a href="module-OpenspliceDDS.Participant.html">Participant</a>
+entities.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="module-OpenspliceDDS.QoS.html">module:OpenspliceDDS.QoS</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".publisherDefault"><span class="type-signature">(static) </span>publisherDefault<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="module-OpenspliceDDS.QoS.html">module:OpenspliceDDS.QoS</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Create a default QoS object suitable for
+creating
+<a href="module-OpenspliceDDS.Publisher.html">Publisher</a>
+entities.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="module-OpenspliceDDS.QoS.html">module:OpenspliceDDS.QoS</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".readerDefault"><span class="type-signature">(static) </span>readerDefault<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="module-OpenspliceDDS.QoS.html">module:OpenspliceDDS.QoS</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Create a default QoS object suitable for
+creating
+<a href="module-OpenspliceDDS.Reader.html">Reader</a>
+entities.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="module-OpenspliceDDS.QoS.html">module:OpenspliceDDS.QoS</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".subscriberDefault"><span class="type-signature">(static) </span>subscriberDefault<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="module-OpenspliceDDS.QoS.html">module:OpenspliceDDS.QoS</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Create a default QoS object suitable for
+creating
+<a href="module-OpenspliceDDS.Subscriber.html">Subscriber</a>
+entities.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="module-OpenspliceDDS.QoS.html">module:OpenspliceDDS.QoS</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".topicDefault"><span class="type-signature">(static) </span>topicDefault<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="module-OpenspliceDDS.QoS.html">module:OpenspliceDDS.QoS</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Create a default QoS object suitable for
+creating
+<a href="module-OpenspliceDDS.Topic.html">Topic</a>
+entities.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="module-OpenspliceDDS.QoS.html">module:OpenspliceDDS.QoS</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".writerDefault"><span class="type-signature">(static) </span>writerDefault<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="module-OpenspliceDDS.QoS.html">module:OpenspliceDDS.QoS</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Create a default QoS object suitable for
+creating
+<a href="module-OpenspliceDDS.Writer.html">Writer</a>
+entities.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="module-OpenspliceDDS.QoS.html">module:OpenspliceDDS.QoS</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="delete"><span class="type-signature"></span>delete<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>This function does nothing. Previously it
+released the DDS memory associated with
+this QoS object. This class no longer retains
+any DDS resources.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// release QoS resources after usage
+const qos = QoS.subscriberDefault();
+qos.partition = {name: ['foo','bar']};
+const sub = dp.createSubscriber(qos);
+qos.delete(); // finished with QoS object</code></pre>
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-OpenspliceDDS.html">OpenspliceDDS</a></li></ul><h3>Externals</h3><ul><li><a href="external-Array.html">Array</a></li><li><a href="external-Buffer.html">Buffer</a></li><li><a href="external-Error.html">Error</a></li><li><a href="external-Map.html">Map</a></li><li><a href="external-Promise.html">Promise</a></li></ul><h3>Classes</h3><ul><li><a href="module-OpenspliceDDS.Condition.html">Condition</a></li><li><a href="module-OpenspliceDDS.DDSError.html">DDSError</a></li><li><a href="module-OpenspliceDDS.Entity.html">Entity</a></li><li><a href="module-OpenspliceDDS.GuardCondition.html">GuardCondition</a></li><li><a href="module-OpenspliceDDS.Participant.html">Participant</a></li><li><a href="module-OpenspliceDDS.Publisher.html">Publisher</a></li><li><a href="module-OpenspliceDDS.QoS.html">QoS</a></li><li><a href="module-OpenspliceDDS.QoSProvider.html">QoSProvider</a></li><li><a href="module-OpenspliceDDS.QueryCondition.html">QueryCondition</a></li><li><a href="module-OpenspliceDDS.ReadCondition.html">ReadCondition</a></li><li><a href="module-OpenspliceDDS.Reader.html">Reader</a></li><li><a href="module-OpenspliceDDS.StatusCondition.html">StatusCondition</a></li><li><a href="module-OpenspliceDDS.Subscriber.html">Subscriber</a></li><li><a href="module-OpenspliceDDS.Topic.html">Topic</a></li><li><a href="module-OpenspliceDDS.TypeSupport.html">TypeSupport</a></li><li><a href="module-OpenspliceDDS.Waitset.html">Waitset</a></li><li><a href="module-OpenspliceDDS.Writer.html">Writer</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Fri Jan 17 2025 12:25:28 GMT+0000 (GMT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

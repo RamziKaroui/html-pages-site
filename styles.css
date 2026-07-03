@@ -813,6 +813,10 @@ h3 {
   margin-top: 10px;
 }
 
+.tool-details-actions {
+  margin-top: 24px;
+}
+
 .tool-detail img {
   width: 100%;
   max-height: 620px;

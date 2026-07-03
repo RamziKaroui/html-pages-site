@@ -1,0 +1,397 @@
+<!--
+  ~ OpenSplice
+  ~
+  ~    This software and documentation are Copyright 2006 to 2017 PrismTech
+  ~    Limited and its licensees. All rights reserved. See file:
+  ~
+  ~                      $OSPL_HOME/LICENSE
+  ~
+  ~    for full copyright notice and license terms.
+  -->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>OpenSplice Launcher</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Documentation extras -->
+    <link href="./css/docs.css" rel="stylesheet">
+</head>
+
+
+<body data-spy="scroll" data-target=".launcher-bar">
+<a class="sr-only" href="#content">Skip to main content</a>
+
+<div class="bs-docs-header" id="content">
+    <div class="container">
+        <h1>OpenSplice Launcher</h1>
+
+        <p>An overview of OpenSplice Launcher, how to use, configure and more.</p>
+    </div>
+</div>
+
+<div class="container bs-docs-container">
+    <div class="row">
+        <!-- MAIN CONTENT -->
+        <div class="col-md-9" role="main">
+            <div class="bs-docs-section">
+                <h1 id="tools" class="page-header">Tools</h1>
+
+                <p class="lead">The tools tab provides easy access to the tools bundled with
+                    OpenSplice.  If RnR Manager is installed, it can be also be started from the tools tab. </p>
+                <img src="./images/screenshots/tools.png">
+            </div>
+            <!--<div class="bs-docs-section">
+                <h1 id="benchmarks" class="page-header">Benchmarks</h1>
+                <p class="lead">OpenSplice Launcher provides easy access to all of the tools bundled with OpenSplice.</p>
+            </div>-->
+            <div class="bs-docs-section">
+                <h1 id="controls" class="page-header">Controls</h1>
+
+                <p class="lead">The controls tab provides the ability to control and interact with
+                    OpenSplice.</p>
+                    <img src="./images/screenshots/controls.png">
+                <br/><br/>
+                <p>The control buttons are enabled if the active configuration is a shared memory
+                    deployment. Otherwise, they are disabled.</p>
+                <br/>
+
+                <h4>Start OpenSplice</h4>
+                <p>When the user clicks on the "Start OpenSplice" button, Launcher starts an instance
+                    of OpenSplice using the active configuration set in Launcher. The configuration
+                    can be set in the <a href="#settings-environment">Environment</a> tab or in the
+                    <a href="#configurations">Configurations</a> tab. A progress bar is displayed in the
+                    bottom toolbar of the Launcher window until the execution of the command completes.</p>
+                <img src="./images/screenshots/controls_osplstartrunning.png">
+                <br/><br/>
+                <p>Once the Launcher has completed the control's execution, a notification popup message is displayed
+                    indicating its result. The status of the OpenSplice
+                instance is updated in the bottom toolbar to indicate that it is running.</p>
+                <img src="./images/screenshots/controls_osplstartcompleted.png">
+                <br/><br/>
+                <h4>Stop OpenSplice</h4>
+                <p>When the user clicks on the "Stop OpenSplice" button, Launcher stops the running
+                    instance of OpenSplice associated to the active configuration set in Launcher.
+                    The configuration can be set in the <a href="#settings-environment">Environment</a> tab
+                    or in the <a href="#configurations">Configurations</a> tab. A progress bar is displayed
+                    in the bottom toolbar of the Launcher window until the execution of the command completes.</p>
+                <img src="./images/screenshots/controls_osplstoprunning.png">
+                <br/><br/>
+                <p>Once the Launcher has completed the control's execution, a notification popup message is displayed
+                    indicating its result. The status of the OpenSplice
+                    instance is updated in the bottom toolbar to indicate that it has been successfully stopped.</p>
+                <img src="./images/screenshots/controls_osplstopcompleted.png">
+                <p><div class="alert alert-info" role="alert">If the user tries to start another OpenSplice
+                instance with the same active configuration, Launcher will display a notification popup message
+                indicating that the instance is already running.
+            </div></p>
+                <p><div class="alert alert-warning" role="alert">If the user wants to run two instances of
+                OpenSplice, they must have <b>different domain names</b> and <b>different domain ids</b> in order
+                    to be successfully started by Launcher.</div></p>
+            </div>
+            <div class="bs-docs-section">
+                <h1 id="configurations" class="page-header">Configurations</h1>
+
+                <p class="lead">The configurations tab lists all of the configurations bundled with
+                    OpenSplice.</p>
+
+                <p>For each configuration a brief description of the configuration is provided.</p>
+                <img src="./images/screenshots/configurations.png">
+
+                <h3>Refreshing the configurations list</h3>
+
+                <p> Pressing the Refresh button refreshes the configurations list with the contents of OSPL_URI,
+                    OSPL_HOME\etc\config directory, and user specified configurations directory.
+                    Duplicates are removed if they exist in more than one of these locations.</p>
+                <img src="./images/screenshots/configurations_refreshlist.png">
+
+                <h3>Setting the default configuration</h3>
+
+                <p>Selecting a configuration in the list and then clicking on the check mark icon will set
+                    that configuration as the default configuration used within OpenSplice Launcher.
+                    A warning is displayed if a configuration no longer exists when trying to set it as default
+                    configuration.</p>
+                <img src="./images/screenshots/configurations_setdefault.png">
+
+                <h3>Editing a configuration</h3>
+
+                <p>Selecting a configuration in the list and then clicking on the icon that looks like a pencil will
+                    open
+                    OpenSplice Configurator for that configuration so that it can be edited.
+                    A warning is displayed if a configuration no longer exists when trying to set it as default
+                    configuration.</p>
+
+                <p>Note: If OpenSplice's installation directory is write-protected, the tool will need to be run
+                    with elevated permissions in order to save modifications made to the default configuration files
+                    found in OSPL_HOME\etc\config. The same applies to user-specified configuration directories.</p>
+                <img src="./images/screenshots/configurations_edit.png">
+            </div>
+            <div class="bs-docs-section">
+                <h1 id="documentation" class="page-header">Documentation</h1>
+
+                <p class="lead">The documentation tab lists all of the documentation artifacts bundled with
+                    OpenSplice.</p>
+                <img src="./images/screenshots/documentation.png">
+
+                <h3>Opening a document</h3>
+
+                <p>There are two ways to open a selected document.   The first is to double click on the selected item.  The second is to click on the book icon in the bottom right corner.</p>
+
+                <p>The document type can be set using the dropdown in the bottom right corner.   HTML and PDF document types are supported.</p>
+
+            </div>
+            <div class="bs-docs-section">
+                <h1 id="examples" class="page-header">Examples</h1>
+
+                <p class="lead">The examples tab lists some of the examples that are bundled with OpenSplice
+                    and allows a user to build and run the example.</p>
+
+                <p>Note: If OpenSplice is installed in a write-protected directory, the application will need to
+                    be
+                    run with elevated permissions in order to build the examples.</p>
+
+                <img src="./images/screenshots/examples.png">
+
+
+                <h3 id="examples-building">Building</h3>
+
+                <p>Clicking on the Build icon will compile the example for the language that is selected in the
+                    language drop-down box. A command prompt or terminal will open showing the progress and
+                    result of compiling the example.</p>
+
+                <p>Launcher expects that the toolchain required to build the example for the chosen language
+                    are available in the environment of Launcher. For example, to build with Visual Studio this
+                    may require running vcvarsall.bat. However, the Visual Studio VCINSTALLDIR environment
+                    variable can be specified in the <i>Environment</i> tab in the <i>Settings</i> pane.
+                    Compiling Java will require that <i>JAVA_JDK_HOME\bin</i> be found on the path.
+                </p>
+                <img src="./images/screenshots/examples_building.png">
+
+                <p>The C/C++ examples are built in a folder specified in the "C/C++ Examples Build Path" found in
+                the <i>Environment</i> tab in the <i>Settings</i> pane. The default is <i>$HOME</i>/ZettaScale/OpenSpliceDDS/examples,
+                but can be changed in the <i>Settings</i> pane. This pane also allows the user to specify a
+                CMake "generator" to create the project build system, as well as the "build type" (e.g. Release, Debug, etc.).
+                Please consult the CMake documentation for the generators and build types available in your platform.
+
+                <h3 id="examples-cleaning">Cleaning</h3>
+
+                <p>Clicking on the Clean icon will remove all the artifacts created by building the example for
+                    language that is selected in the language drop-down box.</p>
+                <img src="./images/screenshots/examples_cleaning.png">
+
+                <h3 id="examples-running">Running</h3>
+
+                <p>Clicking on the Run icon will execute the executables that resulted from building the example
+                    for the language that is selected in the language drop-down box. A command prompt or terminal
+                    will open for each executable showing the output produced by that executable. If running Java
+                    executables, JAVA_HOME is expected to be available in Launcher's environment path.</p>
+
+                <p>The user can select a configuration to use in the configuration
+                    drop-down box. By default, the active configuration set for Launcher will be used.
+                    In the drop-down box, the active configuration is displayed in bold.
+                    The active configuration can be set in the <i>Settings</i> dialog or
+                    in the <i>Configurations</i> tab. If the selected configuration uses the OpenSplice shared
+                    memory feature then Launcher will start the OpenSplice daemon before running any of
+                    the executables.</p>
+
+                <p>Some examples have more than one executable. The Executable drop-down box allows the user
+                    to select <em>All</em> or a specific executable to run. This would allow for running one
+                    of the examples across the network by using Launcher to start the executables on different
+                    computers.</p>
+
+                <p>If running an executable with a shared memory configuration and there is no ospl instance running
+                    with that configuration, an ospl instance will be launched with it. The uptime in seconds of the
+                    Splice Daemon before it will shutdown automatically can be specified in the <em>Ospl Uptime</em>
+                    field. By default, all examples will have a minimum of 10s uptime. A longer or equal time can be
+                    specified, but not shorter. If a single process configuration is selected, the field is disabled.
+                </p>
+
+                <p>The <em>Parameters</em> section lists all of the command line parameters that can be
+                    passed to the executables when they are run. Hovering over the parameter will display
+                    information on what the parameter is used for.</p>
+
+                <p>The <em>Description</em> section shows the documentation for the example. It is the
+                    same as the documentation you will find in each of the examples folders in your
+                    OpenSplice installation.</p>
+                <img src="./images/screenshots/examples_running.png">
+
+                <h3 id="examples-opening-example-solution-files">Opening Example Solution Files in Microsoft Visual
+                    Studio (Windows only)</h3>
+
+                <p>On Microsoft Windows platforms, users have the ability to open the example solution files for the
+                    OpenSplice examples in order to inspect and build them.</p>
+                <p>
+                <div class="alert alert-info" role="alert">Prior to OpenSplice 6.6.3, these were available to
+                    users from the Start Menu in Windows.
+                </div>
+                </p>
+
+                <img src="./images/screenshots/examples_selecting_example_solution_file.png">
+
+                <p>Clicking on the <em>Open Visual Studio solution file</em> icon will open the selected example
+                    solution file
+                    in the Microsoft Visual Studio editor. </p>
+
+                <img src="./images/screenshots/examples_opening_example_solution_file.png">
+
+                <p>The version of Microsoft Visual Studio that is used to open the
+                    example solution files is used by either inferring from the <b>VCINSTALLDIR</b> environment variable
+                    or
+                    by looking in the PATH to see if <b>devenv.exe</b> is found. If the executable cannot be found in
+                    either
+                    locations, a notification will pop up instructing the user to set the appropriate environment
+                    variables.</p>
+
+                <img src="./images/screenshots/examples_opening_example_solution_file_warning.png">
+
+            </div>
+            <div class="bs-docs-section">
+                <h1 id="settings" class="page-header">Settings</h1>
+
+                <p class="lead">The Configuration Settings pane shows information regarding the OSPL installation,
+                    environment variables, and user configurations location</p>
+                <img src="./images/screenshots/settings.png">
+
+                <h3 id="settings-about">About</h3>
+
+                <p>Starting Launcher from the start menu or from a terminal with the OSPL_HOME environment variable
+                    set will identify the name, date, and version of OpenSplice being used to populate the
+                    content of
+                    Launcher.</p>
+                <img src="./images/screenshots/settings_about.png">
+
+                <h3 id="settings-environment">Environment</h3>
+
+                <p>Setting environment variables in this tab allows the user to quickly customize their environment.
+                    Overriding any settings will make it available to all the tools which are used by Launcher.
+                    Specifying the VCINSTALLDIR allows the user to build against a specific version of
+                    Visual Studio to run the examples without having to migrate the solution files.
+                    Changes to the URI will trigger a refresh of the configurations list in the Configurations tab.
+                </p>
+                <img src="./images/screenshots/settings_environment.png">
+
+                <br/>
+                <br/>
+
+                <p>To preview the environment variable settings, select the <b>Preview</b> button.</p>
+
+                <p>The <b>Preview Environment Variables</b> dialog allows the user to view the environment variables
+                    after being modified by the user.   These settings will be available to the tools
+                    and the Launcher start and stop scripts.  The <b>Copy to clipboard</b> button copies the
+                    environment variable settings to the clipboard.</p>
+
+                <img src="./images/screenshots/preview_environment_variables.png">
+
+                <h3 id="settings-configurations">Configurations</h3>
+
+                <p>Overriding the OpenSplice configurations directory allows the user to run and edit
+                    their own configurations. These will populate and trigger a refresh of the <i>Configurations</i>
+                    tab.</p>
+                <img src="./images/screenshots/settings_configurations.png">
+            </div>
+            <div class="bs-docs-section">
+                <h1 id="requirements" class="page-header">Requirements</h1>
+
+                <p class="lead">OS Requirements</p>
+                <h5>The OSPL Launcher tool is supported on the following JAVA FX certified operating systems:</h5>
+                <ul>
+                    <li>Microsoft Windows Vista SP2 (32 & 64 bit)</li>
+                    <li>Microsoft Windows 7 SP1 (32 & 64 bit)</li>
+                    <li>Microsoft Windows 8 (32 & 64 bit)</li>
+                    <li>Microsoft Windows 10 (32 & 64 bit)</li>
+                    <li>Mac OS X 10.7.3 or greater x64</li>
+                    <li>Linux (32 &64 bit)
+                        <ul>
+                            <li>Ubuntu 10.4+</li>
+                            <li>gtk2 2.18+</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h5>The OSPL Launcher tool is not supported on the following systems:</h5>
+                <ul>
+                    <li>Microsoft Windows XP</li>
+                    <li>Linux on ARM</li>
+                </ul>
+                <p class="lead">Software Requirements</p>
+                <h5>The following tools are required to run OSPL Launcher:</h5>
+
+                <ul>
+                    <li>OpenSplice for DDS 6.4.1+</li>
+                    <li>OpenSplice 6.5.0+</li>
+                    <li>Linux:</li>
+                    <ul>
+                        <li>xterm</li>
+                        <li>gtk2 2.18+</li>
+                        <li>bash</li>
+                    </ul>
+                </ul>
+                <h5>The following tools are required to build and run the examples:</h5>
+                <ul>
+                    <li>For Java examples:</li>
+                    <ul>
+                        <li>Oracle JDK 8
+                        <li>Apache Maven 3.6+
+                    </ul>
+                    <li> For C/C99/C++ examples:
+                    <ul>
+                        <li>Suitable C/C++ compiler (e.g. GCC, clang)
+                        <li>CMake 3.10+
+                        <li>Either GNU Make 3.8+ or an alternative build system supported by CMake, such as Ninja (see CMake help for possible generators).
+                    </ul>
+                </ul>
+
+                <p class="lead">More support and requirements information</p>
+
+                <p>This information is based on Oracle's published <a href="http://www.oracle.com/technetwork/
+                        java/javafx/downloads/supportedconfigurations-1506746.html">JavaFX 2 Certified System
+                    Configurations
+                </a> and <a href="http://www.oracle.com/technetwork/java/javase/certconfig-2095354.html">
+                    Oracle JDK 8 and JRE 8 Certified System Configurations</a>, last accessed on May 5, 2014
+                    and is subject to change. Check this page regularly to look up support for your platform.
+                </p>
+            </div>
+        </div>
+
+        <!-- SIDEBAR NAVIGATION -->
+        <div class="col-md-3">
+            <div id="launcher-bar" class="bs-sidebar affix" role="complementary">
+                <ul class="nav bs-docs-sidenav">
+                    <li class="active"><a href="#tools">Tools</a></li>
+                    <!--<li><a href="#benchmarks">Benchmarks</a></li>-->
+                    <li><a href="#controls">Controls</a></li>
+                    <li><a href="#configurations">Configurations</a></li>
+                    <li><a href="#documentation">Documentation</a></li>
+                    <li><a href="#examples">Examples</a></li>
+                    <li><a href="#settings">Settings</a></li>
+                    <li><a href="#requirements">Requirements</a></li>
+                </ul>
+                <a class="back-to-top" href="#top">
+                    Back to top
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <br/>
+        <br/>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<!--<script src="./js/docs.min.js"></script>-->
+
+</body>
+</html>
