@@ -40,6 +40,11 @@ html[data-theme="dark"] {
   box-sizing: border-box;
 }
 
+img,
+svg {
+  max-width: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -79,6 +84,7 @@ a {
 .brand {
   display: inline-flex;
   align-items: center;
+  flex: 1 1 220px;
   gap: 12px;
   text-decoration: none;
   min-width: 220px;
@@ -87,6 +93,7 @@ a {
 .header-branding {
   display: inline-flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 14px;
   min-width: 0;
 }
@@ -154,6 +161,7 @@ a {
   border-radius: 8px;
   background: var(--card);
   text-decoration: none;
+  text-align: center;
 }
 
 .nav-menu {
@@ -952,6 +960,14 @@ h3 {
   .product-lifecycle-grid {
     grid-template-columns: 1fr;
   }
+
+  .product-lifecycle-phase {
+    min-height: auto;
+  }
+
+  .product-lifecycle-phase span {
+    font-size: clamp(1.18rem, 5.8vw, 1.5rem);
+  }
 }
 
 .architecture {
@@ -1315,6 +1331,7 @@ h3 {
 
 .table-scroll {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--card);
@@ -1520,6 +1537,8 @@ h3 {
 @media (max-width: 700px) {
   .header-branding {
     width: 100%;
+    align-items: flex-start;
+    gap: 10px;
   }
 
   .zettascale-brand img {
@@ -1527,18 +1546,49 @@ h3 {
   }
 
   .brand {
+    flex-basis: 100%;
     min-width: 0;
+  }
+
+  .brand strong {
+    font-size: 0.94rem;
+  }
+
+  .brand small {
+    font-size: 0.72rem;
   }
 
   .nav {
     width: 100%;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding-bottom: 4px;
+    overflow: visible;
+    flex-wrap: wrap;
+    padding-bottom: 0;
   }
 
-  .nav:has(.nav-menu[open]) {
-    overflow: visible;
+  .nav a,
+  .nav-menu {
+    flex: 1 1 calc(50% - 8px);
+  }
+
+  .nav-menu > summary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .resources-menu[open] {
+    flex-basis: 100%;
+  }
+
+  .nav-submenu {
+    position: static;
+    width: 100%;
+    margin-top: 6px;
+    box-shadow: none;
+  }
+
+  .nav-submenu a {
+    justify-content: center;
+    white-space: normal;
   }
 
   .theme-toggle {
@@ -1549,9 +1599,38 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .tool-detail,
+  .download-form,
+  .support-form {
+    min-width: 0;
+  }
+
+  .tool-detail a,
+  .benefit-copy a,
+  .download-form a {
+    overflow-wrap: anywhere;
+  }
+
+  .wallet-panel .overview-product-image:active,
+  .tool-detail img:active {
+    transform: none;
+  }
+
+  .tool-detail img {
+    max-height: min(520px, 78vh);
+  }
+
   h1 {
-    max-width: 14ch;
-    font-size: clamp(2.25rem, 12vw, 3.4rem);
+    max-width: 100%;
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .page-hero {
+    padding-top: clamp(42px, 10vw, 58px);
+  }
+
+  .page-hero h1 {
+    max-width: 100%;
   }
 
   .hero h1 {
