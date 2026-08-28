@@ -26,14 +26,20 @@
     applyTheme(root.dataset.theme === "dark" ? "light" : "dark");
   });
 
-  document.querySelectorAll("[data-static-login]").forEach((form) => {
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const status = form.querySelector(".form-status");
-      if (status) {
-        status.textContent = "Login request ready for support portal integration.";
-      }
-    });
+  document.querySelectorAll("[data-salesforce-login]").forEach((form) => {
+    const loginUrl = form.querySelector("[data-salesforce-login-url]");
+    const error = form.querySelector("[data-salesforce-login-error]");
+    const params = new URLSearchParams(window.location.search);
+
+    if (loginUrl) {
+      const returnUrl = new URL(window.location.href);
+      returnUrl.searchParams.set("salesforce_error", "invalid_login");
+      loginUrl.value = returnUrl.toString();
+    }
+
+    if (error && params.get("salesforce_error") === "invalid_login") {
+      error.hidden = false;
+    }
   });
 
   document.querySelectorAll("[data-evaluation-form]").forEach((form) => {

@@ -60,22 +60,43 @@
 
       <section class="section">
         <div class="support-layout">
-          <form class="support-form" action="#" method="post" data-static-login>
+          <form
+            class="support-form"
+            action="https://zettascaletech.my.salesforce.com/secur/login_portal.jsp"
+            method="post"
+            target="_top"
+            data-salesforce-login
+          >
+            <input type="hidden" name="startURL" value="/home/home.jsp">
+            <input
+              id="support-login-url"
+              type="hidden"
+              name="loginURL"
+              value="support.html?salesforce_error=invalid_login"
+              data-salesforce-login-url
+            >
+            <input type="hidden" name="useSecure" value="true">
+            <input type="hidden" name="orgId" value="00D200000000MaH">
+            <input type="hidden" name="portalId" value="06020000000M1iF">
+            <input type="hidden" name="loginType" value="3">
+            <input type="hidden" name="action" value="loginAction">
             <h2>Customer Login</h2>
+            <p class="form-status form-status-error" role="alert" hidden data-salesforce-login-error>
+              Error: Please check your username and password. If you still can't log in, contact your Salesforce administrator.
+            </p>
             <label for="support-email">Email</label>
-            <input id="support-email" name="email" type="email" autocomplete="email" required>
+            <input id="support-email" name="un" type="email" autocomplete="username" required>
 
             <label for="support-password">Password</label>
             <input
               id="support-password"
-              name="password"
+              name="pw"
               type="password"
               autocomplete="current-password"
               required
             >
 
             <button class="button primary" type="submit">Login</button>
-            <p class="form-status" role="status" aria-live="polite"></p>
           </form>
 
           <div class="support-contact">

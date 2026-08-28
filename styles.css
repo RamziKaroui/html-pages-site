@@ -1302,6 +1302,11 @@ h3 {
   font-size: 0.9rem;
 }
 
+.form-status-error {
+  color: #b42318;
+  font-weight: 800;
+}
+
 .evaluation-section {
   display: grid;
   gap: 30px;
