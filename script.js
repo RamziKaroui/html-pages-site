@@ -26,6 +26,12 @@
     applyTheme(root.dataset.theme === "dark" ? "light" : "dark");
   });
 
+  document.querySelectorAll("[data-coming-soon-message]").forEach((button) => {
+    button.addEventListener("click", () => {
+      window.alert(button.dataset.comingSoonMessage);
+    });
+  });
+
   document.querySelectorAll("[data-salesforce-login]").forEach((form) => {
     const loginUrl = form.querySelector("[data-salesforce-login-url]");
     const error = form.querySelector("[data-salesforce-login-error]");

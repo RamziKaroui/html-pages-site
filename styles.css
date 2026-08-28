@@ -1093,6 +1093,7 @@ h3 {
   display: flex;
   min-height: 108px;
   align-items: flex-end;
+  gap: 12px;
   padding: 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -1102,6 +1103,19 @@ h3 {
   font: inherit;
   font-weight: 800;
   text-align: left;
+  text-decoration: none;
+}
+
+.resource-button-with-logo {
+  align-items: center;
+}
+
+.resource-button-with-logo img {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  object-fit: contain;
 }
 
 .resource-grid a:hover,
