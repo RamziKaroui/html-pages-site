@@ -277,6 +277,77 @@
     });
   });
 
+  document.querySelectorAll("[data-license-dialog]").forEach((dialog) => {
+    const content = dialog.querySelector(".license-dialog-body");
+    const acceptLink = dialog.querySelector("[data-license-accept]");
+    const cancelControls = dialog.querySelectorAll("[data-license-cancel]");
+    const defaultDownloadUrl = dialog.dataset.defaultDownloadUrl || "";
+    const params = new URLSearchParams(window.location.search);
+    const isLicenseEntry = params.get("license") === "1";
+
+    const returnToDownloads = () => {
+      if (dialog.open) {
+        dialog.close();
+      }
+
+      if (isLicenseEntry) {
+        window.location.href = "download-evaluation.html";
+      }
+    };
+
+    const prepareAcceptLink = (downloadUrl) => {
+      if (!acceptLink || !downloadUrl) {
+        return;
+      }
+
+      acceptLink.href = downloadUrl;
+      acceptLink.removeAttribute("download");
+      acceptLink.setAttribute("aria-disabled", "false");
+    };
+
+    const openLicenseDialog = (downloadUrl = defaultDownloadUrl) => {
+      prepareAcceptLink(downloadUrl);
+
+      if (content) {
+        content.scrollTop = 0;
+      }
+
+      if (typeof dialog.showModal === "function") {
+        dialog.showModal();
+      } else {
+        dialog.setAttribute("open", "");
+      }
+
+      content?.focus();
+    };
+
+    document.querySelectorAll("[data-license-download]").forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        openLicenseDialog(link.dataset.downloadUrl || link.href);
+      });
+    });
+
+    cancelControls.forEach((control) => {
+      control.addEventListener("click", returnToDownloads);
+    });
+
+    acceptLink?.addEventListener("click", (event) => {
+      if (acceptLink.getAttribute("aria-disabled") === "true") {
+        event.preventDefault();
+      }
+    });
+
+    dialog.addEventListener("cancel", (event) => {
+      event.preventDefault();
+      returnToDownloads();
+    });
+
+    if (isLicenseEntry) {
+      openLicenseDialog();
+    }
+  });
+
   document.querySelectorAll("[data-logo-carousel]").forEach((carousel) => {
     const cards = Array.from(carousel.querySelectorAll(".customer-logo-card"));
     let index = 0;
