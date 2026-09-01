@@ -291,7 +291,7 @@
       }
 
       if (isLicenseEntry) {
-        window.location.href = "download-evaluation.html";
+        window.location.href = "download-evaluation.html?v=license-workflow-20260901";
       }
     };
 
