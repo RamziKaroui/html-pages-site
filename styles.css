@@ -1007,6 +1007,10 @@ h3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.document-section-label {
+  margin-top: 34px;
+}
+
 .ordering-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
