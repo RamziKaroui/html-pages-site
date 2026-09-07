@@ -318,6 +318,13 @@ h3 {
   margin-top: 34px;
 }
 
+.panel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -1031,6 +1038,15 @@ h3 {
   margin: 0 0 10px;
   font-size: 1.1rem;
   line-height: 1.25;
+}
+
+.document-download {
+  margin-top: 12px;
+}
+
+.document-download.is-disabled {
+  opacity: 0.55;
+  pointer-events: none;
 }
 
 .definition-article {
